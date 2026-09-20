@@ -1,0 +1,516 @@
+{
+  "metrics": {
+    "dense_fog_1080p": {
+      "A1": {
+        "method_id": "A1",
+        "method_name": "Physics Baseline",
+        "output_resolution": [
+          135,
+          240
+        ],
+        "avg_proc_ms": 13.67,
+        "avg_e2e_ms": 25.5,
+        "proc_fps": 73.2,
+        "e2e_fps": 39.2,
+        "latency_breakdown": {},
+        "sharpness_diagnostics": {
+          "laplacian_variance": 742.88,
+          "mean_gradient_magnitude": 59.385
+        },
+        "niqe": 3.96,
+        "black_pixel_rate_pct": 0.441,
+        "white_clipping_rate_pct": 0.0,
+        "temporal_flicker_total": 8.949,
+        "temporal_flicker_static": 3.672,
+        "temporal_flicker_motion": 39.81,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "dense_fog_1080p_A1_frame24.png"
+      },
+      "A4_LR": {
+        "method_id": "A4_LR",
+        "method_name": "Frozen Low-Res",
+        "output_resolution": [
+          135,
+          240
+        ],
+        "avg_proc_ms": 26.89,
+        "avg_e2e_ms": 51.72,
+        "proc_fps": 37.2,
+        "e2e_fps": 19.3,
+        "latency_breakdown": {
+          "prep": 3.5927999999998406,
+          "physics_features": 3.987000000000407,
+          "cnn_inference": 6.087400000000187,
+          "guided_smoothing": 0.6466999999990009,
+          "temporal_coherence": 0.19760000000168532,
+          "inversion": 1.3549999999984408,
+          "total_ms": 15.897799999999407,
+          "fps": 62.90178515266498
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 590.509,
+          "mean_gradient_magnitude": 52.771
+        },
+        "niqe": 4.16,
+        "black_pixel_rate_pct": 0.056,
+        "white_clipping_rate_pct": 0.0,
+        "temporal_flicker_total": 7.995,
+        "temporal_flicker_static": 3.212,
+        "temporal_flicker_motion": 35.966,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "dense_fog_1080p_A4_LR_frame24.png"
+      },
+      "B1": {
+        "method_id": "B1",
+        "method_name": "High-Res Bilinear",
+        "output_resolution": [
+          1080,
+          1920
+        ],
+        "avg_proc_ms": 206.68,
+        "avg_e2e_ms": 229.62,
+        "proc_fps": 4.8,
+        "e2e_fps": 4.4,
+        "latency_breakdown": {
+          "low_res_a4_ms": 14.138099999996712,
+          "upsampling_ms": 39.8221999999997,
+          "inversion_ms": 128.1005999999998,
+          "total_proc_ms": 182.07430000000002,
+          "fps": 5.492263323269675
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 90.168,
+          "mean_gradient_magnitude": 23.347
+        },
+        "niqe": 6.89,
+        "black_pixel_rate_pct": 0.403,
+        "white_clipping_rate_pct": 0.001,
+        "temporal_flicker_total": 11.083,
+        "temporal_flicker_static": 3.345,
+        "temporal_flicker_motion": 56.703,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "dense_fog_1080p_B1_frame24.png"
+      },
+      "B2": {
+        "method_id": "B2",
+        "method_name": "High-Res Guided",
+        "output_resolution": [
+          1080,
+          1920
+        ],
+        "avg_proc_ms": 448.46,
+        "avg_e2e_ms": 473.61,
+        "proc_fps": 2.2,
+        "e2e_fps": 2.1,
+        "latency_breakdown": {
+          "low_res_a4_ms": 18.33570000000151,
+          "upsampling_ms": 263.65109999999703,
+          "inversion_ms": 109.70130000000466,
+          "total_proc_ms": 391.7125000000041,
+          "fps": 2.5528927465934568
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 88.595,
+          "mean_gradient_magnitude": 23.128
+        },
+        "niqe": 6.96,
+        "black_pixel_rate_pct": 0.399,
+        "white_clipping_rate_pct": 0.001,
+        "temporal_flicker_total": 11.026,
+        "temporal_flicker_static": 3.319,
+        "temporal_flicker_motion": 56.463,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "dense_fog_1080p_B2_frame24.png"
+      }
+    },
+    "dynamic_urban_1080p": {
+      "A1": {
+        "method_id": "A1",
+        "method_name": "Physics Baseline",
+        "output_resolution": [
+          135,
+          240
+        ],
+        "avg_proc_ms": 13.4,
+        "avg_e2e_ms": 27.39,
+        "proc_fps": 74.6,
+        "e2e_fps": 36.5,
+        "latency_breakdown": {},
+        "sharpness_diagnostics": {
+          "laplacian_variance": 1802.985,
+          "mean_gradient_magnitude": 82.756
+        },
+        "niqe": 3.82,
+        "black_pixel_rate_pct": 2.213,
+        "white_clipping_rate_pct": 0.299,
+        "temporal_flicker_total": 2.827,
+        "temporal_flicker_static": 1.637,
+        "temporal_flicker_motion": 36.979,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "dynamic_urban_1080p_A1_frame24.png"
+      },
+      "A4_LR": {
+        "method_id": "A4_LR",
+        "method_name": "Frozen Low-Res",
+        "output_resolution": [
+          135,
+          240
+        ],
+        "avg_proc_ms": 17.37,
+        "avg_e2e_ms": 37.58,
+        "proc_fps": 57.6,
+        "e2e_fps": 26.6,
+        "latency_breakdown": {
+          "prep": 4.813299999995024,
+          "physics_features": 3.9613000000002785,
+          "cnn_inference": 4.202600000006385,
+          "guided_smoothing": 0.5211000000002741,
+          "temporal_coherence": 0.20810000000182072,
+          "inversion": 1.6452999999998497,
+          "total_ms": 15.37580000000105,
+          "fps": 65.03726635361619
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 1415.726,
+          "mean_gradient_magnitude": 74.497
+        },
+        "niqe": 3.85,
+        "black_pixel_rate_pct": 0.213,
+        "white_clipping_rate_pct": 0.213,
+        "temporal_flicker_total": 2.665,
+        "temporal_flicker_static": 1.513,
+        "temporal_flicker_motion": 35.707,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "dynamic_urban_1080p_A4_LR_frame24.png"
+      },
+      "B1": {
+        "method_id": "B1",
+        "method_name": "High-Res Bilinear",
+        "output_resolution": [
+          1080,
+          1920
+        ],
+        "avg_proc_ms": 207.21,
+        "avg_e2e_ms": 231.4,
+        "proc_fps": 4.8,
+        "e2e_fps": 4.3,
+        "latency_breakdown": {
+          "low_res_a4_ms": 22.48949999999894,
+          "upsampling_ms": 50.13700000000654,
+          "inversion_ms": 134.55450000000013,
+          "total_proc_ms": 207.1934000000013,
+          "fps": 4.8264085632070985
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 595.47,
+          "mean_gradient_magnitude": 51.54
+        },
+        "niqe": 6.53,
+        "black_pixel_rate_pct": 0.845,
+        "white_clipping_rate_pct": 1.369,
+        "temporal_flicker_total": 4.267,
+        "temporal_flicker_static": 2.315,
+        "temporal_flicker_motion": 59.668,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "dynamic_urban_1080p_B1_frame24.png"
+      },
+      "B2": {
+        "method_id": "B2",
+        "method_name": "High-Res Guided",
+        "output_resolution": [
+          1080,
+          1920
+        ],
+        "avg_proc_ms": 406.59,
+        "avg_e2e_ms": 431.19,
+        "proc_fps": 2.5,
+        "e2e_fps": 2.3,
+        "latency_breakdown": {
+          "low_res_a4_ms": 17.314099999993005,
+          "upsampling_ms": 222.87059999999315,
+          "inversion_ms": 110.05079999999623,
+          "total_proc_ms": 350.2444000000082,
+          "fps": 2.8551491472810886
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 586.38,
+          "mean_gradient_magnitude": 51.064
+        },
+        "niqe": 6.58,
+        "black_pixel_rate_pct": 0.776,
+        "white_clipping_rate_pct": 1.372,
+        "temporal_flicker_total": 4.224,
+        "temporal_flicker_static": 2.29,
+        "temporal_flicker_motion": 59.121,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "dynamic_urban_1080p_B2_frame24.png"
+      }
+    },
+    "synthetic_gt_432p": {
+      "A1": {
+        "method_id": "A1",
+        "method_name": "Physics Baseline",
+        "output_resolution": [
+          426,
+          239
+        ],
+        "avg_proc_ms": 33.47,
+        "avg_e2e_ms": 36.68,
+        "proc_fps": 29.9,
+        "e2e_fps": 27.3,
+        "latency_breakdown": {},
+        "sharpness_diagnostics": {
+          "laplacian_variance": 24.227,
+          "mean_gradient_magnitude": 15.46
+        },
+        "niqe": 3.61,
+        "black_pixel_rate_pct": 0.0,
+        "white_clipping_rate_pct": 0.308,
+        "temporal_flicker_total": 20.726,
+        "temporal_flicker_static": 12.286,
+        "temporal_flicker_motion": 44.94,
+        "psnr": 9.48,
+        "ssim": 0.7055,
+        "saved_file": "synthetic_gt_432p_A1_frame24.png"
+      },
+      "A4_LR": {
+        "method_id": "A4_LR",
+        "method_name": "Frozen Low-Res",
+        "output_resolution": [
+          426,
+          239
+        ],
+        "avg_proc_ms": 35.72,
+        "avg_e2e_ms": 48.0,
+        "proc_fps": 28.0,
+        "e2e_fps": 20.8,
+        "latency_breakdown": {
+          "prep": 4.122600000002308,
+          "physics_features": 8.124800000004484,
+          "cnn_inference": 9.767099999990592,
+          "guided_smoothing": 1.260599999994838,
+          "temporal_coherence": 0.38990000000183045,
+          "inversion": 5.5825999999967735,
+          "total_ms": 29.293299999991973,
+          "fps": 34.137499018556255
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 24.24,
+          "mean_gradient_magnitude": 15.289
+        },
+        "niqe": 3.61,
+        "black_pixel_rate_pct": 0.0,
+        "white_clipping_rate_pct": 0.309,
+        "temporal_flicker_total": 20.37,
+        "temporal_flicker_static": 12.23,
+        "temporal_flicker_motion": 43.753,
+        "psnr": 9.47,
+        "ssim": 0.7079,
+        "saved_file": "synthetic_gt_432p_A4_LR_frame24.png"
+      },
+      "B1": {
+        "method_id": "B1",
+        "method_name": "High-Res Bilinear",
+        "output_resolution": [
+          768,
+          432
+        ],
+        "avg_proc_ms": 71.1,
+        "avg_e2e_ms": 80.39,
+        "proc_fps": 14.1,
+        "e2e_fps": 12.4,
+        "latency_breakdown": {
+          "low_res_a4_ms": 33.935900000003016,
+          "upsampling_ms": 6.087899999997148,
+          "inversion_ms": 15.87449999999535,
+          "total_proc_ms": 55.91189999999813,
+          "fps": 17.88528023551397
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 16.224,
+          "mean_gradient_magnitude": 9.651
+        },
+        "niqe": 4.05,
+        "black_pixel_rate_pct": 0.0,
+        "white_clipping_rate_pct": 0.311,
+        "temporal_flicker_total": 20.419,
+        "temporal_flicker_static": 12.173,
+        "temporal_flicker_motion": 43.737,
+        "psnr": 9.47,
+        "ssim": 0.7664,
+        "saved_file": "synthetic_gt_432p_B1_frame24.png"
+      },
+      "B2": {
+        "method_id": "B2",
+        "method_name": "High-Res Guided",
+        "output_resolution": [
+          768,
+          432
+        ],
+        "avg_proc_ms": 91.41,
+        "avg_e2e_ms": 103.13,
+        "proc_fps": 10.9,
+        "e2e_fps": 9.7,
+        "latency_breakdown": {
+          "low_res_a4_ms": 37.379299999997784,
+          "upsampling_ms": 32.02269999999885,
+          "inversion_ms": 16.870800000006625,
+          "total_proc_ms": 86.2860000000012,
+          "fps": 11.589365598126998
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 14.914,
+          "mean_gradient_magnitude": 9.311
+        },
+        "niqe": 4.46,
+        "black_pixel_rate_pct": 0.0,
+        "white_clipping_rate_pct": 0.293,
+        "temporal_flicker_total": 20.357,
+        "temporal_flicker_static": 12.169,
+        "temporal_flicker_motion": 43.513,
+        "psnr": 9.47,
+        "ssim": 0.768,
+        "saved_file": "synthetic_gt_432p_B2_frame24.png"
+      }
+    },
+    "night_fog_1440p": {
+      "A1": {
+        "method_id": "A1",
+        "method_name": "Physics Baseline",
+        "output_resolution": [
+          180,
+          240
+        ],
+        "avg_proc_ms": 20.2,
+        "avg_e2e_ms": 40.02,
+        "proc_fps": 49.5,
+        "e2e_fps": 25.0,
+        "latency_breakdown": {},
+        "sharpness_diagnostics": {
+          "laplacian_variance": 141.985,
+          "mean_gradient_magnitude": 16.582
+        },
+        "niqe": 7.39,
+        "black_pixel_rate_pct": 43.549,
+        "white_clipping_rate_pct": 0.0,
+        "temporal_flicker_total": 14.575,
+        "temporal_flicker_static": 2.616,
+        "temporal_flicker_motion": 76.703,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "night_fog_1440p_A1_frame24.png"
+      },
+      "A4_LR": {
+        "method_id": "A4_LR",
+        "method_name": "Frozen Low-Res",
+        "output_resolution": [
+          180,
+          240
+        ],
+        "avg_proc_ms": 21.8,
+        "avg_e2e_ms": 48.74,
+        "proc_fps": 45.9,
+        "e2e_fps": 20.5,
+        "latency_breakdown": {
+          "prep": 6.049099999998475,
+          "physics_features": 4.49899999999559,
+          "cnn_inference": 5.723700000004328,
+          "guided_smoothing": 0.6471000000090044,
+          "temporal_coherence": 0.23469999999292668,
+          "inversion": 1.87119999999652,
+          "total_ms": 19.057799999998792,
+          "fps": 52.47195374072891
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 119.9,
+          "mean_gradient_magnitude": 15.891
+        },
+        "niqe": 7.37,
+        "black_pixel_rate_pct": 43.539,
+        "white_clipping_rate_pct": 0.0,
+        "temporal_flicker_total": 14.773,
+        "temporal_flicker_static": 2.449,
+        "temporal_flicker_motion": 78.238,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "night_fog_1440p_A4_LR_frame24.png"
+      },
+      "B1": {
+        "method_id": "B1",
+        "method_name": "High-Res Bilinear",
+        "output_resolution": [
+          1440,
+          1920
+        ],
+        "avg_proc_ms": 266.85,
+        "avg_e2e_ms": 297.63,
+        "proc_fps": 3.7,
+        "e2e_fps": 3.4,
+        "latency_breakdown": {
+          "low_res_a4_ms": 33.47119999999393,
+          "upsampling_ms": 95.07429999999317,
+          "inversion_ms": 205.8830999999941,
+          "total_proc_ms": 334.4442000000072,
+          "fps": 2.9900354079992373
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 6.086,
+          "mean_gradient_magnitude": 4.36
+        },
+        "niqe": 11.11,
+        "black_pixel_rate_pct": 45.151,
+        "white_clipping_rate_pct": 0.0,
+        "temporal_flicker_total": 14.795,
+        "temporal_flicker_static": 2.334,
+        "temporal_flicker_motion": 57.524,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "night_fog_1440p_B1_frame24.png"
+      },
+      "B2": {
+        "method_id": "B2",
+        "method_name": "High-Res Guided",
+        "output_resolution": [
+          1440,
+          1920
+        ],
+        "avg_proc_ms": 584.53,
+        "avg_e2e_ms": 614.76,
+        "proc_fps": 1.7,
+        "e2e_fps": 1.6,
+        "latency_breakdown": {
+          "low_res_a4_ms": 23.381999999998015,
+          "upsampling_ms": 413.95209999998883,
+          "inversion_ms": 181.82810000000416,
+          "total_proc_ms": 619.1729000000095,
+          "fps": 1.6150577649635258
+        },
+        "sharpness_diagnostics": {
+          "laplacian_variance": 6.04,
+          "mean_gradient_magnitude": 4.354
+        },
+        "niqe": 11.11,
+        "black_pixel_rate_pct": 45.16,
+        "white_clipping_rate_pct": 0.0,
+        "temporal_flicker_total": 14.795,
+        "temporal_flicker_static": 2.315,
+        "temporal_flicker_motion": 57.509,
+        "psnr": null,
+        "ssim": null,
+        "saved_file": "night_fog_1440p_B2_frame24.png"
+      }
+    }
+  },
+  "transmission_mae": {
+    "t_temporal_full_mae": 0.1487,
+    "t_temporal_low_mae": 0.1505
+  }
+}

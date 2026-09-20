@@ -1,0 +1,9 @@
+Method,Type,PSNR,SSIM,NIQE,Flicker,Black%,FPS
+DCP (He et al. 2009),Heuristic Prior,16.50,0.5070,3.37,40.96,0.01%,26.8
+CAP (Zhu et al. 2015),Color Attenuation Prior,20.15,0.7533,3.45,21.95,0.00%,16.9
+CLAHE (Zuiderveld 1994),Local Contrast Stretch,14.48,0.3532,3.27,52.81,0.00%,11.5
+Corrected Gamma (γ=2.0),Fixed Tone Curve,15.54,0.8032,3.55,16.97,0.00%,325.3
+Original CEEF (Kaplan 2023),Multi-Exposure Fusion,18.30,0.5749,3.28,34.19,0.03%,2.1
+Modified CEEF (Approx),Single-Scale Fusion,19.04,0.6365,3.53,24.21,0.00%,3.4
+Session 19 Physics (A1),Closed-Form Physics,9.61,0.6876,3.54,21.01,0.00%,51.0
+Final Proposed A4 (Ours),Physics + Learned Residual,9.59,0.6915,3.53,20.64,0.00%,26.8

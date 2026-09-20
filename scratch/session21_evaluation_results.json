@@ -1,0 +1,126 @@
+{
+  "dense_fog": {
+    "video": "foggy_video1.mp4",
+    "frames": 50,
+    "fps_processing_only": 53.76,
+    "fps_end_to_end": 31.44,
+    "latency_ms": {
+      "decode": 10.72,
+      "prep": 3.54,
+      "physics_features": 4.81,
+      "cnn_inference": 7.41,
+      "guided_smoothing": 0.76,
+      "temporal_coherence": 0.28,
+      "inversion": 1.73,
+      "total_proc": 18.6
+    },
+    "psnr": null,
+    "ssim": null,
+    "niqe": 3.86,
+    "temporal_flicker": 9.407,
+    "black_rate_pct": 0.64,
+    "white_rate_pct": 6.1,
+    "delta_t_stats": {
+      "mean": -0.004,
+      "std": 0.0135,
+      "min": -0.067,
+      "max": 0.0167,
+      "pct_above_pos_0_05": 0.0,
+      "pct_below_neg_0_05": 0.54,
+      "pct_near_zero_0_01": 56.97
+    }
+  },
+  "dynamic_urban": {
+    "video": "foggy_video2.mp4",
+    "frames": 50,
+    "fps_processing_only": 48.49,
+    "fps_end_to_end": 29.52,
+    "latency_ms": {
+      "decode": 10.91,
+      "prep": 3.6,
+      "physics_features": 5.03,
+      "cnn_inference": 8.86,
+      "guided_smoothing": 0.84,
+      "temporal_coherence": 0.3,
+      "inversion": 1.91,
+      "total_proc": 20.62
+    },
+    "psnr": null,
+    "ssim": null,
+    "niqe": 3.93,
+    "temporal_flicker": 2.916,
+    "black_rate_pct": 2.39,
+    "white_rate_pct": 0.96,
+    "delta_t_stats": {
+      "mean": -0.0035,
+      "std": 0.0133,
+      "min": -0.0622,
+      "max": 0.0196,
+      "pct_above_pos_0_05": 0.0,
+      "pct_below_neg_0_05": 0.21,
+      "pct_near_zero_0_01": 61.6
+    }
+  },
+  "synthetic_gt": {
+    "video": "car-detection_patchy_haze.mp4",
+    "frames": 50,
+    "fps_processing_only": 25.98,
+    "fps_end_to_end": 11.25,
+    "latency_ms": {
+      "decode": 1.35,
+      "prep": 5.0,
+      "physics_features": 11.09,
+      "cnn_inference": 13.46,
+      "guided_smoothing": 1.67,
+      "temporal_coherence": 0.45,
+      "inversion": 6.53,
+      "total_proc": 38.49
+    },
+    "psnr": 9.61,
+    "ssim": 0.6871,
+    "niqe": 3.53,
+    "temporal_flicker": 21.059,
+    "black_rate_pct": 0.0,
+    "white_rate_pct": 0.33,
+    "delta_t_stats": {
+      "mean": -0.013,
+      "std": 0.0056,
+      "min": -0.0605,
+      "max": 0.0011,
+      "pct_above_pos_0_05": 0.0,
+      "pct_below_neg_0_05": 0.02,
+      "pct_near_zero_0_01": 22.16
+    }
+  },
+  "difficult_night": {
+    "video": "foggy_video3.mp4",
+    "frames": 50,
+    "fps_processing_only": 49.02,
+    "fps_end_to_end": 25.23,
+    "latency_ms": {
+      "decode": 15.99,
+      "prep": 4.43,
+      "physics_features": 5.51,
+      "cnn_inference": 6.73,
+      "guided_smoothing": 0.91,
+      "temporal_coherence": 0.3,
+      "inversion": 2.42,
+      "total_proc": 20.4
+    },
+    "psnr": null,
+    "ssim": null,
+    "niqe": 5.84,
+    "temporal_flicker": 8.066,
+    "black_rate_pct": 35.14,
+    "white_rate_pct": 2.44,
+    "delta_t_stats": {
+      "mean": 0.002,
+      "std": 0.0107,
+      "min": -0.0604,
+      "max": 0.0248,
+      "pct_above_pos_0_05": 0.0,
+      "pct_below_neg_0_05": 0.02,
+      "pct_near_zero_0_01": 77.76
+    }
+  }
+}

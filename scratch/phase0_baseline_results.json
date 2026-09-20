@@ -1,0 +1,46 @@
+{
+  "dense_fog": {
+    "video": "foggy_video1.mp4",
+    "frames": 50,
+    "fps": 8.52,
+    "psnr": null,
+    "ssim": null,
+    "niqe": 3.86,
+    "temporal_flicker": 9.486,
+    "black_rate_pct": 0.69,
+    "white_rate_pct": 6.09
+  },
+  "dynamic_urban": {
+    "video": "foggy_video2.mp4",
+    "frames": 50,
+    "fps": 30.79,
+    "psnr": null,
+    "ssim": null,
+    "niqe": 3.86,
+    "temporal_flicker": 2.919,
+    "black_rate_pct": 2.51,
+    "white_rate_pct": 0.55
+  },
+  "synthetic_gt": {
+    "video": "car-detection_patchy_haze.mp4",
+    "frames": 50,
+    "fps": 10.85,
+    "psnr": 9.61,
+    "ssim": 0.6876,
+    "niqe": 3.54,
+    "temporal_flicker": 21.007,
+    "black_rate_pct": 0.0,
+    "white_rate_pct": 0.33
+  },
+  "difficult_night": {
+    "video": "foggy_video3.mp4",
+    "frames": 50,
+    "fps": 31.5,
+    "psnr": null,
+    "ssim": null,
+    "niqe": 5.75,
+    "temporal_flicker": 8.06,
+    "black_rate_pct": 34.89,
+    "white_rate_pct": 2.46
+  }
+}

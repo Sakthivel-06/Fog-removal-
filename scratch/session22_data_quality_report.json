@@ -1,0 +1,35 @@
+{
+  "mean_delta_tgt_adjacent": 0.00069,
+  "mean_delta_haze_lum_adjacent": 0.349,
+  "min_tgt": 0.1529,
+  "max_tgt": 0.793,
+  "mean_tgt": 0.3777,
+  "std_tgt": 0.0965,
+  "has_nan": false,
+  "has_inf": false,
+  "histogram_pct": [
+    0.0,
+    0.7,
+    20.1,
+    44.4,
+    24.3,
+    7.9,
+    2.2,
+    0.4,
+    0.0,
+    0.0
+  ],
+  "bin_edges": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ]
+}

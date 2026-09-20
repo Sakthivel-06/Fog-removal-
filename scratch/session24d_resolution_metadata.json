@@ -1,0 +1,2122 @@
+{
+  "dense_fog_1080p": {
+    "DCP": {
+      "method": "DCP",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 770.58,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 68.424,
+        "mean_gradient_magnitude": 20.286
+      },
+      "niqe": 5.26,
+      "black_pixel_rate_pct": 0.096,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_DCP_native.png"
+    },
+    "CAP": {
+      "method": "CAP",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 957.56,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 48.565,
+        "mean_gradient_magnitude": 15.481
+      },
+      "niqe": 6.83,
+      "black_pixel_rate_pct": 0.177,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_CAP_native.png"
+    },
+    "CLAHE": {
+      "method": "CLAHE",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 1146.31,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 273.28,
+        "mean_gradient_magnitude": 41.362
+      },
+      "niqe": 4.55,
+      "black_pixel_rate_pct": 0.015,
+      "white_clipping_rate_pct": 0.001,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_CLAHE_native.png"
+    },
+    "Gamma": {
+      "method": "Gamma",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 19.72,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 35.844,
+        "mean_gradient_magnitude": 13.488
+      },
+      "niqe": 8.1,
+      "black_pixel_rate_pct": 0.087,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_Gamma_native.png"
+    },
+    "Original_CEEF": {
+      "method": "Original_CEEF",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native multi-scale pyramid"
+        }
+      ],
+      "runtime_ms": 11468.91,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 159.535,
+        "mean_gradient_magnitude": 29.133
+      },
+      "niqe": 6.24,
+      "black_pixel_rate_pct": 5.026,
+      "white_clipping_rate_pct": 0.001,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_Original_CEEF_native.png"
+    },
+    "Modified_CEEF": {
+      "method": "Modified_CEEF",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native exposure fusion"
+        }
+      ],
+      "runtime_ms": 5868.9,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 114.329,
+        "mean_gradient_magnitude": 32.525
+      },
+      "niqe": 3.7,
+      "black_pixel_rate_pct": 0.001,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_Modified_CEEF_native.png"
+    },
+    "A1_Physics": {
+      "method": "A1_Physics",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        135,
+        240
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        135,
+        240
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 32400,
+      "pixel_ratio_to_input": 0.0156,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            135,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Real-time max_process_res limit"
+        },
+        {
+          "src": [
+            135,
+            240
+          ],
+          "dst": [
+            240,
+            135
+          ],
+          "interp": "Bilinear",
+          "purpose": "Guide transmission downscale"
+        }
+      ],
+      "runtime_ms": 55.78,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 814.939,
+        "mean_gradient_magnitude": 60.498
+      },
+      "niqe": 3.93,
+      "black_pixel_rate_pct": 0.451,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_A1_Physics_native.png"
+    },
+    "A4_LR": {
+      "method": "A4_LR",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        135,
+        240
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        135,
+        240
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 32400,
+      "pixel_ratio_to_input": 0.0156,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            135,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Real-time max_process_res limit"
+        },
+        {
+          "src": [
+            135,
+            240
+          ],
+          "dst": [
+            240,
+            135
+          ],
+          "interp": "Bilinear",
+          "purpose": "Guide feature downscale for TinyUNet"
+        }
+      ],
+      "runtime_ms": 19.36,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 644.7,
+        "mean_gradient_magnitude": 53.736
+      },
+      "niqe": 4.14,
+      "black_pixel_rate_pct": 0.059,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_A4_LR_native.png"
+    },
+    "A4_FULL_TEST": {
+      "method": "A4_FULL_TEST",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            135,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Transmission estimation pipeline"
+        },
+        {
+          "src": [
+            240,
+            135
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "Bilinear + Guided Filter",
+          "purpose": "Edge-preserving transmission upsampling to native"
+        }
+      ],
+      "runtime_ms": 454.93,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 111.364,
+        "mean_gradient_magnitude": 24.899
+      },
+      "niqe": 6.97,
+      "black_pixel_rate_pct": 0.458,
+      "white_clipping_rate_pct": 0.002,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_A4_FULL_TEST_native.png"
+    },
+    "A4_FULL_BILINEAR": {
+      "method": "A4_FULL_BILINEAR",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            135,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Transmission estimation pipeline"
+        },
+        {
+          "src": [
+            240,
+            135
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "Bilinear",
+          "purpose": "Control transmission upsampling to native"
+        }
+      ],
+      "runtime_ms": 147.32,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 113.399,
+        "mean_gradient_magnitude": 25.122
+      },
+      "niqe": 6.93,
+      "black_pixel_rate_pct": 0.461,
+      "white_clipping_rate_pct": 0.002,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dense_fog_1080p_A4_FULL_BILINEAR_native.png"
+    }
+  },
+  "dynamic_urban_1080p": {
+    "DCP": {
+      "method": "DCP",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 650.78,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 448.462,
+        "mean_gradient_magnitude": 49.018
+      },
+      "niqe": 5.43,
+      "black_pixel_rate_pct": 0.207,
+      "white_clipping_rate_pct": 0.268,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_DCP_native.png"
+    },
+    "CAP": {
+      "method": "CAP",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 1155.6,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 352.859,
+        "mean_gradient_magnitude": 40.219
+      },
+      "niqe": 6.76,
+      "black_pixel_rate_pct": 5.131,
+      "white_clipping_rate_pct": 0.061,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_CAP_native.png"
+    },
+    "CLAHE": {
+      "method": "CLAHE",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 1187.31,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 824.636,
+        "mean_gradient_magnitude": 67.862
+      },
+      "niqe": 4.92,
+      "black_pixel_rate_pct": 0.003,
+      "white_clipping_rate_pct": 0.045,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_CLAHE_native.png"
+    },
+    "Gamma": {
+      "method": "Gamma",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 22.01,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 244.319,
+        "mean_gradient_magnitude": 33.928
+      },
+      "niqe": 7.05,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.025,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_Gamma_native.png"
+    },
+    "Original_CEEF": {
+      "method": "Original_CEEF",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native multi-scale pyramid"
+        }
+      ],
+      "runtime_ms": 10994.28,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 488.578,
+        "mean_gradient_magnitude": 51.005
+      },
+      "niqe": 5.92,
+      "black_pixel_rate_pct": 5.279,
+      "white_clipping_rate_pct": 0.147,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_Original_CEEF_native.png"
+    },
+    "Modified_CEEF": {
+      "method": "Modified_CEEF",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        1080,
+        1920
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native exposure fusion"
+        }
+      ],
+      "runtime_ms": 5163.96,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 325.295,
+        "mean_gradient_magnitude": 47.497
+      },
+      "niqe": 4.24,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.019,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_Modified_CEEF_native.png"
+    },
+    "A1_Physics": {
+      "method": "A1_Physics",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        135,
+        240
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        135,
+        240
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 32400,
+      "pixel_ratio_to_input": 0.0156,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            135,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Real-time max_process_res limit"
+        },
+        {
+          "src": [
+            135,
+            240
+          ],
+          "dst": [
+            240,
+            135
+          ],
+          "interp": "Bilinear",
+          "purpose": "Guide transmission downscale"
+        }
+      ],
+      "runtime_ms": 27.13,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 1792.543,
+        "mean_gradient_magnitude": 82.869
+      },
+      "niqe": 3.85,
+      "black_pixel_rate_pct": 2.238,
+      "white_clipping_rate_pct": 0.324,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_A1_Physics_native.png"
+    },
+    "A4_LR": {
+      "method": "A4_LR",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        135,
+        240
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        135,
+        240
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 32400,
+      "pixel_ratio_to_input": 0.0156,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            135,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Real-time max_process_res limit"
+        },
+        {
+          "src": [
+            135,
+            240
+          ],
+          "dst": [
+            240,
+            135
+          ],
+          "interp": "Bilinear",
+          "purpose": "Guide feature downscale for TinyUNet"
+        }
+      ],
+      "runtime_ms": 16.84,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 1412.525,
+        "mean_gradient_magnitude": 74.623
+      },
+      "niqe": 3.88,
+      "black_pixel_rate_pct": 0.201,
+      "white_clipping_rate_pct": 0.225,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_A4_LR_native.png"
+    },
+    "A4_FULL_TEST": {
+      "method": "A4_FULL_TEST",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            135,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Transmission estimation pipeline"
+        },
+        {
+          "src": [
+            240,
+            135
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "Bilinear + Guided Filter",
+          "purpose": "Edge-preserving transmission upsampling to native"
+        }
+      ],
+      "runtime_ms": 425.3,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 522.888,
+        "mean_gradient_magnitude": 50.19
+      },
+      "niqe": 6.49,
+      "black_pixel_rate_pct": 0.71,
+      "white_clipping_rate_pct": 1.381,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_A4_FULL_TEST_native.png"
+    },
+    "A4_FULL_BILINEAR": {
+      "method": "A4_FULL_BILINEAR",
+      "input_resolution": [
+        1080,
+        1920
+      ],
+      "processing_resolution": [
+        1080,
+        1920
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        1080,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2073600,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1080,
+            1920
+          ],
+          "dst": [
+            135,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Transmission estimation pipeline"
+        },
+        {
+          "src": [
+            240,
+            135
+          ],
+          "dst": [
+            1080,
+            1920
+          ],
+          "interp": "Bilinear",
+          "purpose": "Control transmission upsampling to native"
+        }
+      ],
+      "runtime_ms": 213.32,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 531.025,
+        "mean_gradient_magnitude": 50.655
+      },
+      "niqe": 6.44,
+      "black_pixel_rate_pct": 0.773,
+      "white_clipping_rate_pct": 1.377,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "dynamic_urban_1080p_A4_FULL_BILINEAR_native.png"
+    }
+  },
+  "night_fog_1440p": {
+    "DCP": {
+      "method": "DCP",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        1440,
+        1920
+      ],
+      "guide_resolution": [
+        1440,
+        1920
+      ],
+      "output_resolution": [
+        1440,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2764800,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            1440,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 1152.4,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 6.319,
+        "mean_gradient_magnitude": 4.29
+      },
+      "niqe": 11.02,
+      "black_pixel_rate_pct": 44.246,
+      "white_clipping_rate_pct": 0.003,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_DCP_native.png"
+    },
+    "CAP": {
+      "method": "CAP",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        1440,
+        1920
+      ],
+      "guide_resolution": [
+        1440,
+        1920
+      ],
+      "output_resolution": [
+        1440,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2764800,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            1440,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 1088.02,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 3.828,
+        "mean_gradient_magnitude": 3.72
+      },
+      "niqe": 8.56,
+      "black_pixel_rate_pct": 0.018,
+      "white_clipping_rate_pct": 0.002,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_CAP_native.png"
+    },
+    "CLAHE": {
+      "method": "CLAHE",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        1440,
+        1920
+      ],
+      "guide_resolution": [
+        1440,
+        1920
+      ],
+      "output_resolution": [
+        1440,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2764800,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            1440,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 1409.97,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 20.323,
+        "mean_gradient_magnitude": 8.672
+      },
+      "niqe": 10.05,
+      "black_pixel_rate_pct": 0.033,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_CLAHE_native.png"
+    },
+    "Gamma": {
+      "method": "Gamma",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        1440,
+        1920
+      ],
+      "guide_resolution": [
+        1440,
+        1920
+      ],
+      "output_resolution": [
+        1440,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2764800,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            1440,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 26.48,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 3.456,
+        "mean_gradient_magnitude": 2.39
+      },
+      "niqe": 12.0,
+      "black_pixel_rate_pct": 86.1,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_Gamma_native.png"
+    },
+    "Original_CEEF": {
+      "method": "Original_CEEF",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        1440,
+        1920
+      ],
+      "guide_resolution": [
+        1440,
+        1920
+      ],
+      "output_resolution": [
+        1440,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2764800,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            1440,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native multi-scale pyramid"
+        }
+      ],
+      "runtime_ms": 13843.52,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 9.393,
+        "mean_gradient_magnitude": 6.234
+      },
+      "niqe": 10.16,
+      "black_pixel_rate_pct": 28.239,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_Original_CEEF_native.png"
+    },
+    "Modified_CEEF": {
+      "method": "Modified_CEEF",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        1440,
+        1920
+      ],
+      "guide_resolution": [
+        1440,
+        1920
+      ],
+      "output_resolution": [
+        1440,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2764800,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            1440,
+            1920
+          ],
+          "interp": "None",
+          "purpose": "Native exposure fusion"
+        }
+      ],
+      "runtime_ms": 5749.86,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 11.997,
+        "mean_gradient_magnitude": 7.912
+      },
+      "niqe": 7.67,
+      "black_pixel_rate_pct": 2.365,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_Modified_CEEF_native.png"
+    },
+    "A1_Physics": {
+      "method": "A1_Physics",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        180,
+        240
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        180,
+        240
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 43200,
+      "pixel_ratio_to_input": 0.0156,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            180,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Real-time max_process_res limit"
+        },
+        {
+          "src": [
+            180,
+            240
+          ],
+          "dst": [
+            240,
+            135
+          ],
+          "interp": "Bilinear",
+          "purpose": "Guide transmission downscale"
+        }
+      ],
+      "runtime_ms": 33.09,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 142.214,
+        "mean_gradient_magnitude": 16.586
+      },
+      "niqe": 7.41,
+      "black_pixel_rate_pct": 43.484,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_A1_Physics_native.png"
+    },
+    "A4_LR": {
+      "method": "A4_LR",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        180,
+        240
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        180,
+        240
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 43200,
+      "pixel_ratio_to_input": 0.0156,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            180,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Real-time max_process_res limit"
+        },
+        {
+          "src": [
+            180,
+            240
+          ],
+          "dst": [
+            240,
+            135
+          ],
+          "interp": "Bilinear",
+          "purpose": "Guide feature downscale for TinyUNet"
+        }
+      ],
+      "runtime_ms": 21.08,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 120.061,
+        "mean_gradient_magnitude": 15.895
+      },
+      "niqe": 7.39,
+      "black_pixel_rate_pct": 43.475,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_A4_LR_native.png"
+    },
+    "A4_FULL_TEST": {
+      "method": "A4_FULL_TEST",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        1440,
+        1920
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        1440,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2764800,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            180,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Transmission estimation pipeline"
+        },
+        {
+          "src": [
+            240,
+            135
+          ],
+          "dst": [
+            1440,
+            1920
+          ],
+          "interp": "Bilinear + Guided Filter",
+          "purpose": "Edge-preserving transmission upsampling to native"
+        }
+      ],
+      "runtime_ms": 579.87,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 6.026,
+        "mean_gradient_magnitude": 4.355
+      },
+      "niqe": 11.11,
+      "black_pixel_rate_pct": 45.113,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_A4_FULL_TEST_native.png"
+    },
+    "A4_FULL_BILINEAR": {
+      "method": "A4_FULL_BILINEAR",
+      "input_resolution": [
+        1440,
+        1920
+      ],
+      "processing_resolution": [
+        1440,
+        1920
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        1440,
+        1920
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 2764800,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            1440,
+            1920
+          ],
+          "dst": [
+            180,
+            240
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Transmission estimation pipeline"
+        },
+        {
+          "src": [
+            240,
+            135
+          ],
+          "dst": [
+            1440,
+            1920
+          ],
+          "interp": "Bilinear",
+          "purpose": "Control transmission upsampling to native"
+        }
+      ],
+      "runtime_ms": 170.95,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 6.073,
+        "mean_gradient_magnitude": 4.361
+      },
+      "niqe": 11.11,
+      "black_pixel_rate_pct": 45.102,
+      "white_clipping_rate_pct": 0.0,
+      "psnr": null,
+      "ssim": null,
+      "saved_file": "night_fog_1440p_A4_FULL_BILINEAR_native.png"
+    }
+  },
+  "synthetic_gt_432p": {
+    "DCP": {
+      "method": "DCP",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        768,
+        432
+      ],
+      "guide_resolution": [
+        768,
+        432
+      ],
+      "output_resolution": [
+        768,
+        432
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 331776,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            768,
+            432
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 82.94,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 96.591,
+        "mean_gradient_magnitude": 23.394
+      },
+      "niqe": 3.28,
+      "black_pixel_rate_pct": 0.01,
+      "white_clipping_rate_pct": 0.255,
+      "psnr": 15.74,
+      "ssim": 0.61,
+      "saved_file": "synthetic_gt_432p_DCP_native.png"
+    },
+    "CAP": {
+      "method": "CAP",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        768,
+        432
+      ],
+      "guide_resolution": [
+        768,
+        432
+      ],
+      "output_resolution": [
+        768,
+        432
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 331776,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            768,
+            432
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 210.4,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 25.436,
+        "mean_gradient_magnitude": 12.893
+      },
+      "niqe": 3.63,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.026,
+      "psnr": 20.7,
+      "ssim": 0.8321,
+      "saved_file": "synthetic_gt_432p_CAP_native.png"
+    },
+    "CLAHE": {
+      "method": "CLAHE",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        768,
+        432
+      ],
+      "guide_resolution": [
+        768,
+        432
+      ],
+      "output_resolution": [
+        768,
+        432
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 331776,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            768,
+            432
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 213.55,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 147.433,
+        "mean_gradient_magnitude": 32.291
+      },
+      "niqe": 3.44,
+      "black_pixel_rate_pct": 0.003,
+      "white_clipping_rate_pct": 0.015,
+      "psnr": 14.61,
+      "ssim": 0.5161,
+      "saved_file": "synthetic_gt_432p_CLAHE_native.png"
+    },
+    "Gamma": {
+      "method": "Gamma",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        768,
+        432
+      ],
+      "guide_resolution": [
+        768,
+        432
+      ],
+      "output_resolution": [
+        768,
+        432
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 331776,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            768,
+            432
+          ],
+          "interp": "None",
+          "purpose": "Native processing"
+        }
+      ],
+      "runtime_ms": 4.26,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 12.728,
+        "mean_gradient_magnitude": 9.193
+      },
+      "niqe": 4.3,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.012,
+      "psnr": 15.68,
+      "ssim": 0.854,
+      "saved_file": "synthetic_gt_432p_Gamma_native.png"
+    },
+    "Original_CEEF": {
+      "method": "Original_CEEF",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        768,
+        432
+      ],
+      "guide_resolution": [
+        768,
+        432
+      ],
+      "output_resolution": [
+        768,
+        432
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 331776,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            768,
+            432
+          ],
+          "interp": "None",
+          "purpose": "Native multi-scale pyramid"
+        }
+      ],
+      "runtime_ms": 1352.01,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 59.946,
+        "mean_gradient_magnitude": 20.744
+      },
+      "niqe": 3.39,
+      "black_pixel_rate_pct": 0.027,
+      "white_clipping_rate_pct": 0.078,
+      "psnr": 17.41,
+      "ssim": 0.6813,
+      "saved_file": "synthetic_gt_432p_Original_CEEF_native.png"
+    },
+    "Modified_CEEF": {
+      "method": "Modified_CEEF",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        768,
+        432
+      ],
+      "guide_resolution": [
+        768,
+        432
+      ],
+      "output_resolution": [
+        768,
+        432
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 331776,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            768,
+            432
+          ],
+          "interp": "None",
+          "purpose": "Native exposure fusion"
+        }
+      ],
+      "runtime_ms": 819.14,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 47.348,
+        "mean_gradient_magnitude": 23.678
+      },
+      "niqe": 3.96,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.009,
+      "psnr": 18.6,
+      "ssim": 0.679,
+      "saved_file": "synthetic_gt_432p_Modified_CEEF_native.png"
+    },
+    "A1_Physics": {
+      "method": "A1_Physics",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        426,
+        239
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        426,
+        239
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 101814,
+      "pixel_ratio_to_input": 0.3069,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            426,
+            239
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Real-time max_process_res limit"
+        },
+        {
+          "src": [
+            426,
+            239
+          ],
+          "dst": [
+            240,
+            135
+          ],
+          "interp": "Bilinear",
+          "purpose": "Guide transmission downscale"
+        }
+      ],
+      "runtime_ms": 26.96,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 29.029,
+        "mean_gradient_magnitude": 18.032
+      },
+      "niqe": 3.54,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.3,
+      "psnr": 9.8,
+      "ssim": 0.6765,
+      "saved_file": "synthetic_gt_432p_A1_Physics_native.png"
+    },
+    "A4_LR": {
+      "method": "A4_LR",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        426,
+        239
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        426,
+        239
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 101814,
+      "pixel_ratio_to_input": 0.3069,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            426,
+            239
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Real-time max_process_res limit"
+        },
+        {
+          "src": [
+            426,
+            239
+          ],
+          "dst": [
+            240,
+            135
+          ],
+          "interp": "Bilinear",
+          "purpose": "Guide feature downscale for TinyUNet"
+        }
+      ],
+      "runtime_ms": 34.54,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 28.352,
+        "mean_gradient_magnitude": 17.531
+      },
+      "niqe": 3.52,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.303,
+      "psnr": 9.79,
+      "ssim": 0.6824,
+      "saved_file": "synthetic_gt_432p_A4_LR_native.png"
+    },
+    "A4_FULL_TEST": {
+      "method": "A4_FULL_TEST",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        768,
+        432
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        768,
+        432
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 331776,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            426,
+            239
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Transmission estimation pipeline"
+        },
+        {
+          "src": [
+            240,
+            135
+          ],
+          "dst": [
+            768,
+            432
+          ],
+          "interp": "Bilinear + Guided Filter",
+          "purpose": "Edge-preserving transmission upsampling to native"
+        }
+      ],
+      "runtime_ms": 64.89,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 19.808,
+        "mean_gradient_magnitude": 11.143
+      },
+      "niqe": 4.06,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.287,
+      "psnr": 9.78,
+      "ssim": 0.7517,
+      "saved_file": "synthetic_gt_432p_A4_FULL_TEST_native.png"
+    },
+    "A4_FULL_BILINEAR": {
+      "method": "A4_FULL_BILINEAR",
+      "input_resolution": [
+        768,
+        432
+      ],
+      "processing_resolution": [
+        768,
+        432
+      ],
+      "guide_resolution": [
+        240,
+        135
+      ],
+      "output_resolution": [
+        768,
+        432
+      ],
+      "channels": 3,
+      "dtype": "uint8",
+      "pixel_count": 331776,
+      "pixel_ratio_to_input": 1.0,
+      "resize_chain": [
+        {
+          "src": [
+            768,
+            432
+          ],
+          "dst": [
+            426,
+            239
+          ],
+          "interp": "Stride/Bilinear",
+          "purpose": "Transmission estimation pipeline"
+        },
+        {
+          "src": [
+            240,
+            135
+          ],
+          "dst": [
+            768,
+            432
+          ],
+          "interp": "Bilinear",
+          "purpose": "Control transmission upsampling to native"
+        }
+      ],
+      "runtime_ms": 25.77,
+      "sharpness_diagnostics": {
+        "laplacian_variance": 21.191,
+        "mean_gradient_magnitude": 11.47
+      },
+      "niqe": 3.82,
+      "black_pixel_rate_pct": 0.0,
+      "white_clipping_rate_pct": 0.305,
+      "psnr": 9.78,
+      "ssim": 0.7501,
+      "saved_file": "synthetic_gt_432p_A4_FULL_BILINEAR_native.png"
+    }
+  }
+}

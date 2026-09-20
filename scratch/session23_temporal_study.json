@@ -1,0 +1,80 @@
+{
+  "car_detection": {
+    "A1_baseline": {
+      "overall_flicker": 20.836471557617188,
+      "static_flicker": 5.705203533172607,
+      "motion_flicker": 30.406700134277344,
+      "temporal_ssim": 0.6768085436559047
+    },
+    "A2_no_temp_loss": {
+      "overall_flicker": 21.09883689880371,
+      "static_flicker": 5.716925144195557,
+      "motion_flicker": 30.7633113861084,
+      "temporal_ssim": 0.6714375379206883
+    },
+    "A3_temp_loss_no_inf": {
+      "overall_flicker": 21.063323974609375,
+      "static_flicker": 5.7165350914001465,
+      "motion_flicker": 30.715917587280273,
+      "temporal_ssim": 0.671899007465202
+    },
+    "A4_proposed_full": {
+      "overall_flicker": 20.47174072265625,
+      "static_flicker": 5.707000732421875,
+      "motion_flicker": 29.83869743347168,
+      "temporal_ssim": 0.6833197485341462
+    }
+  },
+  "dense_fog": {
+    "A1_baseline": {
+      "overall_flicker": 9.407787322998047,
+      "static_flicker": 2.264042854309082,
+      "motion_flicker": 39.12849426269531,
+      "temporal_ssim": 0.7544758448210718
+    },
+    "A2_no_temp_loss": {
+      "overall_flicker": 8.355703353881836,
+      "static_flicker": 2.1519432067871094,
+      "motion_flicker": 37.24516296386719,
+      "temporal_ssim": 0.7657420424576463
+    },
+    "A3_temp_loss_no_inf": {
+      "overall_flicker": 8.27779769897461,
+      "static_flicker": 2.1719791889190674,
+      "motion_flicker": 36.847198486328125,
+      "temporal_ssim": 0.7660981369042117
+    },
+    "A4_proposed_full": {
+      "overall_flicker": 8.400236129760742,
+      "static_flicker": 2.1399688720703125,
+      "motion_flicker": 36.93241500854492,
+      "temporal_ssim": 0.764194101233335
+    }
+  },
+  "dynamic_urban": {
+    "A1_baseline": {
+      "overall_flicker": 2.980348587036133,
+      "static_flicker": 1.330363392829895,
+      "motion_flicker": 42.209041595458984,
+      "temporal_ssim": 0.9562013092442746
+    },
+    "A2_no_temp_loss": {
+      "overall_flicker": 2.8240039348602295,
+      "static_flicker": 1.294760823249817,
+      "motion_flicker": 40.081825256347656,
+      "temporal_ssim": 0.9568352594619481
+    },
+    "A3_temp_loss_no_inf": {
+      "overall_flicker": 2.781442642211914,
+      "static_flicker": 1.280035376548767,
+      "motion_flicker": 39.81385040283203,
+      "temporal_ssim": 0.9570938114959275
+    },
+    "A4_proposed_full": {
+      "overall_flicker": 2.7776103019714355,
+      "static_flicker": 1.247283697128296,
+      "motion_flicker": 39.82379150390625,
+      "temporal_ssim": 0.9569742767022407
+    }
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "foggy_video1": {
+    "A1": {
+      "frame_10": {
+        "frame_index": 10,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 1.9652572016460905,
+        "display_scaling_max_diff": 44,
+        "benchmark_saved_file": "foggy_video1_A1_f10_benchmark.png",
+        "web_saved_file": "foggy_video1_A1_f10_web.png",
+        "browser_display_file": "foggy_video1_A1_f10_browser_display_sim.png"
+      },
+      "frame_25": {
+        "frame_index": 25,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 2.2044958847736624,
+        "display_scaling_max_diff": 47,
+        "benchmark_saved_file": "foggy_video1_A1_f25_benchmark.png",
+        "web_saved_file": "foggy_video1_A1_f25_web.png",
+        "browser_display_file": "foggy_video1_A1_f25_browser_display_sim.png"
+      },
+      "frame_40": {
+        "frame_index": 40,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 2.1080144032921813,
+        "display_scaling_max_diff": 35,
+        "benchmark_saved_file": "foggy_video1_A1_f40_benchmark.png",
+        "web_saved_file": "foggy_video1_A1_f40_web.png",
+        "browser_display_file": "foggy_video1_A1_f40_browser_display_sim.png"
+      }
+    },
+    "A4": {
+      "frame_10": {
+        "frame_index": 10,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 1.7194341563786009,
+        "display_scaling_max_diff": 39,
+        "benchmark_saved_file": "foggy_video1_A4_f10_benchmark.png",
+        "web_saved_file": "foggy_video1_A4_f10_web.png",
+        "browser_display_file": "foggy_video1_A4_f10_browser_display_sim.png"
+      },
+      "frame_25": {
+        "frame_index": 25,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 1.922366255144033,
+        "display_scaling_max_diff": 41,
+        "benchmark_saved_file": "foggy_video1_A4_f25_benchmark.png",
+        "web_saved_file": "foggy_video1_A4_f25_web.png",
+        "browser_display_file": "foggy_video1_A4_f25_browser_display_sim.png"
+      },
+      "frame_40": {
+        "frame_index": 40,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 1.8472942386831275,
+        "display_scaling_max_diff": 32,
+        "benchmark_saved_file": "foggy_video1_A4_f40_benchmark.png",
+        "web_saved_file": "foggy_video1_A4_f40_web.png",
+        "browser_display_file": "foggy_video1_A4_f40_browser_display_sim.png"
+      }
+    }
+  },
+  "foggy_video2": {
+    "A1": {
+      "frame_10": {
+        "frame_index": 10,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 3.049125514403292,
+        "display_scaling_max_diff": 58,
+        "benchmark_saved_file": "foggy_video2_A1_f10_benchmark.png",
+        "web_saved_file": "foggy_video2_A1_f10_web.png",
+        "browser_display_file": "foggy_video2_A1_f10_browser_display_sim.png"
+      },
+      "frame_25": {
+        "frame_index": 25,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 3.149814814814815,
+        "display_scaling_max_diff": 59,
+        "benchmark_saved_file": "foggy_video2_A1_f25_benchmark.png",
+        "web_saved_file": "foggy_video2_A1_f25_web.png",
+        "browser_display_file": "foggy_video2_A1_f25_browser_display_sim.png"
+      },
+      "frame_40": {
+        "frame_index": 40,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 3.1438477366255144,
+        "display_scaling_max_diff": 65,
+        "benchmark_saved_file": "foggy_video2_A1_f40_benchmark.png",
+        "web_saved_file": "foggy_video2_A1_f40_web.png",
+        "browser_display_file": "foggy_video2_A1_f40_browser_display_sim.png"
+      }
+    },
+    "A4": {
+      "frame_10": {
+        "frame_index": 10,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 2.7104320987654322,
+        "display_scaling_max_diff": 48,
+        "benchmark_saved_file": "foggy_video2_A4_f10_benchmark.png",
+        "web_saved_file": "foggy_video2_A4_f10_web.png",
+        "browser_display_file": "foggy_video2_A4_f10_browser_display_sim.png"
+      },
+      "frame_25": {
+        "frame_index": 25,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 2.7997427983539094,
+        "display_scaling_max_diff": 52,
+        "benchmark_saved_file": "foggy_video2_A4_f25_benchmark.png",
+        "web_saved_file": "foggy_video2_A4_f25_web.png",
+        "browser_display_file": "foggy_video2_A4_f25_browser_display_sim.png"
+      },
+      "frame_40": {
+        "frame_index": 40,
+        "input_size": [
+          1080,
+          1920
+        ],
+        "processing_size": [
+          135,
+          240
+        ],
+        "saved_output_size": [
+          135,
+          240
+        ],
+        "display_size": [
+          680,
+          1208
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 2.789423868312757,
+        "display_scaling_max_diff": 57,
+        "benchmark_saved_file": "foggy_video2_A4_f40_benchmark.png",
+        "web_saved_file": "foggy_video2_A4_f40_web.png",
+        "browser_display_file": "foggy_video2_A4_f40_browser_display_sim.png"
+      }
+    }
+  },
+  "car-detection_patchy_haze": {
+    "A1": {
+      "frame_10": {
+        "frame_index": 10,
+        "input_size": [
+          768,
+          432
+        ],
+        "processing_size": [
+          426,
+          239
+        ],
+        "saved_output_size": [
+          426,
+          239
+        ],
+        "display_size": [
+          680,
+          381
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.3740251831771662,
+        "display_scaling_max_diff": 21,
+        "benchmark_saved_file": "car-detection_patchy_haze_A1_f10_benchmark.png",
+        "web_saved_file": "car-detection_patchy_haze_A1_f10_web.png",
+        "browser_display_file": "car-detection_patchy_haze_A1_f10_browser_display_sim.png"
+      },
+      "frame_25": {
+        "frame_index": 25,
+        "input_size": [
+          768,
+          432
+        ],
+        "processing_size": [
+          426,
+          239
+        ],
+        "saved_output_size": [
+          426,
+          239
+        ],
+        "display_size": [
+          680,
+          381
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.37419870220860263,
+        "display_scaling_max_diff": 23,
+        "benchmark_saved_file": "car-detection_patchy_haze_A1_f25_benchmark.png",
+        "web_saved_file": "car-detection_patchy_haze_A1_f25_web.png",
+        "browser_display_file": "car-detection_patchy_haze_A1_f25_browser_display_sim.png"
+      },
+      "frame_40": {
+        "frame_index": 40,
+        "input_size": [
+          768,
+          432
+        ],
+        "processing_size": [
+          426,
+          239
+        ],
+        "saved_output_size": [
+          426,
+          239
+        ],
+        "display_size": [
+          680,
+          381
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.404757695405347,
+        "display_scaling_max_diff": 27,
+        "benchmark_saved_file": "car-detection_patchy_haze_A1_f40_benchmark.png",
+        "web_saved_file": "car-detection_patchy_haze_A1_f40_web.png",
+        "browser_display_file": "car-detection_patchy_haze_A1_f40_browser_display_sim.png"
+      }
+    },
+    "A4": {
+      "frame_10": {
+        "frame_index": 10,
+        "input_size": [
+          768,
+          432
+        ],
+        "processing_size": [
+          426,
+          239
+        ],
+        "saved_output_size": [
+          426,
+          239
+        ],
+        "display_size": [
+          680,
+          381
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.370885470891364,
+        "display_scaling_max_diff": 20,
+        "benchmark_saved_file": "car-detection_patchy_haze_A4_f10_benchmark.png",
+        "web_saved_file": "car-detection_patchy_haze_A4_f10_web.png",
+        "browser_display_file": "car-detection_patchy_haze_A4_f10_browser_display_sim.png"
+      },
+      "frame_25": {
+        "frame_index": 25,
+        "input_size": [
+          768,
+          432
+        ],
+        "processing_size": [
+          426,
+          239
+        ],
+        "saved_output_size": [
+          426,
+          239
+        ],
+        "display_size": [
+          680,
+          381
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.36796183890886,
+        "display_scaling_max_diff": 23,
+        "benchmark_saved_file": "car-detection_patchy_haze_A4_f25_benchmark.png",
+        "web_saved_file": "car-detection_patchy_haze_A4_f25_web.png",
+        "browser_display_file": "car-detection_patchy_haze_A4_f25_browser_display_sim.png"
+      },
+      "frame_40": {
+        "frame_index": 40,
+        "input_size": [
+          768,
+          432
+        ],
+        "processing_size": [
+          426,
+          239
+        ],
+        "saved_output_size": [
+          426,
+          239
+        ],
+        "display_size": [
+          680,
+          381
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.39848809266571067,
+        "display_scaling_max_diff": 27,
+        "benchmark_saved_file": "car-detection_patchy_haze_A4_f40_benchmark.png",
+        "web_saved_file": "car-detection_patchy_haze_A4_f40_web.png",
+        "browser_display_file": "car-detection_patchy_haze_A4_f40_browser_display_sim.png"
+      }
+    }
+  },
+  "foggy_video3": {
+    "A1": {
+      "frame_10": {
+        "frame_index": 10,
+        "input_size": [
+          1440,
+          1920
+        ],
+        "processing_size": [
+          180,
+          240
+        ],
+        "saved_output_size": [
+          180,
+          240
+        ],
+        "display_size": [
+          680,
+          906
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.7752391975308642,
+        "display_scaling_max_diff": 30,
+        "benchmark_saved_file": "foggy_video3_A1_f10_benchmark.png",
+        "web_saved_file": "foggy_video3_A1_f10_web.png",
+        "browser_display_file": "foggy_video3_A1_f10_browser_display_sim.png"
+      },
+      "frame_25": {
+        "frame_index": 25,
+        "input_size": [
+          1440,
+          1920
+        ],
+        "processing_size": [
+          180,
+          240
+        ],
+        "saved_output_size": [
+          180,
+          240
+        ],
+        "display_size": [
+          680,
+          906
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.3788811728395062,
+        "display_scaling_max_diff": 60,
+        "benchmark_saved_file": "foggy_video3_A1_f25_benchmark.png",
+        "web_saved_file": "foggy_video3_A1_f25_web.png",
+        "browser_display_file": "foggy_video3_A1_f25_browser_display_sim.png"
+      },
+      "frame_40": {
+        "frame_index": 40,
+        "input_size": [
+          1440,
+          1920
+        ],
+        "processing_size": [
+          180,
+          240
+        ],
+        "saved_output_size": [
+          180,
+          240
+        ],
+        "display_size": [
+          680,
+          906
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.3526311728395062,
+        "display_scaling_max_diff": 57,
+        "benchmark_saved_file": "foggy_video3_A1_f40_benchmark.png",
+        "web_saved_file": "foggy_video3_A1_f40_web.png",
+        "browser_display_file": "foggy_video3_A1_f40_browser_display_sim.png"
+      }
+    },
+    "A4": {
+      "frame_10": {
+        "frame_index": 10,
+        "input_size": [
+          1440,
+          1920
+        ],
+        "processing_size": [
+          180,
+          240
+        ],
+        "saved_output_size": [
+          180,
+          240
+        ],
+        "display_size": [
+          680,
+          906
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.6908179012345679,
+        "display_scaling_max_diff": 26,
+        "benchmark_saved_file": "foggy_video3_A4_f10_benchmark.png",
+        "web_saved_file": "foggy_video3_A4_f10_web.png",
+        "browser_display_file": "foggy_video3_A4_f10_browser_display_sim.png"
+      },
+      "frame_25": {
+        "frame_index": 25,
+        "input_size": [
+          1440,
+          1920
+        ],
+        "processing_size": [
+          180,
+          240
+        ],
+        "saved_output_size": [
+          180,
+          240
+        ],
+        "display_size": [
+          680,
+          906
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.3580864197530864,
+        "display_scaling_max_diff": 50,
+        "benchmark_saved_file": "foggy_video3_A4_f25_benchmark.png",
+        "web_saved_file": "foggy_video3_A4_f25_web.png",
+        "browser_display_file": "foggy_video3_A4_f25_browser_display_sim.png"
+      },
+      "frame_40": {
+        "frame_index": 40,
+        "input_size": [
+          1440,
+          1920
+        ],
+        "processing_size": [
+          180,
+          240
+        ],
+        "saved_output_size": [
+          180,
+          240
+        ],
+        "display_size": [
+          680,
+          906
+        ],
+        "output_mae": 0.0,
+        "output_max_pixel_diff": 0,
+        "output_psnr": 100.0,
+        "display_scaling_mae": 0.32871913580246914,
+        "display_scaling_max_diff": 53,
+        "benchmark_saved_file": "foggy_video3_A4_f40_benchmark.png",
+        "web_saved_file": "foggy_video3_A4_f40_web.png",
+        "browser_display_file": "foggy_video3_A4_f40_browser_display_sim.png"
+      }
+    }
+  }
+}

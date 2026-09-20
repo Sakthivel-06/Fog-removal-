@@ -1,0 +1,538 @@
+{
+  "A1_baseline": {
+    "dense_fog": {
+      "video": "foggy_video1.mp4",
+      "mode": "A1_baseline",
+      "frames": 50,
+      "fps_processing_only": 104.67,
+      "fps_end_to_end": 43.59,
+      "latency_ms": {
+        "decode": 12.02,
+        "prep": 2.89,
+        "physics_features": 4.25,
+        "cnn_inference": 0.04,
+        "guided_smoothing": 0.59,
+        "temporal_coherence": 0.22,
+        "inversion": 1.51,
+        "total_proc": 9.55
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 3.86,
+      "temporal_flicker": 9.486,
+      "black_rate_pct": 0.69,
+      "white_rate_pct": 6.09,
+      "delta_t_stats": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "pct_above_pos_0_05": 0.0,
+        "pct_below_neg_0_05": 0.0,
+        "pct_near_zero_0_01": 100.0
+      }
+    },
+    "dynamic_urban": {
+      "video": "foggy_video2.mp4",
+      "mode": "A1_baseline",
+      "frames": 50,
+      "fps_processing_only": 93.57,
+      "fps_end_to_end": 41.48,
+      "latency_ms": {
+        "decode": 11.79,
+        "prep": 3.37,
+        "physics_features": 4.44,
+        "cnn_inference": 0.04,
+        "guided_smoothing": 0.7,
+        "temporal_coherence": 0.26,
+        "inversion": 1.81,
+        "total_proc": 10.69
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 3.86,
+      "temporal_flicker": 2.919,
+      "black_rate_pct": 2.51,
+      "white_rate_pct": 0.55,
+      "delta_t_stats": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "pct_above_pos_0_05": 0.0,
+        "pct_below_neg_0_05": 0.0,
+        "pct_near_zero_0_01": 100.0
+      }
+    },
+    "synthetic_gt": {
+      "video": "car-detection_patchy_haze.mp4",
+      "mode": "A1_baseline",
+      "frames": 50,
+      "fps_processing_only": 51.04,
+      "fps_end_to_end": 14.58,
+      "latency_ms": {
+        "decode": 1.52,
+        "prep": 4.31,
+        "physics_features": 8.44,
+        "cnn_inference": 0.06,
+        "guided_smoothing": 1.13,
+        "temporal_coherence": 0.33,
+        "inversion": 5.18,
+        "total_proc": 19.59
+      },
+      "psnr": 9.61,
+      "ssim": 0.6876,
+      "transmission_mae": null,
+      "niqe": 3.54,
+      "temporal_flicker": 21.007,
+      "black_rate_pct": 0.0,
+      "white_rate_pct": 0.33,
+      "delta_t_stats": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "pct_above_pos_0_05": 0.0,
+        "pct_below_neg_0_05": 0.0,
+        "pct_near_zero_0_01": 100.0
+      }
+    },
+    "difficult_night": {
+      "video": "foggy_video3.mp4",
+      "mode": "A1_baseline",
+      "frames": 50,
+      "fps_processing_only": 104.72,
+      "fps_end_to_end": 36.19,
+      "latency_ms": {
+        "decode": 15.95,
+        "prep": 3.23,
+        "physics_features": 3.85,
+        "cnn_inference": 0.04,
+        "guided_smoothing": 0.58,
+        "temporal_coherence": 0.19,
+        "inversion": 1.62,
+        "total_proc": 9.55
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 5.75,
+      "temporal_flicker": 8.06,
+      "black_rate_pct": 34.89,
+      "white_rate_pct": 2.46,
+      "delta_t_stats": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "pct_above_pos_0_05": 0.0,
+        "pct_below_neg_0_05": 0.0,
+        "pct_near_zero_0_01": 100.0
+      }
+    }
+  },
+  "A2_no_temp_loss": {
+    "dense_fog": {
+      "video": "foggy_video1.mp4",
+      "mode": "A2_no_temp_loss",
+      "frames": 50,
+      "fps_processing_only": 50.7,
+      "fps_end_to_end": 30.69,
+      "latency_ms": {
+        "decode": 11.19,
+        "prep": 3.44,
+        "physics_features": 4.82,
+        "cnn_inference": 8.36,
+        "guided_smoothing": 0.8,
+        "temporal_coherence": 0.25,
+        "inversion": 1.95,
+        "total_proc": 19.72
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 4.12,
+      "temporal_flicker": 8.433,
+      "black_rate_pct": 0.07,
+      "white_rate_pct": 7.08,
+      "delta_t_stats": {
+        "mean": 0.0317,
+        "std": 0.1223,
+        "min": -0.3,
+        "max": 0.1488,
+        "pct_above_pos_0_05": 75.26,
+        "pct_below_neg_0_05": 18.22,
+        "pct_near_zero_0_01": 0.95
+      }
+    },
+    "dynamic_urban": {
+      "video": "foggy_video2.mp4",
+      "mode": "A2_no_temp_loss",
+      "frames": 50,
+      "fps_processing_only": 40.65,
+      "fps_end_to_end": 25.5,
+      "latency_ms": {
+        "decode": 12.67,
+        "prep": 3.97,
+        "physics_features": 5.78,
+        "cnn_inference": 11.09,
+        "guided_smoothing": 0.99,
+        "temporal_coherence": 0.32,
+        "inversion": 2.35,
+        "total_proc": 24.6
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 3.87,
+      "temporal_flicker": 2.76,
+      "black_rate_pct": 0.14,
+      "white_rate_pct": 1.04,
+      "delta_t_stats": {
+        "mean": -0.0315,
+        "std": 0.145,
+        "min": -0.3,
+        "max": 0.1094,
+        "pct_above_pos_0_05": 55.16,
+        "pct_below_neg_0_05": 30.07,
+        "pct_near_zero_0_01": 2.13
+      }
+    },
+    "synthetic_gt": {
+      "video": "car-detection_patchy_haze.mp4",
+      "mode": "A2_no_temp_loss",
+      "frames": 50,
+      "fps_processing_only": 27.72,
+      "fps_end_to_end": 11.05,
+      "latency_ms": {
+        "decode": 1.53,
+        "prep": 4.78,
+        "physics_features": 10.75,
+        "cnn_inference": 11.85,
+        "guided_smoothing": 1.61,
+        "temporal_coherence": 0.39,
+        "inversion": 6.46,
+        "total_proc": 36.07
+      },
+      "psnr": 9.64,
+      "ssim": 0.6866,
+      "transmission_mae": null,
+      "niqe": 3.5,
+      "temporal_flicker": 21.251,
+      "black_rate_pct": 0.0,
+      "white_rate_pct": 0.33,
+      "delta_t_stats": {
+        "mean": -0.1023,
+        "std": 0.1103,
+        "min": -0.2998,
+        "max": 0.1282,
+        "pct_above_pos_0_05": 13.3,
+        "pct_below_neg_0_05": 67.94,
+        "pct_near_zero_0_01": 3.61
+      }
+    },
+    "difficult_night": {
+      "video": "foggy_video3.mp4",
+      "mode": "A2_no_temp_loss",
+      "frames": 50,
+      "fps_processing_only": 54.19,
+      "fps_end_to_end": 26.91,
+      "latency_ms": {
+        "decode": 16.3,
+        "prep": 3.86,
+        "physics_features": 4.92,
+        "cnn_inference": 6.32,
+        "guided_smoothing": 0.83,
+        "temporal_coherence": 0.25,
+        "inversion": 2.19,
+        "total_proc": 18.45
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 5.52,
+      "temporal_flicker": 8.161,
+      "black_rate_pct": 33.32,
+      "white_rate_pct": 2.31,
+      "delta_t_stats": {
+        "mean": 0.0669,
+        "std": 0.0902,
+        "min": -0.2998,
+        "max": 0.181,
+        "pct_above_pos_0_05": 90.21,
+        "pct_below_neg_0_05": 6.67,
+        "pct_near_zero_0_01": 0.1
+      }
+    }
+  },
+  "A3_temp_loss_no_inf": {
+    "dense_fog": {
+      "video": "foggy_video1.mp4",
+      "mode": "A3_temp_loss_no_inf",
+      "frames": 50,
+      "fps_processing_only": 61.09,
+      "fps_end_to_end": 34.9,
+      "latency_ms": {
+        "decode": 10.66,
+        "prep": 3.23,
+        "physics_features": 4.28,
+        "cnn_inference": 6.18,
+        "guided_smoothing": 0.7,
+        "temporal_coherence": 0.23,
+        "inversion": 1.68,
+        "total_proc": 16.37
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 4.04,
+      "temporal_flicker": 8.36,
+      "black_rate_pct": 0.05,
+      "white_rate_pct": 7.13,
+      "delta_t_stats": {
+        "mean": 0.0223,
+        "std": 0.1227,
+        "min": -0.3,
+        "max": 0.1384,
+        "pct_above_pos_0_05": 73.73,
+        "pct_below_neg_0_05": 20.11,
+        "pct_near_zero_0_01": 0.87
+      }
+    },
+    "dynamic_urban": {
+      "video": "foggy_video2.mp4",
+      "mode": "A3_temp_loss_no_inf",
+      "frames": 50,
+      "fps_processing_only": 61.54,
+      "fps_end_to_end": 35.52,
+      "latency_ms": {
+        "decode": 10.31,
+        "prep": 3.02,
+        "physics_features": 4.23,
+        "cnn_inference": 6.25,
+        "guided_smoothing": 0.74,
+        "temporal_coherence": 0.22,
+        "inversion": 1.71,
+        "total_proc": 16.25
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 3.88,
+      "temporal_flicker": 2.714,
+      "black_rate_pct": 0.1,
+      "white_rate_pct": 0.89,
+      "delta_t_stats": {
+        "mean": -0.0217,
+        "std": 0.1476,
+        "min": -0.2999,
+        "max": 0.1103,
+        "pct_above_pos_0_05": 61.17,
+        "pct_below_neg_0_05": 29.46,
+        "pct_near_zero_0_01": 1.38
+      }
+    },
+    "synthetic_gt": {
+      "video": "car-detection_patchy_haze.mp4",
+      "mode": "A3_temp_loss_no_inf",
+      "frames": 50,
+      "fps_processing_only": 30.02,
+      "fps_end_to_end": 12.08,
+      "latency_ms": {
+        "decode": 1.41,
+        "prep": 4.17,
+        "physics_features": 9.96,
+        "cnn_inference": 11.09,
+        "guided_smoothing": 1.49,
+        "temporal_coherence": 0.38,
+        "inversion": 5.99,
+        "total_proc": 33.31
+      },
+      "psnr": 9.64,
+      "ssim": 0.6868,
+      "transmission_mae": null,
+      "niqe": 3.5,
+      "temporal_flicker": 21.216,
+      "black_rate_pct": 0.0,
+      "white_rate_pct": 0.33,
+      "delta_t_stats": {
+        "mean": -0.1005,
+        "std": 0.1096,
+        "min": -0.299,
+        "max": 0.1339,
+        "pct_above_pos_0_05": 13.82,
+        "pct_below_neg_0_05": 67.58,
+        "pct_near_zero_0_01": 3.59
+      }
+    },
+    "difficult_night": {
+      "video": "foggy_video3.mp4",
+      "mode": "A3_temp_loss_no_inf",
+      "frames": 50,
+      "fps_processing_only": 54.9,
+      "fps_end_to_end": 27.36,
+      "latency_ms": {
+        "decode": 15.39,
+        "prep": 3.93,
+        "physics_features": 4.92,
+        "cnn_inference": 5.97,
+        "guided_smoothing": 0.84,
+        "temporal_coherence": 0.27,
+        "inversion": 2.21,
+        "total_proc": 18.21
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 5.52,
+      "temporal_flicker": 8.126,
+      "black_rate_pct": 33.33,
+      "white_rate_pct": 2.29,
+      "delta_t_stats": {
+        "mean": 0.0536,
+        "std": 0.0858,
+        "min": -0.2988,
+        "max": 0.1711,
+        "pct_above_pos_0_05": 89.31,
+        "pct_below_neg_0_05": 6.65,
+        "pct_near_zero_0_01": 0.11
+      }
+    }
+  },
+  "A4_proposed_full": {
+    "dense_fog": {
+      "video": "foggy_video1.mp4",
+      "mode": "A4_proposed_full",
+      "frames": 50,
+      "fps_processing_only": 58.68,
+      "fps_end_to_end": 32.8,
+      "latency_ms": {
+        "decode": 10.85,
+        "prep": 3.28,
+        "physics_features": 4.43,
+        "cnn_inference": 6.46,
+        "guided_smoothing": 0.78,
+        "temporal_coherence": 0.25,
+        "inversion": 1.77,
+        "total_proc": 17.04
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 4.05,
+      "temporal_flicker": 8.483,
+      "black_rate_pct": 0.1,
+      "white_rate_pct": 6.06,
+      "delta_t_stats": {
+        "mean": 0.0223,
+        "std": 0.1227,
+        "min": -0.3,
+        "max": 0.1384,
+        "pct_above_pos_0_05": 73.73,
+        "pct_below_neg_0_05": 20.11,
+        "pct_near_zero_0_01": 0.87
+      }
+    },
+    "dynamic_urban": {
+      "video": "foggy_video2.mp4",
+      "mode": "A4_proposed_full",
+      "frames": 50,
+      "fps_processing_only": 46.28,
+      "fps_end_to_end": 27.43,
+      "latency_ms": {
+        "decode": 12.66,
+        "prep": 3.95,
+        "physics_features": 5.59,
+        "cnn_inference": 8.46,
+        "guided_smoothing": 0.93,
+        "temporal_coherence": 0.35,
+        "inversion": 2.21,
+        "total_proc": 21.61
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 3.92,
+      "temporal_flicker": 2.708,
+      "black_rate_pct": 0.23,
+      "white_rate_pct": 0.88,
+      "delta_t_stats": {
+        "mean": -0.0217,
+        "std": 0.1476,
+        "min": -0.2999,
+        "max": 0.1103,
+        "pct_above_pos_0_05": 61.17,
+        "pct_below_neg_0_05": 29.46,
+        "pct_near_zero_0_01": 1.38
+      }
+    },
+    "synthetic_gt": {
+      "video": "car-detection_patchy_haze.mp4",
+      "mode": "A4_proposed_full",
+      "frames": 50,
+      "fps_processing_only": 26.77,
+      "fps_end_to_end": 10.73,
+      "latency_ms": {
+        "decode": 1.51,
+        "prep": 4.86,
+        "physics_features": 11.38,
+        "cnn_inference": 12.02,
+        "guided_smoothing": 1.67,
+        "temporal_coherence": 0.46,
+        "inversion": 6.71,
+        "total_proc": 37.35
+      },
+      "psnr": 9.59,
+      "ssim": 0.6915,
+      "transmission_mae": null,
+      "niqe": 3.53,
+      "temporal_flicker": 20.641,
+      "black_rate_pct": 0.0,
+      "white_rate_pct": 0.33,
+      "delta_t_stats": {
+        "mean": -0.1005,
+        "std": 0.1096,
+        "min": -0.299,
+        "max": 0.1339,
+        "pct_above_pos_0_05": 13.82,
+        "pct_below_neg_0_05": 67.58,
+        "pct_near_zero_0_01": 3.59
+      }
+    },
+    "difficult_night": {
+      "video": "foggy_video3.mp4",
+      "mode": "A4_proposed_full",
+      "frames": 50,
+      "fps_processing_only": 51.39,
+      "fps_end_to_end": 26.14,
+      "latency_ms": {
+        "decode": 16.21,
+        "prep": 4.14,
+        "physics_features": 5.26,
+        "cnn_inference": 6.49,
+        "guided_smoothing": 0.89,
+        "temporal_coherence": 0.28,
+        "inversion": 2.32,
+        "total_proc": 19.46
+      },
+      "psnr": null,
+      "ssim": null,
+      "transmission_mae": null,
+      "niqe": 5.56,
+      "temporal_flicker": 8.221,
+      "black_rate_pct": 33.73,
+      "white_rate_pct": 2.29,
+      "delta_t_stats": {
+        "mean": 0.0536,
+        "std": 0.0858,
+        "min": -0.2988,
+        "max": 0.1711,
+        "pct_above_pos_0_05": 89.31,
+        "pct_below_neg_0_05": 6.65,
+        "pct_near_zero_0_01": 0.11
+      }
+    }
+  }
+}
