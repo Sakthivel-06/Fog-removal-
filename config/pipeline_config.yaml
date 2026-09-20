@@ -1,0 +1,73 @@
+# ==============================================================================
+# Pipeline Configuration: Spatially-Varying DCP/CAP Fusion (w_dcp) Parameters
+# ==============================================================================
+
+fusion:
+  # Sky / Bright-Region Detection & Suppression
+  sky_lum_thresh: 0.55
+  sky_lum_range: 0.25
+  sky_var_limit: 0.0005
+  bright_lum_thresh: 0.75
+  bright_lum_range: 0.15
+
+  # Local Contrast / Texture Confidence
+  texture_var_scale: 0.0008
+
+  # Dark-Region Protection (Road Asphalt / Vehicle Shadows)
+  dark_lum_thresh: 0.32
+  dark_lum_range: 0.20
+
+  # Haze-Density Evidence H(x) Gate
+  haze_lum_low_thresh: 0.20
+  haze_lum_low_range: 0.12
+  haze_lum_high_thresh: 0.82
+  haze_lum_high_range: 0.15
+  haze_dc_thresh: 0.15
+  haze_dc_range: 0.35
+
+  # Composite Weight Scaling, Clamping & Spatial Smoothing
+  w_base: 0.15
+  w_haze_scale: 0.60
+  w_sky_penalty: 0.85
+  w_dark_penalty: 0.55
+  w_text_base: 0.60
+  w_text_scale: 0.40
+  w_min: 0.05
+  w_max: 0.75
+  w_smooth_sigma: 1.5
+
+airlight:
+  # Candidate Pool Exclusions
+  highlight_thresh: 0.95
+  highlight_max_channel: 0.96
+  blue_sky_diff_thresh: 0.16
+  blue_sky_lum_thresh: 0.50
+  upper_sky_lum_thresh: 0.65
+  upper_sky_var_limit: 0.0003
+  upper_sky_y_max: 0.28
+  vehicle_lum_thresh: 0.60
+  vehicle_var_min: 0.0010
+  ground_y_min: 0.65
+
+  # Selection & Data-Driven Bounds
+  top_candidate_ratio: 0.001
+  min_candidates: 30
+  a_min_hard: 0.45          # Absolute safety floor: prevents near-zero airlight collapse under any condition
+  a_min_soft: 0.65          # Nominal daytime airlight luminance threshold
+  a_max: 0.94               # Upper bound: prevents specular highlight leakage
+
+temporal:
+  # Spatially Adaptive Alpha Bounds
+  alpha_static: 0.15         # Smoothing alpha in static regions (stronger smoothing, suppresses flicker)
+  alpha_motion: 0.90         # Smoothing alpha in high-motion regions (near-instantaneous update, zero ghosting)
+  alpha_airlight: 0.08       # Temporal smoothing alpha for global atmospheric light A
+
+  # Lightweight Motion Confidence Estimation
+  motion_thresh_low: 0.03    # Lower threshold for frame difference (sensor/compression noise floor)
+  motion_thresh_high: 0.15   # Upper threshold for full motion confidence
+  motion_filter_size: 3      # Spatial box filter window for regularizing motion mask
+
+  # Scene-Change Detection & History Reset
+  scene_cut_thresh: 0.20     # Mean frame difference threshold for triggering scene-cut reset
+  scene_cut_motion_pct: 60.0 # Percentage of high-motion pixels to trigger scene-cut reset
+

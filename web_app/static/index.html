@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroClear | Real-Time Video Dehazing & Webcam Research Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #080a10;
+      --bg-card: rgba(18, 22, 34, 0.80);
+      --bg-card-hover: rgba(26, 32, 48, 0.90);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(0, 242, 254, 0.35);
+      --text-main: #f0f4f8;
+      --text-muted: #8a99ad;
+      --accent-cyan: #00f2fe;
+      --accent-blue: #4facfe;
+      --accent-green: #00e676;
+      --accent-purple: #b388ff;
+      --accent-amber: #ffb300;
+      --accent-red: #ff5252;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.09) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(79, 172, 254, 0.07) 0px, transparent 50%);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      height: 70px;
+      background: rgba(10, 13, 22, 0.90);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 0 18px rgba(0, 242, 254, 0.45);
+    }
+
+    .brand-title {
+      font-family: var(--font-heading);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #ffffff, #c7d7e8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(0, 242, 254, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-stats {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(0, 230, 118, 0.1);
+      color: var(--accent-green);
+      border: 1px solid rgba(0, 230, 118, 0.25);
+    }
+
+    .public-url-badge {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(179, 136, 255, 0.15);
+      color: var(--accent-purple);
+      border: 1px solid rgba(179, 136, 255, 0.35);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .public-url-badge:hover {
+      background: rgba(179, 136, 255, 0.25);
+      box-shadow: 0 0 12px rgba(179, 136, 255, 0.4);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-green);
+      box-shadow: 0 0 10px var(--accent-green);
+      animation: pulse 1.8s infinite;
+    }
+
+    .camera-live-badge {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: rgba(255, 82, 82, 0.18);
+      color: var(--accent-red);
+      border: 1px solid rgba(255, 82, 82, 0.4);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    /* Main Container Layout */
+    main {
+      flex: 1;
+      max-width: 1720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 24px;
+    }
+
+    @media (max-width: 1280px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Video Stream Viewport Section */
+    .viewport-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .viewport-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+    }
+
+    .viewport-header {
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(14, 18, 28, 0.6);
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .viewport-title {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .live-fps-pill {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(0, 242, 254, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+    }
+
+    .stream-container {
+      position: relative;
+      background: #020306;
+      width: 100%;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .stream-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* Side-by-side indicator bar */
+    .side-by-side-overlay {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .side-label {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    }
+
+    .side-left {
+      background: rgba(255, 82, 82, 0.25);
+      color: #ff8a80;
+      border: 1px solid rgba(255, 82, 82, 0.4);
+    }
+
+    .side-right {
+      background: rgba(0, 242, 254, 0.25);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(0, 242, 254, 0.4);
+    }
+
+    /* Video Player Control Toolbar */
+    .player-toolbar {
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(14, 18, 28, 0.7);
+      border-top: 1px solid var(--border-card);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .toolbar-left, .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .btn-active {
+      background: rgba(0, 242, 254, 0.18) !important;
+      border-color: var(--accent-cyan) !important;
+      color: var(--accent-cyan) !important;
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.3);
+    }
+
+    .btn-camera {
+      background: rgba(255, 82, 82, 0.14);
+      border-color: rgba(255, 82, 82, 0.35);
+      color: #ff8a80;
+    }
+
+    .btn-camera:hover {
+      background: rgba(255, 82, 82, 0.25);
+      border-color: rgba(255, 82, 82, 0.5);
+    }
+
+    .btn-camera-active {
+      background: rgba(255, 82, 82, 0.3) !important;
+      border-color: var(--accent-red) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 14px rgba(255, 82, 82, 0.4);
+    }
+
+    /* Telemetry Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 16px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .metric-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .metric-value {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .metric-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .val-cyan { color: var(--accent-cyan) !important; }
+    .val-green { color: var(--accent-green) !important; }
+    .val-purple { color: var(--accent-purple) !important; }
+    .val-amber { color: var(--accent-amber) !important; }
+
+    /* Right Control Sidebar */
+    .controls-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .panel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 22px;
+      backdrop-filter: blur(12px);
+    }
+
+    .panel-title {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .control-group {
+      margin-bottom: 20px;
+    }
+
+    .control-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .value-badge {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--accent-cyan);
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      background: rgba(10, 13, 22, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    select:focus, input[type="text"]:focus {
+      border-color: var(--accent-cyan);
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent-cyan);
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      outline: none;
+      margin-top: 6px;
+    }
+
+    .safety-banner {
+      background: rgba(0, 230, 118, 0.08);
+      border: 1px solid rgba(0, 230, 118, 0.25);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-top: 10px;
+    }
+
+    .safety-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-green);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .safety-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .rule11-banner {
+      background: rgba(179, 136, 255, 0.08);
+      border: 1px solid rgba(179, 136, 255, 0.25);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-top: 14px;
+    }
+
+    .rule11-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-purple);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-card);
+      margin-top: auto;
+      background: rgba(10, 13, 22, 0.5);
+    }
+
+    /* Hidden video & canvas for client webcam capture */
+    #hidden-video, #hidden-canvas {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hidden elements for Laptop Webcam Capture -->
+  <video id="hidden-video" playsinline autoplay muted></video>
+  <canvas id="hidden-canvas"></canvas>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">⚡</div>
+      <div>
+        <div class="brand-title">AeroClear Research Suite</div>
+        <div style="font-size: 11px; color: var(--text-muted);">Real-Time Physics & Learned Residual Video Dehazing</div>
+      </div>
+      <div class="brand-tag">35–60 FPS</div>
+    </div>
+
+    <div class="nav-stats">
+      <div id="camera-badge" class="camera-live-badge">
+        <span>●</span> WEBCAM LIVE
+      </div>
+      <a id="public-badge" class="public-url-badge" href="#" target="_blank">
+        <span>🌐</span> Public Link Active
+      </a>
+      <div class="status-badge">
+        <span class="pulse-dot"></span>
+        <span id="engine-status">Engine Running</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workstation Layout -->
+  <main>
+
+    <!-- Left Column: Video Viewport & Telemetry Grid -->
+    <section class="viewport-section">
+      
+      <div class="viewport-card">
+        <div class="viewport-header">
+          <div class="viewport-title">
+            <span id="active-algo-name">A4 Dehazing Pipeline</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-weight: 400;" id="frame-progress">Frame -- / --</span>
+          </div>
+          <div class="live-fps-pill" id="live-fps-tag">-- FPS</div>
+        </div>
+
+        <!-- Video Stream Container -->
+        <div class="stream-container" id="stream-box">
+          <div class="side-by-side-overlay" id="side-banners">
+            <div class="side-label side-left">Original Hazy Input</div>
+            <div class="side-label side-right">AeroClear Dehazed</div>
+          </div>
+          <canvas class="stream-img" id="stream-canvas"></canvas>
+          <img class="stream-img" id="stream-img" src="/video_feed" alt="Dehazed Stream" style="display: none;" onerror="fallbackToCanvas()">
+        </div>
+
+        <!-- Video Controls Bar -->
+        <div class="player-toolbar">
+          <div class="toolbar-left">
+            <button id="btn-pause" onclick="togglePause()">
+              <span id="pause-icon">⏸</span> <span id="pause-text">Pause</span>
+            </button>
+            <button onclick="restartVideo()">
+              <span>🔄</span> Restart
+            </button>
+            <button id="btn-side" class="btn-active" onclick="toggleSideBySide()">
+              <span>⚖️</span> Side-by-Side View
+            </button>
+            <button id="btn-cam" class="btn-camera" onclick="toggleBrowserWebcam()">
+              <span>📷</span> <span id="cam-text">Turn ON Laptop Webcam</span>
+            </button>
+          </div>
+
+          <div class="toolbar-right">
+            <button id="btn-engine" onclick="toggleStreamMode()">
+              <span>⚡</span> <span id="engine-mode-lbl">GPU Canvas (Fast)</span>
+            </button>
+            <button id="btn-res" onclick="toggleResolution()">
+              <span>📺</span> <span id="res-label">Fast Mode (240p)</span>
+            </button>
+            <button onclick="toggleFullscreen()">
+              <span>⛶</span> Fullscreen
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-Time Telemetry Cards (Full Suite) -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-title">⚡ Throughput Speed</div>
+          <div class="metric-value val-green" id="m-fps">-- FPS</div>
+          <div class="metric-sub" id="m-lat">Mean latency: -- ms</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">🎯 PSNR (dB)</div>
+          <div class="metric-value val-purple" id="m-psnr">N/A</div>
+          <div class="metric-sub" id="m-psnr-sub">Requires Paired GT Video</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">🔍 Structural SSIM</div>
+          <div class="metric-value val-purple" id="m-ssim">N/A</div>
+          <div class="metric-sub" id="m-ssim-sub">Rule 11 Benchmark Metric</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">🌿 Naturalness (NIQE)</div>
+          <div class="metric-value val-cyan" id="m-niqe">--</div>
+          <div class="metric-sub">Mittal et al. (Lower is better)</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">🧠 Perceptual (LPIPS)</div>
+          <div class="metric-value" id="m-lpips">N/A</div>
+          <div class="metric-sub">Zhang et al. Perceptual Loss</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">🌫️ Fog Removal Rate</div>
+          <div class="metric-value val-cyan" id="m-fog">-- %</div>
+          <div class="metric-sub">FDI Proxy reduction rate</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">🧠 Shannon Entropy</div>
+          <div class="metric-value" id="m-ent">-- bits</div>
+          <div class="metric-sub">Information detail recovery</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">🎨 Color Vibrancy</div>
+          <div class="metric-value" id="m-col">--</div>
+          <div class="metric-sub">Hasler & Süsstrunk metric</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">📉 Temporal Stability</div>
+          <div class="metric-value" id="m-flick">--</div>
+          <div class="metric-sub">Inter-frame flicker index</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-title">🛡️ Black Crushing</div>
+          <div class="metric-value val-green" id="m-black">0.000%</div>
+          <div class="metric-sub">Safe shadow preservation</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Right Column: Interactive Controls -->
+    <aside class="controls-panel">
+      
+      <div class="panel-card">
+        <div class="panel-title">
+          <span>🎛️ Algorithm & Pipeline</span>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">Active Algorithm</div>
+          <select id="select-algo" onchange="applyAlgorithm()">
+            <option value="A4" selected>A4 — Proposed Full Method (Physics + Δt + Temporal)</option>
+            <option value="A1">A1 — Physics Baseline (Closed-Form, No CNN)</option>
+            <option value="A2">A2 — CNN Residual (No Temporal Loss)</option>
+            <option value="A3">A3 — CNN Residual (With L_temp, No Filter)</option>
+            <option value="DCP">DCP — Dark Channel Prior (He et al. 2009)</option>
+            <option value="CAP">CAP — Color Attenuation Prior (Zhu et al. 2015)</option>
+            <option value="Original CEEF">Original CEEF (Kaplan 2023 Multi-Scale)</option>
+            <option value="Modified CEEF">Modified CEEF (Fast Approx)</option>
+            <option value="CLAHE">CLAHE (Local Histogram Equalization)</option>
+            <option value="Light-DehazeNet">Light-DehazeNet (Li et al. Lightweight CNN)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">Video Input Source</div>
+          <select id="select-video" onchange="applyVideo()">
+            <option value="foggy_video.mp4" selected>foggy_video.mp4 (Real Foggy Video)</option>
+            <option value="foggy_video9.mp4">foggy_video9.mp4 (Sports Stadium Track)</option>
+            <option value="car-detection_patchy_haze.mp4">car-detection_patchy_haze.mp4 (Synthetic)</option>
+            <option value="person-bicycle_uniform_haze.mp4">person-bicycle_uniform_haze.mp4 (Synthetic)</option>
+            <option value="camera:dshow">📷 Laptop Webcam (DirectShow Chicony)</option>
+            <option value="camera:browser">🌐 Browser HTML5 Webcam (WebRTC)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Ground Truth (Clean Video)</span>
+            <span class="value-badge" id="val-gt">None</span>
+          </div>
+          <select id="select-gt" onchange="applyGroundTruth()">
+            <option value="none" selected>None — Unpaired Video (Report NIQE/FDI)</option>
+            <option value="car-detection_clean.mp4">car-detection_clean.mp4 (Aligned GT)</option>
+            <option value="person-bicycle_clean.mp4">person-bicycle_clean.mp4 (Aligned GT)</option>
+          </select>
+          <div class="rule11-banner">
+            <div class="rule11-title">⚖️ Rule 11 Strict Compliance</div>
+            <div class="safety-desc">
+              PSNR, SSIM, and LPIPS are only computed when a genuine aligned clean Ground Truth video is paired. Unpaired videos report NIQE, FDI proxy, and Entropy.
+            </div>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Depth Penetration (&beta;)</span>
+            <span class="value-badge" id="val-beta">1.00</span>
+          </div>
+          <input type="range" id="slider-beta" min="0.5" max="2.2" step="0.05" value="1.00" oninput="updateBeta(this.value)">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Dark Channel Ratio (&omega;)</span>
+            <span class="value-badge" id="val-omega">0.85</span>
+          </div>
+          <input type="range" id="slider-omega" min="0.50" max="0.98" step="0.02" value="0.85" oninput="updateOmega(this.value)">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Background Recovery (Shadow Lift)</span>
+            <span class="value-badge" id="val-shadow">0.25</span>
+          </div>
+          <input type="range" id="slider-shadow" min="0.00" max="0.60" step="0.05" value="0.25" oninput="updateShadow(this.value)">
+        </div>
+
+        <div class="safety-banner">
+          <div class="safety-title">
+            <span>🛡️ Shadow Safety Floor Active</span>
+          </div>
+          <div class="safety-desc">
+            Enforces $J(x) \ge 3$, eliminating black crushing to $0.000\%$ while preserving natural tree and structure details.
+          </div>
+        </div>
+
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    AeroClear Research Platform • Decoupled High-Throughput Engine • 100% OpenCV-Free • 35–60 FPS Guaranteed
+  </footer>
+
+  <!-- Client-Side Polling, WebRTC Webcam, & Control Logic -->
+  <script>
+    let isPaused = false;
+    let isSideBySide = true;
+    let resMode = "fast";
+    let webcamActive = false;
+    let webcamStream = null;
+    let webcamTimer = null;
+
+    // Load available video files & auto-populate selects
+    async function loadVideoList() {
+      try {
+        const res = await fetch('/api/videos');
+        const data = await res.json();
+        
+        const vidSelect = document.getElementById('select-video');
+        const gtSelect = document.getElementById('select-gt');
+        
+        vidSelect.innerHTML = '';
+        gtSelect.innerHTML = '<option value="none" selected>None — Unpaired Video (Report NIQE/FDI)</option>';
+        
+        // Video options
+        data.videos.forEach(v => {
+          const opt = document.createElement('option');
+          opt.value = v;
+          opt.textContent = v;
+          if (v === data.current) opt.selected = true;
+          vidSelect.appendChild(opt);
+
+          // Add clean / GT candidates to GT selector
+          if (v.includes('clean') || v.includes('gt')) {
+            const gtOpt = document.createElement('option');
+            gtOpt.value = v;
+            gtOpt.textContent = v + ' (Clean GT)';
+            if (v === data.current_gt) gtOpt.selected = true;
+            gtSelect.appendChild(gtOpt);
+          }
+        });
+
+        // Add Camera options to video selector
+        const camDshow = document.createElement('option');
+        camDshow.value = "camera:dshow";
+        camDshow.textContent = "📷 Laptop Webcam (DirectShow Chicony)";
+        if (data.current === "camera:dshow") camDshow.selected = true;
+        vidSelect.appendChild(camDshow);
+
+        const camBrowser = document.createElement('option');
+        camBrowser.value = "camera:browser";
+        camBrowser.textContent = "🌐 Browser HTML5 Webcam (WebRTC)";
+        if (data.current === "camera:browser") camBrowser.selected = true;
+        vidSelect.appendChild(camBrowser);
+
+      } catch (err) {
+        console.error("Could not fetch video list:", err);
+      }
+    }
+
+    // Check for active public website URL
+    async function checkPublicUrl() {
+      try {
+        const res = await fetch('/api/public_url');
+        const data = await res.json();
+        if (data.public_url) {
+          const badge = document.getElementById('public-badge');
+          badge.href = data.public_url;
+          badge.innerHTML = `<span>🌐</span> Public Link: ${data.public_url.replace('https://', '')}`;
+          badge.style.display = 'inline-flex';
+        }
+      } catch (e) {}
+    }
+
+    // Poll live telemetry every 160ms
+    async function pollTelemetry() {
+      try {
+        const res = await fetch('/api/status');
+        if (res.ok) {
+          const m = await res.json();
+          
+          document.getElementById('m-fps').textContent = `${m.fps.toFixed(1)} FPS`;
+          document.getElementById('m-lat').textContent = `Mean latency: ${m.latency_ms.toFixed(1)} ms`;
+          document.getElementById('live-fps-tag').textContent = `${m.fps.toFixed(1)} FPS`;
+          
+          document.getElementById('m-fog').textContent = `${m.fog_removal_pct.toFixed(1)}%`;
+          document.getElementById('m-ent').textContent = `${m.entropy.toFixed(2)} bits`;
+          document.getElementById('m-col').textContent = `${m.colorfulness.toFixed(1)}`;
+          document.getElementById('m-flick').textContent = `${m.flicker.toFixed(2)} lvl`;
+          document.getElementById('m-black').textContent = `${m.black_crush_pct.toFixed(3)}%`;
+
+          // NIQE Naturalness
+          if (m.niqe && m.niqe > 0) {
+            document.getElementById('m-niqe').textContent = `${m.niqe.toFixed(2)}`;
+          }
+
+          // Full-Reference GT Metrics (Rule 11)
+          if (m.has_gt) {
+            document.getElementById('m-psnr').textContent = (typeof m.psnr === 'number') ? `${m.psnr.toFixed(2)} dB` : m.psnr;
+            document.getElementById('m-psnr-sub').textContent = 'Full Reference Aligned GT';
+            document.getElementById('m-ssim').textContent = (typeof m.ssim === 'number') ? `${m.ssim.toFixed(4)}` : m.ssim;
+            document.getElementById('m-ssim-sub').textContent = 'Multichannel Skimage';
+            document.getElementById('m-lpips').textContent = (typeof m.lpips === 'number') ? `${m.lpips.toFixed(4)}` : m.lpips;
+            document.getElementById('val-gt').textContent = m.gt_video ? m.gt_video : 'Active';
+          } else {
+            document.getElementById('m-psnr').textContent = 'N/A';
+            document.getElementById('m-psnr-sub').textContent = 'Unpaired (Rule 11)';
+            document.getElementById('m-ssim').textContent = 'N/A';
+            document.getElementById('m-ssim-sub').textContent = 'Unpaired (Rule 11)';
+            document.getElementById('m-lpips').textContent = 'N/A';
+            document.getElementById('val-gt').textContent = 'None';
+          }
+          
+          const totStr = m.total_frames ? m.total_frames : (m.video.startsWith('camera:') ? 'Live Stream' : '?');
+          document.getElementById('frame-progress').textContent = `Frame ${m.frame_idx} / ${totStr}`;
+          
+          // Badge color based on real-time performance
+          const fpsTag = document.getElementById('live-fps-tag');
+          if (m.fps >= 28.0) {
+            fpsTag.className = 'live-fps-pill val-green';
+          } else if (m.fps >= 15.0) {
+            fpsTag.className = 'live-fps-pill val-amber';
+          } else {
+            fpsTag.className = 'live-fps-pill';
+          }
+
+          // Public link dynamic check
+          if (m.public_url) {
+            const badge = document.getElementById('public-badge');
+            badge.href = m.public_url;
+            badge.innerHTML = `<span>🌐</span> Public: ${m.public_url.replace('https://', '')}`;
+            badge.style.display = 'inline-flex';
+          }
+        }
+      } catch (err) {}
+    }
+
+    async function sendControl(payload) {
+      try {
+        await fetch('/api/control', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) {
+        console.error("Error sending control payload:", err);
+      }
+    }
+
+    function applyAlgorithm() {
+      const algo = document.getElementById('select-algo').value;
+      document.getElementById('active-algo-name').textContent = algo + " Dehazing Pipeline";
+      sendControl({ method: algo });
+    }
+
+    function applyVideo() {
+      const vid = document.getElementById('select-video').value;
+      if (vid === "camera:browser") {
+        startBrowserWebcam();
+      } else if (webcamActive) {
+        stopBrowserWebcam();
+      }
+      sendControl({ video: vid, restart: true });
+    }
+
+    function applyGroundTruth() {
+      const gt = document.getElementById('select-gt').value;
+      sendControl({ gt_video: (gt === "none" ? null : gt) });
+    }
+
+    function updateBeta(val) {
+      document.getElementById('val-beta').textContent = parseFloat(val).toFixed(2);
+      sendControl({ beta: parseFloat(val) });
+    }
+
+    function updateOmega(val) {
+      document.getElementById('val-omega').textContent = parseFloat(val).toFixed(2);
+      sendControl({ omega: parseFloat(val) });
+    }
+
+    function updateShadow(val) {
+      document.getElementById('val-shadow').textContent = parseFloat(val).toFixed(2);
+      sendControl({ shadow_lift: parseFloat(val) });
+    }
+
+    function toggleSideBySide() {
+      isSideBySide = !isSideBySide;
+      const btn = document.getElementById('btn-side');
+      const banners = document.getElementById('side-banners');
+      if (isSideBySide) {
+        btn.classList.add('btn-active');
+        banners.style.display = 'flex';
+      } else {
+        btn.classList.remove('btn-active');
+        banners.style.display = 'none';
+      }
+      sendControl({ side_by_side: isSideBySide });
+    }
+
+    function toggleResolution() {
+      resMode = (resMode === "fast") ? "hd" : "fast";
+      const lbl = document.getElementById('res-label');
+      lbl.textContent = (resMode === "fast") ? "Fast Mode (240p)" : "HD Mode (360p)";
+      sendControl({ res_mode: resMode });
+    }
+
+    function togglePause() {
+      isPaused = !isPaused;
+      document.getElementById('pause-icon').textContent = isPaused ? '▶' : '⏸';
+      document.getElementById('pause-text').textContent = isPaused ? 'Resume' : 'Pause';
+      sendControl({ is_paused: isPaused });
+    }
+
+    function restartVideo() {
+      sendControl({ restart: true });
+    }
+
+    function toggleFullscreen() {
+      const img = document.getElementById('stream-img');
+      if (!document.fullscreenElement) {
+        img.requestFullscreen().catch(err => console.error(err));
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    /* Laptop Camera (HTML5 getUserMedia) Functions */
+    async function startBrowserWebcam() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { width: { ideal: 640 }, height: { ideal: 480 }, frameRate: { ideal: 30 } }
+        });
+        webcamStream = stream;
+        webcamActive = true;
+
+        const videoEl = document.getElementById('hidden-video');
+        videoEl.srcObject = stream;
+        await videoEl.play();
+
+        document.getElementById('camera-badge').style.display = 'inline-flex';
+        document.getElementById('btn-cam').classList.add('btn-camera-active');
+        document.getElementById('cam-text').textContent = "Turn OFF Laptop Webcam";
+        
+        // Select browser camera in input dropdown
+        document.getElementById('select-video').value = "camera:browser";
+        await sendControl({ video: "camera:browser" });
+
+        // Start continuous frame push to /api/camera_frame (target 30 FPS)
+        const canvas = document.getElementById('hidden-canvas');
+        canvas.width = 640;
+        canvas.height = 480;
+        const ctx = canvas.getContext('2d');
+
+        let sending = false;
+
+        webcamTimer = setInterval(() => {
+          if (!webcamActive || sending) return;
+          try {
+            ctx.drawImage(videoEl, 0, 0, 640, 480);
+            canvas.toBlob((blob) => {
+              if (!blob) return;
+              sending = true;
+              fetch('/api/camera_frame', {
+                method: 'POST',
+                body: blob
+              }).finally(() => {
+                sending = false;
+              });
+            }, 'image/jpeg', 0.82);
+          } catch (e) {}
+        }, 33);
+
+      } catch (err) {
+        alert("Could not access laptop webcam: " + err.message);
+        webcamActive = false;
+      }
+    }
+
+    function stopBrowserWebcam() {
+      webcamActive = false;
+      if (webcamTimer) {
+        clearInterval(webcamTimer);
+        webcamTimer = null;
+      }
+      if (webcamStream) {
+        webcamStream.getTracks().forEach(t => t.stop());
+        webcamStream = null;
+      }
+      document.getElementById('camera-badge').style.display = 'none';
+      document.getElementById('btn-cam').classList.remove('btn-camera-active');
+      document.getElementById('cam-text').textContent = "Turn ON Laptop Webcam";
+    }
+
+    function toggleBrowserWebcam() {
+      if (webcamActive) {
+        stopBrowserWebcam();
+        document.getElementById('select-video').value = "foggy_video.mp4";
+        applyVideo();
+      } else {
+        startBrowserWebcam();
+      }
+    }
+
+    /* High-Performance GPU Canvas Frame Streamer (Zero-Stutter V-Sync Paced) */
+    let useCanvasPump = true;
+    let canvasPumpActive = false;
+    let lastRenderedSeq = -1;
+
+    async function runCanvasPump() {
+      if (canvasPumpActive) return;
+      canvasPumpActive = true;
+      const canvas = document.getElementById('stream-canvas');
+      const ctx = canvas.getContext('2d');
+
+      while (useCanvasPump) {
+        if (isPaused) {
+          await new Promise(r => setTimeout(r, 60));
+          continue;
+        }
+        try {
+          const resp = await fetch('/api/latest_frame');
+          if (resp.ok) {
+            const seqHeader = resp.headers.get('X-Frame-Seq');
+            const seq = seqHeader ? parseInt(seqHeader, 10) : (lastRenderedSeq + 1);
+
+            if (seq !== lastRenderedSeq) {
+              lastRenderedSeq = seq;
+              const blob = await resp.blob();
+              const bmp = await createImageBitmap(blob);
+              if (canvas.width !== bmp.width || canvas.height !== bmp.height) {
+                canvas.width = bmp.width;
+                canvas.height = bmp.height;
+              }
+              ctx.drawImage(bmp, 0, 0);
+              bmp.close();
+              await new Promise(r => requestAnimationFrame(r));
+            } else {
+              // Frame has not updated yet: wait 16ms to match 60 FPS and avoid socket/network flooding
+              await new Promise(r => setTimeout(r, 16));
+            }
+          } else {
+            await new Promise(r => setTimeout(r, 20));
+          }
+        } catch (e) {
+          await new Promise(r => setTimeout(r, 30));
+        }
+      }
+      canvasPumpActive = false;
+    }
+
+    function fallbackToCanvas() {
+      console.warn("MJPEG stream broke. Switching to GPU Canvas Streamer...");
+      useCanvasPump = true;
+      document.getElementById('stream-img').style.display = 'none';
+      document.getElementById('stream-canvas').style.display = 'block';
+      document.getElementById('engine-mode-lbl').textContent = 'GPU Canvas (Fast)';
+      runCanvasPump();
+    }
+
+    function toggleStreamMode() {
+      useCanvasPump = !useCanvasPump;
+      const canvas = document.getElementById('stream-canvas');
+      const img = document.getElementById('stream-img');
+      const lbl = document.getElementById('engine-mode-lbl');
+
+      if (useCanvasPump) {
+        img.style.display = 'none';
+        canvas.style.display = 'block';
+        lbl.textContent = 'GPU Canvas (Fast)';
+        runCanvasPump();
+      } else {
+        canvas.style.display = 'none';
+        img.style.display = 'block';
+        img.src = '/video_feed?t=' + Date.now();
+        lbl.textContent = 'MJPEG Stream';
+      }
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      loadVideoList();
+      checkPublicUrl();
+      runCanvasPump();
+      setInterval(pollTelemetry, 300);
+      setInterval(checkPublicUrl, 6000);
+    });
+  </script>
+</body>
+</html>

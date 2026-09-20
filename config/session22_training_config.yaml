@@ -1,0 +1,88 @@
+# Session 22 Full Training Experiment Configuration
+experiment_name: "session22_learned_transmission_residual"
+session: 22
+date: "2026-09-14"
+
+# Reproducibility Controls
+seed: 42
+deterministic: true
+device: "cpu"
+
+# Dataset Specification (Video-level split strictly enforced)
+dataset:
+  train_sources:
+    - video: "test_videos/person-bicycle_clean.mp4"
+      max_frames: 120
+      beta_base: 1.20
+      beta_var: 0.60
+      wind_vx: 0.80
+      wind_vy: 0.25
+      seed: 20260914
+    - video: "test_videos/WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4"
+      max_frames: 100
+      beta_base: 1.40
+      beta_var: 0.70
+      wind_vx: 0.60
+      wind_vy: -0.20
+      seed: 20260915
+  val_sources:
+    - video: "test_videos/WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4"
+      max_frames: 50
+      beta_base: 1.30
+      beta_var: 0.65
+      wind_vx: 0.70
+      wind_vy: 0.30
+      seed: 20260916
+  test_sources:
+    - video: "test_videos/WhatsApp Video 2026-09-10 at 9.43.25 PM.mp4"
+      max_frames: 50
+      beta_base: 1.25
+      beta_var: 0.50
+      wind_vx: 0.90
+      wind_vy: 0.15
+      seed: 20260917
+  quarantined_evaluation_benchmarks:
+    - "test_videos/foggy_video1.mp4"
+    - "test_videos/foggy_video2.mp4"
+    - "test_videos/car-detection_patchy_haze.mp4"
+    - "test_videos/foggy_video3.mp4"
+
+# Resolution and Sizing
+resolution:
+  guide_resolution: [240, 135] # [W, H]
+  synthesis_resolution: [480, 270] # [W, H] (2x guide resolution)
+
+# Model Architecture
+model:
+  architecture: "TinyUNet"
+  target_parameters: 13921
+  in_channels: 8
+  base_channels: 12
+  delta_scale: 0.30
+  activation: "LeakyReLU(0.1)"
+  bounding: "0.30 * Tanh"
+
+# Training Hyperparameters
+training:
+  epochs: 25
+  batch_size: 4
+  optimizer: "AdamW"
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler: "CosineAnnealingLR"
+  min_lr: 0.00001
+  early_stopping_patience: 7
+
+# Composite Loss Function Weights
+loss_weights:
+  lambda_trans: 1.00 # Transmission fidelity
+  lambda_rec: 0.50   # Physical radiance reconstruction (L1 + SSIM)
+  lambda_temp: 0.40  # Motion-masked temporal consistency
+  lambda_grad: 0.25  # Spatial edge gradient alignment
+  lambda_reg: 0.10   # Residual L2 penalty (anchor to physics)
+
+# Output Paths
+checkpoints:
+  best_checkpoint: "checkpoints/delta_t_tiny_unet_best.pt"
+  ablation_no_temp_checkpoint: "checkpoints/delta_t_tiny_unet_no_temp.pt"
+  output_dir: "checkpoints"

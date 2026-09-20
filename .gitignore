@@ -1,0 +1,50 @@
+# Python byte code & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local binaries & runtime logs
+cloudflared.exe
+*.log
+tunnel.log
+.agents/
+
+# Datasets, papers, and heavy outputs (keep code repository light)
+data/
+papers/
+temp_uploads/
+scratch/
+results/
+Light-DehazeNet/readme_images/
+
+# Large videos (keeps web app light for cloud deployment)
+test_videos/foggy_video1.mp4
+test_videos/foggy_video2.mp4
+test_videos/foggy_video3.mp4
+test_videos/foggy_video4.mp4
+test_videos/foggy_video5.mp4
+test_videos/foggy_video6.mp4
+test_videos/foggy_video7.mp4
+test_videos/foggy_video8.mp4
+test_videos/foggy_video9.mp4
+test_videos/foggy_video11.mp4
+test_videos/foggy_video12.mp4
+test_videos/foggy_video13.mp4
+test_videos/foggy_video14.mp4
+test_videos/foggy_video15.mp4
+test_videos/WhatsApp*.mp4
