@@ -1,0 +1,631 @@
+
+
+========== 1-s2.0-S0957417423030944-main.pdf ==========
+Expert Systems With Applications 241 (2024) 122592
+Available online 15 November 2023
+0957-4174/© 2023 Elsevier Ltd. All rights reserved.
+Contents lists available at ScienceDirect
+Expert Systems With Applications
+journal homepage: www.elsevier.com/locate/eswa
+Cross-stage recurrent feature sharing network for video dehazing
+Vijay M. Galshetwara, Poonam Sainia, Sachin Chaudharyb,∗
+a Department of Computer Science and Engineering, Punjab Engineering College, Chandigarh, India
+b Amity University, Punjab
+A R T I C L E I N F O
+Keywords:
+Cross-stage feature sharing
+Multi-receptive feature aggregation
+Pixelwise spatial attention
+Generative adversarial network
+A B S T R A C T
+Hazy weather conditions feed serious haze effects, such as color and visibility degradations in the captured
+videos. Extensive research on video dehazing has been carried out. However, they lack to balance the spatial
+and high-level contextual information during restoration. Being a complex task in this paper, we propose a
+cross-stage recurrent feature sharing network to balance the competing objective. In the proposed network,
+a cross-stage feature merging module operates on learned features of the previous video frame using the
+proposed encoder decoder based generator architecture. Learned features fed into the same encoder decoder
+framework for the current video frame feature learning. This module benefit the network while restoring
+the current video frame. It shares the feature information between two consecutive frames as they have a
+very minute information change. Meanwhile, the design of our encoder decoder generator architecture is
+based on a multi-receptive resolution module, feature fusion module, and pixel-wise spatial attention module.
+These modules mainly focus on acquiring broad contextual information, fusing intermediate-stage features
+to increase the learning ability of the network, and capturing robust features while discarding unnecessary
+features. Experimental evaluation results and ablation study show that the proposed network is superior to
+existing state-of-the-art methods for video dehazing.
+1. Introduction
+Videos captured in hazy weather conditions usually have unclear
+scene views and degradations in structural details. These visually de-
+graded videos cannot be considered for computer vision applications
+that seek clean inputs. There is a need to restore structural information
+and visibility of these degraded videos, which will benefit high-level
+computer vision tasks. The videos with haze degradations require an
+efficient dehazing network to restore haze-free videos. Thus despite
+challenges, video dehazing has become an emerging research area.
+Previous works ( Dhara et al. , 2020; Galshetwar, Patil, & Chaudhary ,
+2022; He et al., 2011; Hu et al., 2020; Ju et al., 2020; Liu et al., 2022;
+Qin & Gu , 2022) use the classical scattering model (Eq. ( 1)) for haze
+generation in video frames.
+𝐼𝑥(𝑛) = 𝐽𝑥(𝑛) ∗ 𝑇𝑥(𝑛) +𝐴 ∗ (1 −𝑇𝑥(𝑛)) (1)
+where, 𝐼𝑥(𝑛) and 𝐽𝑥(𝑛) are the hazy and haze-free video frames at
+pixel 𝑥 and time 𝑛 respectively, 𝐴 is the illumination light, and 𝑇𝑥(𝑛)
+is scene transmission map of the respective frame. The transmission
+map, as well as illumination light, can help the restoration of haze free
+scene. Transmission map𝑇𝑥(𝑛) = 𝑒(−𝛽𝑑 (𝑥)) is estimated, where,𝛽 denotes
+∗ Corresponding author.
+E-mail addresses: vijaymadhavraogalshetwar.phdcse20@pec.edu.in (V.M. Galshetwar), poonamsaini@pec.edu.in (P. Saini), schaudhary@pb.amity.edu
+(S. Chaudhary).
+attenuation coefficient and 𝑑(𝑥) denotes depth of the scene from the
+camera at pixel 𝑥.
+The attenuation coefficient 𝛽 controls the haze density and scene
+attenuation in each pixel. The haze degradation in video frame is
+different at each pixel and depends on depth of scene point from
+the camera 𝑑(𝑥). The scattering model provides critical insights about
+image/video dehazing. The dehazing based on this model requires
+knowledge of illumination light (𝐴) and transmission map (𝑇𝑥(𝑛)). The
+hand-craft
+
+
+========== 1-s2.0-S1077314225001857-main.pdf ==========
+Computer Vision and Image Understanding 260 (2025) 104462
+ 
+Contents lists available at ScienceDirect
+Computer Vision and Image Understanding
+journal homepage: www.elsevier.com/locate/cviu  
+Multiscale Spatio-Temporal Fusion Network for video dehazing
+Qingru Zhang a, Guorong Chen a,b,∗, Yixuan Zhang c, Jinmei Zhang a, Shaofeng Liu a, Jian Wang a
+a School of Computer Science and Engineering, Chongqing University of Science and Technology, Shapingba District, Chongqing, 401331, China
+b Chongqing Institute of Intelligent Mathematics and Autonomous Intelligence, Chongqing University of Science and Technology, Yubei 
+District, Chongqing, 401127, China
+c State Key Laboratory of Coal Mine Disaster Prevention and Control, Chongqing Research Institute, China Coal Technology and Engineering Group 
+Corp., Jiulongpo District, Chongqing, 400039, China
+A R T I C L E  I N F O
+Communicated by YingLi Tian
+Keywords:
+Video dehazing
+Main-auxiliary structure
+Multi-scale features
+Multi-frame alignment
+ A B S T R A C T
+Video dehazing aims to restore high-resolution and high-contrast haze-free frames, which is crucial in 
+engineering applications such as intelligent traffic monitoring systems. These monitoring systems heavily 
+rely on clear visual information to ensure accurate decision-making and reliable operation. However, despite 
+significant advances achieved by deep learning methods, they still face challenges when dealing with diverse 
+real-world scenarios. To address these issues, we propose a Multi-Scale Spatio-Temporal Fusion Network 
+(MSTF-Net), a novel framework designed to enhance video dehazing performance in complex engineering 
+environments. Specifically, the MainAux Encoder integrates multi-source information through a progressively 
+enhanced feature fusion mechanism, improving the representation of both global dynamics and local details. 
+Furthermore, the Spatio-Temporal Adaptive Fusion (STAF) module ensures robust temporal consistency and 
+spatial clarity by leveraging multi-level spatio-temporal information fusion. To evaluate our framework, 
+we constructed a challenging dataset named ‘‘DarkRoad’’, which includes low-light, uneven lighting, and 
+dynamic outdoor scenarios, addressing the key limitations of existing datasets in video dehazing tasks. 
+Extensive experiments demonstrate that MSTF-Net achieves state-of-the-art performance, excelling particularly 
+in applications requiring high clarity, strong contrast, and detailed preservation, providing a reliable solution 
+to video dehazing problems in practical engineering scenarios.
+1. Introduction
+With the rapid development of intelligent traffic monitoring sys-
+tems, video dehazing has become a critical technology to ensure safe 
+and efficient operation under adverse weather and complex environ-
+mental conditions. In hazy weather, the scattering and absorption 
+of light lead to blurred video images, reduced contrast, and loss of 
+details. This not only significantly degrades the visual quality of the 
+video but also directly affects the accuracy and stability of downstream 
+tasks such as traffic flow detection and license plate recognition in 
+intelligent systems (Sarwatt et al., 2024). For instance, when a traffic 
+accident occurs, hazy conditions can blur the surveillance footage, 
+making it difficult to capture clear details of the scene. This may delay 
+accident handling and traffic management, as well as complicate the 
+determination of responsibility. Therefore, restoring clear and realistic 
+video images under hazy conditions has become an urgent and essential 
+challenge in the field of intelligent transportation.
+∗ Corresponding author at: School of Computer Science and Engineering, Chongqing University of Science and Technology, Shapingba District, Chongqing, 
+401331, China.
+E-mail address: 2003057@cqust.edu.cn (G. Chen).
+In video restoration tasks, the features extracted from a single frame 
+at different scales usually contain complementary structural seman-
+tics and lo
+
+
+========== 1-s2.0-S204604302400100X-main.pdf ==========
+International Journal of Transportation Science and Technology 19 (2025) 139–155 
+Contents lists available at ScienceDirect 
+International Journal of Transportation Science 
+and Technology 
+journal homepage: www.elsevier.com/locate/ijtst 
+Research Paper 
+Nighttime agglomerate fog event detection considering car light 
+glare based on video 
+Shize Huang a,b , 
+a Shanghai Key Laboratory of Rail Infrastructure Durability and System Safety, Tongji University, Shanghai 201804, China 
+b Key Laboratory of Road and Trafﬁc Engineering of the Ministry of Education, Tongji University, Shanghai 201804, China 
+Qunyao Tan a,b , Qianhui Fan b,⇑, 
+⇑ Corresponding author. 
+E-mail address: 2310848@tongji.edu.cn (Q. Fan). 
+Zhaoxin Zhang c , 
+c Department of Civil and Environmental Engineering, The Hong Kong University of Science and Technology, Hong Kong, China 
+Yi Zhang b , Xingying Li b 
+a r t i c l e info
+Article history: 
+Received 22 June 2024 
+Received in revised form 10 August 2024 
+Accepted 26 August 2024 
+Available online 30 August 2024 
+Keywords: 
+Agglomerate fog 
+Video detection 
+Time series 
+Nighttime fog 
+a b s t r act
+Agglomerate fog event poses more serious threat than normal foggy weather to express-
+way trafﬁc safety, due to its localized nature and suddenly uneven formation. However, 
+vision-based fog detection methods typically estimate visibility for individual images 
+and ignore the difference in the characteristics of even and uneven fog, lacking use of tem-
+poral information to differentiate between normal foggy weather and agglomerate fog 
+events. Meanwhile, detection of fog at night faces strong interference from car lights that 
+is always overlooked. This study proposes a nighttime agglomerate fog event detection 
+(AFED) method for videos, taking into account car light interference. Depth disparity fea-
+ture is constructed based on the information entropy of depth estimation result. In order 
+to build a metric for uneven characteristics in the ﬁeld of view, we creatively introduce 
+the Moran’s index to establish uneven feature, generating two-dimensional feature time 
+series for each video. By extracting interpretable features from the two-dimensional fea-
+ture time series after removing car light interference frames, a classiﬁcation model based 
+on extreme gradient boosting (XGBoost) is built to differentiate agglomerate fog, normal 
+fog, and no fog videos. Experiments are carried out utilizing real monitoring data from 
+roadside surveillance cameras to validate the effectiveness of features and model. 
+Furthermore, a fog event detection dataset containing over 1 500 videos is established, 
+making up data scarcity for vision-based agglomerate fog event detection and providing 
+support for future research.
+© 2025 Tongji University and Tongji University Press. Publishing Services by Elsevier B.V. 
+on 
+behalf of KeAi Communications Co., Ltd. This is an open access article under the CC BY-
+NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/). 
+1. Introduction 
+Hazy weather leads to a decrease in atmospheric visibility, impacting drivers’ ability of accurate visual recognition for 
+trafﬁc 
+information ahead and leading to accidents such as rear-end collisions. Some studies indicate that certain geograph-
+ical locations and air quality can lead to agglomerate fog classiﬁed as radiation fog, commonly observed on speciﬁc express-
+ways in China ( Hu and Zhu, 2013; Liang et al., 2020; China Meteorological Administration, 2007 ). Agglomerate fog is a type 
+of 
+dense fog inﬂuenced by local microclimates, typically forming within a small area of tens to hundreds of meters, often 
+during the night or early morning. Compared with fog which has widespread advection in the atmosphere, agglomerate 
+fog is characterized by its extremely low visibility, sudden formation, and localized nature (see Fig. 1 ). It is an example of
+Peer review under responsibility of Tongji University. 
+https://doi.org/10.1016/j.ijtst.2024.08.006 
+20
+
+
+========== authorization.pdf ==========
+Error: Stream has ended unexpectedly
+
+
+========== base_paper.pdf ==========
+J. Vis. Commun. Image R. 90 (2023) 103720
+Available online 9 December 2022
+1047-3203/© 2022 Published by Elsevier Inc.
+Contents lists available at ScienceDirect
+J. Vis. Commun. Image R.
+journal homepage: www.elsevier.com/locate/jvci
+Full length article
+Real-world image dehazing with improved joint enhancement and exposure
+fusion✩
+Nur Huseyin Kaplan
+Department of Electrical and Electronic Engineering, Erzurum Technical University, Yakutiye, Erzurum, 25050, Turkiye
+A R T I C L E I N F O
+Keywords:
+Image dehazing
+Image enhancement
+Image sharpening
+Image filtering
+A B S T R A C T
+In this work, a single image dehazing method that improves the haze removal capacity of the Joint Contrast
+Enhancement and Exposure Fusion (CEEF) method with Smoothing-Sharpening Image Filter (SSIF) is presented.
+In this method, the hazy image is first sharpened with SSIF to obtain a sharper image. In this way, the difference
+between haze and objects is amplified. Then, the AHE procedure in CEEF is replaced by CLAHE to obtain
+an enhanced CEEF. The enhanced CEEF is applied to the filtering result to obtain the final dehazed image.
+Observations demonstrate that the proposed method obtains enhanced results while reducing the amount of
+haze. The visual and quantitative comparisons between the proposed method and state-of-the-art dehazing
+methods show that the proposed method has better dehazing performance and has a 50% improvement in
+terms of the FADE metric compared to the closest result.
+1. Introduction
+Imaging systems tend to construct low contrast images, especially
+in bad weather conditions like fog and haze. The low visibility of these
+images is dependent on the scattering and absorption of the light by
+the particles within the atmosphere. Since most automated systems and
+advanced image processing algorithms need higher contrast images,
+dehazing is a fundamental problem for these applications.
+Since the amount of haze depends on the distance between the scene
+and the imaging device, the depth information of these images is not
+present. Therefore, image dehazing is a challenging problem because of
+the unknown depth information. The traditional enhancement methods,
+like histogram-based methods, cannot restore the depth information of
+the images [1–3].
+In order to increase the performance of dehazing algorithms, multi-
+ple images of the same scene taken under different weather conditions
+are used [4–6]. These algorithms are effective for haze removal; how-
+ever, the need for multiple scenes for input is generally not possible.
+For this reason, many single image dehazing algorithms have been
+developed [7–10]. These methods generally use a prior or assumption
+along with the common hazy image model. The standard model consists
+of two unknown parameters, namely transmission and airlight. The
+main objective of single image dehazing methods is to estimate the
+transmission map. In order to achieve this, several prior assumptions
+have been made. For instance, He et al. [ 7] proposed using the Dark
+Channel Prior (DCP) for dehazing. The prior calculates the darkest pixel
+within a patch based on the observation that at least one pixel has a low
+✩ This paper has been recommended for acceptance by Zicheng Liu.
+E-mail address: huseyin.kaplan@erzurum.edu.tr.
+intensity for at least one color channel. Although an effective method, it
+distorts the color, especially in the sky region, and the time consump-
+tion is too high due to the soft matting process to reduce the effects
+caused by patches. Zhu et al. [ 9] have proposed a color attenuation
+prior for image dehazing with a supervised learning process. In this
+prior, the difference between the saturation and brightness values of
+the hazy image based linear model is constructed to estimate the haze
+amount within the image. The method does not perform well, especially
+for in-homogeneous haze. Recently, a multi-scale products prior based
+method (MP) has been proposed [ 10]. This method decomposes the
+input hazy image by an und
+
+
+========== Bridging the synthetic-to-real gap in single image dehazing.pdf ==========
+Contents lists available at ScienceDirect
+Digital Signal Processing
+journal homepage: www.elsevier.com/locate/dsp
+Bridging the synthetic-to-real gap in single image dehazing 
+Stepan Babayan
+ a,∗, Francisco Javier Sáez-Maldonado
+ b, Javier Mateos
+ b, 
+Rafael Molina
+ b
+a Dept. of Information Security, National Polytechnic University of Armenia, Yerevan, 0009, Armenia
+b Dpto. Ciencias de la Computación e I. A., Universidad de Granada, Granada, Spain
+a r t i c l e  i n f o
+Keywords:
+Single image dehazing
+Bayesian probabilistic modeling
+Atmospheric scattering model
+ a b s t r a c t
+Atmospheric haze signiﬁcantly degrades image quality in critical applications such as autonomous driving and 
+surveillance systems, where clear visibility is essential for safety and performance. A fundamental challenge in 
+image dehazing is bridging the gap between the synthetic and real haze domains. Existing deep learning meth-
+ods show promising results on synthetic datasets, but their eﬀectiveness diminishes dramatically in real-world 
+scenarios. This degradation arises from the diverse and complex characteristics of atmospheric haze, domain 
+shift between synthetic training data and real-world conditions, and the inherent ill-posed nature of the dehaz-
+ing problem. We present a multiscale variational Bayesian model that integrates a prior on the haze-free image 
+with three complementary components that preserve spatial structure, provide noise robustness, and frequency-
+domain consistency across diﬀerent resolutions. This enables the model to dynamically adapt to varying haze 
+distributions unseen during training. Furthermore, we incorporate an adaptive network architecture with input-
+conditioned convolutions to ensure physical consistency with the atmospheric scattering model, which in turn 
+provides crucial inductive bias for cross-domain generalization. Despite training exclusively on synthetic data, 
+our method demonstrates superior synthetic-to-real generalization capabilities, achieving state-of-the-art perfor-
+mance on multiple real-world benchmarks, while remaining competitive on the synthetic test set. Furthermore, 
+we demonstrate the practical utility of our approach through the evaluation of a downstream task on the KITTI 
+benchmark, showing that our dehazing method signiﬁcantly improves object detection performance in realistic 
+driving scenarios compared to current state-of-the-art approaches.
+1.  Introduction
+Image dehazing tackles the problem of recovering clear images from 
+scenes aﬀected by atmospheric scattering phenomena. When particles 
+such as dust or fog scatter light in the atmosphere, visibility decreases, 
+and image quality degrades, creating signiﬁcant challenges for applica-
+tions like autonomous driving, surveillance systems, and outdoor pho-
+tography. The physical process behind this degradation is often modeled 
+by the Atmospheric Scattering Model (ASM) [1], where the hazy image 
+𝐼 is given by:
+𝐼 = 𝐽 ⊙ 𝑡 + 𝐴 ⊙ (1 − 𝑡), (1)
+where 𝐽 is the clean image, 𝑡 is the transmission map, 𝐴 is the atmo-
+spheric light, assumed to be uniform across the scene, and ⊙ is the 
+element-wise multiplication operator. The transmission map 𝑡 models 
+the portion of light that reaches the camera without being scattered, 
+and is commonly parameterized using scene depth as:
+𝑡(𝑥) = exp(− 𝛽 ⋅ 𝑑(𝑥)), (2)
+∗ Corresponding author.
+ E-mail address: stepanbabayan.h755-3@polytechnic.am (S. Babayan).
+where 𝑑(𝑥) represents the scene depth at pixel 𝑥 and 𝛽 is the scatter-
+ing coeﬃcient that controls haze density. While the ASM undercounts 
+for some image degradations like illumination variations or noise, it pro-
+vides a widely accepted [2] framework and is utilized by many dehazing 
+methods.
+One of the main diﬃculties in single-image dehazing stems from 
+the ill-posed nature of (1), where many diﬀerent combinations of com-
+ponents 𝐽 , 𝑡, and 𝐴 can generate identical observed images. Classical 
+approaches address this challenge through hand-crafted priors 
+
+
+========== multistage_dehaze_network.pdf ==========
+Contents lists available at ScienceDirect
+Expert Systems With Applications
+journal homepage: www.elsevier.com/locate/eswa
+Multi-stage dehazing network: Where haze perception unit meets global and
+local progressive contrastive regularization
+Weichao Yi a,b,c, Liquan Dong a,b,c
+ ,∗, Ming Liu a,b,c,∗, Lingqin Kong a,b,c
+ , Yue Yang d,
+Xuhong Chu a,b,c, Yuejin Zhao a,b,c
+a Beijing Key Laboratory for Precision Optoelectronic Measurement Instrument and Technology, China
+b School of Optics and Photonics, Beijing Institute of Technology, Beijing 100081, China
+c Yangtze Delta Region Academy of Beijing Institute of Technology, Jiaxing, 314019, China
+d Information Technology Centre of Beijing Foreign Studies University, Beijing, 100089, China
+A R T I C L E I N F O
+Keywords:
+Image dehazing
+Multi-stage architecture
+Contrastive regularization
+Curricular learning
+A B S T R A C T
+Image dehazing is a crucial low-level restoration task that aims to recover a clear image from a hazy
+observation. Recent learning-based approaches have demonstrated impressive performance in this area.
+However, there are still two drawbacks: (1) Existing dehazing architectures do not sufficiently consider non-
+uniform haze distribution, indicating that the haze location information is underexplored. (2) Naïve contrastive
+regularization fails to provide enough constraint force in solution space, i.e., negative-oriented supervision
+information cannot be fully utilized during the training stage. Consequently, we establish a Multi-stage
+Dehazing Network (MSD-Net) to achieve single image haze removal. For one thing, we build a haze perception
+unit (HPU) based on a self-calibration attentive paradigm. This unit can effectively encode haze location
+information as prior guidance and further enhance its feature representation capabilities. For another, we tailor
+a global and local progressive contrastive regularization (GLPCR) to explore negative-oriented supervision
+information. Specifically, the negative samples are derived not only from the original hazy images but are
+also progressively updated through the pseudo-restoration results of the multi-stage architecture. To tackle the
+learning ambiguity arising from diverse negative samples, we employ a curriculum learning strategy during the
+training phase. Moreover, our GLPCR operates in both global and local manners, encouraging the network to
+retain rich information from both image-wise and patch-wise perspectives. Extensive experiments demonstrate
+that our MSD-Net can achieve remarkable dehazing performance compared with other state-of-the-art methods
+on several commonly used hazy dataset benchmarks.
+1. Introduction
+With the rapid development of deep learning techniques, intelligent
+visual-based systems such as video understanding (Chen et al., 2021),
+crowd surveillance (Kong et al., 2023), and autonomous driving (Zhao
+et al., 2024) have achieved remarkable success. However, their im-
+plementation results are significantly deteriorated under heavy hazy
+weather conditions, since these intelligent visual-based systems ur-
+gently need clear images as system inputs. Therefore, image dehazing,
+which focuses on recovering the clear image from its corresponding
+hazy observation, has gradually become a hot research direction.
+Generally, images captured under hazy weather may cause detail
+loss and color distortion. In mathematics, this image degradation pro-
+cess can be formulated by the following atmosphere scattering model
+∗ Corresponding authors.
+E-mail addresses: 3220220499@bit.edu.cn (W. Yi), kylind@bit.edu.cn (L. Dong), bit411liu@bit.edu.cn (M. Liu), konglingqin3025@bit.edu.cn (L. Kong),
+yangyue@bfsu.edu.cn (Y. Yang), chuxuhong001@bit.edu.cn (X. Chu), yjzhao@bit.edu.cn (Y. Zhao).
+(ASM) (Narasimhan & Nayar, 2002):
+𝐼 (𝑥) =𝐽 (𝑥)𝑡 (𝑥) +𝐴 (1 −𝑡 (𝑥)) (1)
+where 𝐼 (𝑥) and 𝐽 (𝑥) represent hazy image and its clean haze-free im-
+age, respectively.𝐴, and𝑡 represent the atmospheric light and the trans-
+mission map, respectively. Furtherm
+
+
+========== PMCN_ Parallax-motion collaboration network for stereo video dehazing.pdf ==========
+Contents lists available at ScienceDirect
+Knowledge-Based Systems
+journal homepage: www.elsevier.com/locate/knosys
+PMCN: Parallax-motion collaboration network for stereo video dehazing
+Chang Wu a, Gang He b,∗, Wanlin Zhao c, Xinquan Lai a, Yunsong Li b
+a School of Electronic Engineering, Xidian University, Xi’an, Shaanxi 710071, China
+b School of Telecommunications Engineering, Xidian University, Xi’an, Shaanxi 710071, China
+c Instrumentation Technology and Economy Institute, China
+A R T I C L E I N F O
+Keywords:
+Stereo video dehazing
+Parallax-motion collaboration
+Dynamic convolutions
+Deep neural network
+A B S T R A C T
+Despite progress in learning-based stereo dehazing, few studies have focused on stereo video dehazing (SVD).
+Existing methods may fall short in the SVD task by not fully leveraging multi-domain information. To address
+this gap, we propose a parallax-motion collaboration network (PMCN) that integrates parallax and motion
+information for efficient stereo video fog removal. We delicately design a parallax-motion collaboration block
+(PMCB) as the critical component of PMCN. Firstly, to capture binocular parallax correspondences more
+efficiently, we introduce a window-based parallax attention mechanism (W-PAM) in the parallax interaction
+module (PIM) of PMCB. By horizontally splitting the whole frame into multiple windows and extracting
+parallax relationships within each window, memory usage and runtime can be reduced. Meanwhile, we
+further conduct horizontal feature modulation to handle cross-window disparity variations. Secondly, a motion
+alignment module (MAM) based on deformable convolution explores the temporal correlation in the feature
+space for an independent view. Finally, we propose a fog-adaptive refinement module (FARM) to refine the
+features after interaction and alignment. FARM incorporates fog prior information and guides the network in
+dynamically generating processing kernels for dehazing to adapt to different fog scenarios. Quantitative and
+qualitative results demonstrate that the proposed PMCN outperforms state-of-the-art methods on both synthetic
+and real-world datasets. In addition, our PMCN also benefits the accuracy improvement for high-level vision
+tasks in fog scenes, e.g., object detection and stereo matching.
+1. Introduction
+1.1. Background
+Stereo vision systems are extensively employed in a variety of real-
+world applications, owing to their ability to provide more accurate
+three-dimensional information. In particular, in the domain of au-
+tonomous driving, crucial decisions depend heavily on the analysis of
+data obtained from stereo vision systems [1]. Such data, primarily in
+the form of video, can be significantly distorted by reduced visibility
+in foggy environments, thereby adversely impacting the performance
+of high-level visual tasks, including object detection. Consequently, it
+becomes imperative to eliminate the effects of haze from the visual
+data.
+Over the past few decades, many DNN-based works [2–10] have
+focused on dehazing tasks. In [2], a gated context aggregation network
+(GCANet) based on encoder–decoder architecture is devised for image
+dehazing and deraining. Dong et al. [3] adopt a Strengthen-Operate-
+Subtract (SOS) strategy and a dense feature fusion (DFF) module based
+on back-projection technology to boost dehazing performance. Wu
+∗ Corresponding author.
+E-mail address: ghe@xidian.edu.cn (G. He).
+et al. [11] propose a novel contrastive regularization method (CR)
+based on contrastive learning, which utilizes both hazy and clear im-
+ages as negative and positive samples, respectively, to improve training
+performance. In [12], an image dehazing framework with frequency
+and spatial dual guidance is proposed. To perform haze removal for
+single-view videos, Ren et al. [4] take advantage of the abundant infor-
+mation that exists across neighboring frames and semantic information
+for transmission estimation. However, the single-view methods are not
+well suited for stereo dehaz
+
+
+========== Towards haze removal with derived pseudo-label supervision from real-world non-aligned training data.pdf ==========
+ 
+Contents lists available at ScienceDirect
+Information Fusion
+journal homepage: www.elsevier.com/locate/inffus  
+Full length article
+Towards haze removal with derived pseudo-label supervision from 
+real-world non-aligned training data
+Weichao Yi a,b,c, Liquan Dong a,b,c,∗, Ming Liu a,b,c,∗, Lingqin Kong a,b,c, Yue Yang d, Xuhong Chu a,b,c, 
+Yuejin Zhao a,b,c
+a Beijing Key Laboratory for Precision Optoelectronic Measurement Instrument and Technology, China
+b School of Optics and Photonics, Beijing Institute of Technology, Beijing 100081, China
+c Yangtze Delta Region Academy of Beijing Institute of Technology, Jiaxing, 314019, China
+d Information Technology Centre of Beijing Foreign Studies University, Beijing, 100089, China
+A R T I C L E  I N F O
+Keywords:
+Image dehazing
+Non-aligned training
+Style transfer
+Neural networks
+ A B S T R A C T
+Single-image dehazing seeks to restore clear images by addressing degradation issues caused by hazy 
+conditions, such as detail loss and color distortion. However, since collecting large-scale and precisely aligned 
+hazy/clear image pairs is unrealistic in real-world scenarios, existing data-driven learning-based dehazing 
+algorithms are often affected by data authenticity and domain gaps between synthetic and real-world scenes, 
+resulting in unsatisfactory performance. To this end, we propose a novel haze removal framework derived 
+from real-world captured non-aligned training data. Specifically, our framework can be divided into two 
+components: a pseudo-label supervision generation stage and an image dehazing stage. For one thing, 
+the former stage explores clean-related style information from the haze-free image and transfers it to its 
+corresponding hazy counterpart, thus generating fine-aligned training image pairs. More clearly, we relieve 
+domain divergence and pixel misalignment through a well-designed Cross-Modulation Align Network (CMA-
+Net), which includes the Domain Transfer Module (DTM) and Feature Alignment Module (FAM). For another, 
+the later stage focuses on constructing an effective dehazing architecture with a pseudo-label pixel-wise 
+supervision training paradigm. Therefore, we propose a standard U-shape dehazing network with Physics-
+related Feature Unit (PFU) and Gate Attentive Fusion (GAF). Furthermore, we establish a new non-aligned 
+hazy/clear dataset named Hazy-JXBIT by our camera devices, to further evaluate the proposed dehazing 
+framework. Extensive experimental results demonstrate that these fine-aligned pseudo-label training pairs 
+generated by CMA-Net can be beneficial for building a steady dehazing network USD-Net, and prompt us 
+to obtain superior performance over existing state-of-the-art methods.
+1. Introduction
+The haze degradation problem arises from light scattering by tiny 
+particles suspended in the atmosphere, e.g., water droplets, and dust
+[1]. This bad weather may cause significant visual quality issues in 
+images captured by camera devices. However, for stable and reliable 
+high-level computer vision systems [2–4], clean image input is a basic 
+requirement to ensure the performance of their deployment. Therefore, 
+image dehazing, whose primary goal is to recover a clean image from its 
+hazy counterpart, has attracted widespread attention in the computer 
+vision community.
+Generally, the hazing process is typically modeled by the well-
+known atmospheric scattering model (ASM) [5]: 
+𝐼 (𝑥) = 𝐽 (𝑥) 𝑡 (𝑥) + 𝐴 (1 − 𝑡 (𝑥)) (1)
+∗ Corresponding authors.
+E-mail addresses: 3120215346@bit.edu.cn (W. Yi), kylind@bit.edu.cn (L. Dong), bit411liu@bit.edu.cn (M. Liu), konglingqin3025@bit.edu.cn (L. Kong), 
+yangyue@bfsu.edu.cn (Y. Yang), chuxuhong001@bit.edu.cn (X. Chu), yjzhao@bit.edu.cn (Y. Zhao).
+where 𝐼 (𝑥) and 𝐽 (𝑥) represent hazy image and its clean haze-free 
+image, respectively. 𝐴, and 𝑡 represent the atmospheric light and the 
+transmission map, respectively. Based on this formulation (1), we can 
+clearly see that image dehazing is a typical ill-posed probl
+
+
+========== Traffic sign detection and recognition using deep learning-based approach with haze removal for autonomous vehicle navigation.pdf ==========
+e-Prime - Advances in Electrical Engineering, Electronics and Energy 7 (2024) 100442
+Available online 18 January 2024
+2772-6711/© 2024 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license ( http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+Traffic sign detection and recognition using deep learning-based approach 
+with haze removal for autonomous vehicle navigation 
+A. Radha Rani a,*, Y. Anusha b, S.K. Cherishama b, S. Vijaya Laxmi b 
+a Associate Professor, Department of Computer Science and Engineering, Malla Reddy Engineering College for Women (UGC-Autonomous), Maisammaguda, Hyderabad, 
+India 
+b Department of Computer Science and Engineering, Malla Reddy Engineering College for Women (UGC Autonomous), Maisammaguda, Hyderabad, India   
+ARTICLE INFO  
+Keywords: 
+Traffic sign detection and recognition 
+Haze removal 
+Convolutional neural network 
+Deep learning 
+ABSTRACT  
+Autonomous vehicle navigation technology is increasing rapidly. However, automatic sign recognition in com-
+plex illumination environments like low-light, hazy regions is a significant challenge in in-vehicle navigation. So, 
+haze removal and robust traffic sign detection and recognition (TSDR) are critical for ensuring the vehicle’s and 
+its passengers’ safety. However, the conventional methods failed to perform both haze removal and TSDR op-
+erations simultaneously. Further, the conventional haze removal methods eliminate the wanted pixels, still the 
+presence of haze, which results in reduced traffic sign detection performance. Moreover, the conventional sign 
+recognition methods classify a few types of traffic signs. So, this work aims to develop a unified model for multi- 
+class sign recognition in complex environmental conditions. Therefore, this work introduced the deep learning 
+model for haze removal based on TSDR (DLHR-TSDR). Initially, the CURE-TSD dataset is considered. The haze 
+removal U-network (HRU-Net) module inputs a hazy image and outputs a haze-free image trained to learn the 
+mapping between hazy and haze-free images. Then, the TSDR-convolutional neural network (CNN) module takes 
+the haze-free image from the previous module as input and outputs the location traffic signs in the image. The 
+simulation results on the Carleton University Retinal Eye-Traffic Sign Dataset (CURE-TSD) dataset show that the 
+DLHR-TSDR method developed in the study resulted in 99.01 % accuracy, higher than traditional methods.   
+1. Introduction 
+Haze removal and robust TSDR are essential tasks for autonomous 
+vehicles [1] due to the improved safety, increased efficiency, real-time 
+performance, and improved robustness: Haze, fog, and other atmo-
+spheric conditions can reduce visibility on the road, making it difficult 
+for human drivers and autonomous vehicles to detect obstacles and 
+navigate safely. Removing haze and accurately detecting traffic signs [2] 
+improves the vehicle’s safety. Accurate detection of traffic signs can help 
+autonomous vehicles navigate efficiently by providing information 
+about the speed limit, road conditions, and other vital details. It can help 
+reduce travel time, optimize routes, and improve fuel efficiency. 
+Autonomous vehicles operate in real-time; therefore, the haze removal 
+and traffic sign detection and recognition algorithms must also operate 
+in real-time. The machine learning model [3] can provide real-time 
+performance using optimized lightweight architectures and efficient 
+algorithms. Autonomous vehicles operate in various environmental 
+conditions, including lighting, weather, and visibility [4]. Removing 
+haze and detecting traffic signs can improve the vehicle’s performance 
+in various scenarios, leading to safer and more reliable autonomous 
+driving. Both driver assistance systems and the technology that makes 
+autonomous vehicles work depend on people reading and understanding 
+traffic signs [5]. One of the essential criteria for the safe and wide use of 
+this techn
+
+
+========== WaveletFormerNet_ A Transformer-based wavelet network for real-world non-homogeneous and dense fog removal.pdf ==========
+Image and Vision Computing 146 (2024) 105014
+Available online 10 April 2024
+0262-8856/© 2024 Elsevier B.V. All rights reserved.
+WaveletFormerNet: A Transformer-based wavelet network for real-world 
+non-homogeneous and dense fog removal 
+Shengli Zhang a, Zhiyong Tao a,*,1, Sen Lin b 
+a School of Electronic and Information Engineering, Liaoning Technical University, Huludao, Liaoning, China 
+b School of Automation and Electrical Engineering, Shenyang Ligong University, Shenyang, Liaoning, China   
+ARTICLE INFO  
+Keywords: 
+Image dehazing 
+Convolution neural network 
+Wavelet transform 
+Swin transformer 
+Fog removal 
+ABSTRACT  
+Although deep convolutional neural networks have achieved remarkable success in removing synthetic fog, it is 
+essential to be able to process images taken in complex foggy conditions, such as dense or non-homogeneous fog, 
+in the real world. However, the haze distribution in the real world is complex, and downsampling can lead to 
+color distortion or loss of detail in the output results as the resolution of a feature map or image resolution 
+decreases. Moreover, the over-stacking of convolutional blocks might increase the model complexity. In addition 
+to the challenges of obtaining sufficient training data, overfitting can also arise in deep learning techniques for 
+foggy image processing, which can limit the generalization abilities of the model, posing challenges for its 
+practical applications in real-world scenarios. Considering these issues, this paper proposes a Transformer-based 
+wavelet network (WaveletFormerNet) for real-world foggy image recovery. We embed the discrete wavelet 
+transform into the Vision Transformer by proposing the WaveletFormer and IWaveletFormer blocks, aiming to 
+alleviate texture detail loss and color distortion in the image due to downsampling. We introduce parallel 
+convolution in the Transformer block, which allows for the capture of multi-frequency information in a light-
+weight mechanism. Such a structure reduces computational expenses and improves the effectiveness of the 
+network. Additionally, we have implemented a feature aggregation module (FAM) to maintain image resolution 
+and enhance the feature extraction capacity of our model, further contributing to its impressive performance in 
+real-world foggy image recovery tasks. Through extensive experiments on real-world fog datasets, we have 
+demonstrated that our WaveletFormerNet achieves superior performance compared to state-of-the-art methods, 
+as shown through quantitative and qualitative evaluations of minor model complexity. Additionally, our satis-
+factory results on real-world dust removal and application tests showcase the superior generalization ability and 
+improved performance of WaveletFormerNet in computer vision-related applications compared to existing state- 
+of-the-art methods, further confirming our proposed approach’s effectiveness and robustness. Our code is 
+available at https://github.com/shengli666666/WaveletFormerNet.   
+1. Introduction 
+Haze is a common atmospheric phenomenon that causes distortion 
+and degradation of images. Image dehazing techniques are significant 
+for many computer vision tasks, such as remote sensing processing 
+[23,24] and video analysis and recognition [40,52]. In recent years, 
+image dehazing has been a hot research topic in computer vision and 
+image processing, serving as an essential low-level image recovery task 
+and a preprocessing step for high-level vision tasks. 
+Many previous dehazing methods [21,60,39,58] have used the 
+classical atmosphere scattering model (ASM) [34,37] to characterize the 
+degradation process of hazy images by Eq. (1): 
+I(x)= J(x)t(x)+ A(1  t(x)) (1)  
+where I(x) and J(x) are the degraded images and the clear images, 
+respectively. A represents global atmospheric light; t(x)= e  βd(x) is the 
+transmission map, where β and d(x) represent atmospheric scattering 
+parameters and scene depth, respectively. The main idea of early prior- 
+based 

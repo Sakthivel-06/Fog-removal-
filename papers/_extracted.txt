@@ -1,0 +1,290 @@
+﻿.\.venv\Scripts\python.exe : invalid pdf header: b'<!DOC'
+At line:1 char:1
++ .\.venv\Scripts\python.exe -c "
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (invalid pdf header: b'<!DOC':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+EOF marker not found
+
+
+========== 1-s2.0-S0957417423030944-main.pdf ==========
+Error: 'charmap' codec can't encode character '\u2217' in position 386: character maps to <undefined>
+
+
+========== 1-s2.0-S1077314225001857-main.pdf ==========
+Error: 'charmap' codec can't encode character '\u2217' in position 291: character maps to <undefined>
+
+
+========== 1-s2.0-S204604302400100X-main.pdf ==========
+Error: 'charmap' codec can't encode character '\ufb01' in position 526: character maps to <undefined>
+
+
+========== authorization.pdf ==========
+Error: Stream has ended unexpectedly
+
+
+========== base_paper.pdf ==========
+Error: 'charmap' codec can't encode character '\u2729' in position 338: character maps to <undefined>
+
+
+========== Bridging the synthetic-to-real gap in single image dehazing.pdf ==========
+Error: 'charmap' codec can't encode character '\u2217' in position 198: character maps to <undefined>
+
+
+========== multistage_dehaze_network.pdf ==========
+Error: 'charmap' codec can't encode character '\u2217' in position 285: character maps to <undefined>
+
+
+========== PMCN_ Parallax-motion collaboration network for stereo video dehazing.pdf ==========
+Error: 'charmap' codec can't encode character '\u2217' in position 211: character maps to <undefined>
+
+
+========== Towards haze removal with derived pseudo-label supervision from real-world non-aligned training data.pdf ==========
+Error: 'charmap' codec can't encode character '\u2217' in position 279: character maps to <undefined>
+
+
+========== Traffic sign detection and recognition using deep learning-based approach with haze removal for autonomous vehicle navigation.pdf ==========
+e-Prime - Advances in Electrical Engineering, Electronics and Energy 7 (2024) 100442
+Available online 18 January 2024
+2772-6711/⌐ 2024 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license ( http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+Traffic sign detection and recognition using deep learning-based approach 
+with haze removal for autonomous vehicle navigation 
+A. Radha Rani a,*, Y. Anusha b, S.K. Cherishama b, S. Vijaya Laxmi b 
+a Associate Professor, Department of Computer Science and Engineering, Malla Reddy Engineering College for Women (UGC-Autonomous), Maisammaguda, Hyderabad, 
+India 
+b Department of Computer Science and Engineering, Malla Reddy Engineering College for Women (UGC Autonomous), Maisammaguda, Hyderabad, India   
+ARTICLE INFO  
+Keywords: 
+Traffic sign detection and recognition 
+Haze removal 
+Convolutional neural network 
+Deep learning 
+ABSTRACT  
+Autonomous vehicle navigation technology is increasing rapidly. However, automatic sign recognition in com-
+plex illumination environments like low-light, hazy regions is a significant challenge in in-vehicle navigation. So, 
+haze removal and robust traffic sign detection and recognition (TSDR) are critical for ensuring the vehicleÆs and 
+its passengersÆ safety. However, the conventional methods failed to perform both haze removal and TSDR op-
+erations simultaneously. Further, the conventional haze removal methods eliminate the wanted pixels, still the 
+presence of haze, which results in reduced traffic sign detection performance. Moreover, the conventional sign 
+recognition methods classify a few types of traffic signs. So, this work aims to develop a unified model for multi- 
+class sign recognition in complex environmental conditions. Therefore, this work introduced the deep learning 
+model for haze removal based on TSDR (DLHR-TSDR). Initially, the CURE-TSD dataset is considered. The haze 
+removal U-network (HRU-Net) module inputs a hazy image and o
+e-Prime - Advances in Electrical Engineering, Electronics and Energy 7 (2024) 100442
+2
+signs significantly impact roadwaysÆ aesthetics. Image conversion from 
+RGB to other colour spaces, including HSI, CIELab, and HSL, is standard 
+practice when using colour-based techniques. The traffic signals are then 
+recovered using nifty data processing, namely, a colour threshold seg-
+mentation technique. The traffic sceneÆs inconsistent lighting might 
+confuse colour-detecting algorithms [9]. In the method of traffic sign 
+identification known as form-based traffic sign detection, geometric 
+symmetry is employed to establish the geometric contour shape of traffic 
+signs. The geometric moment invariant detection method performs 
+better than the template-matching approach in a scene with complicated 
+illumination [10] but at the cost of higher processing complexity. 
+Nevertheless, there is a choice for improvement in the identification 
+rates achieved with these techniques. 
+The faster region-based networks are a standard object identification 
+system that employs a two-stage target detection framework but still 
+struggles with recognizing tiny objects. Whilst CNN was first developed 
+for target detection [11], it has been used in other areas, such as object 
+identification. Further, numerous approaches have been proposed 
+recently to decipher traffic signals. Developing reliable TSDR for 
+autonomous vehicle technology is essential to reach its full potential. 
+Several studies have been done on this subject, and the available liter-
+ature has a lot of valuable methodological suggestions. Still, the machine 
+learning methods [12] have only been tested on data sets with no mis-
+takes. So, researchers have yet to pay much attention to a wide range of 
+challenging situations that affect the quality of traffic images taken in 
+the field. The significant contributions to this work are as follows:  
+ò Implementation of HRU-Net model for removing the haze from input 
+images andpre-pro
+e-Prime - Advances in Electrical Engineering, Electronics and Energy 7 (2024) 100442
+3
+traffic signs. Using the Gabor kernel in the first convolutional layer, 
+conducting batch normalization processing after the pooling layer, and 
+using the Adam algorithm as the optimizer approach, this model ach-
+ieves better results than the reference LeNet-5 [20] model. 
+Thus, Liu et al. [21] presented a unique transfer learning architecture 
+that uses additional boosting and cascaded ConvNet to compensate for 
+this limitation. Several methods are used to form cascading contents. An 
+enhanced detection rate and more data for training were the results of 
+cascading a ConvNet after an AdaBoost detector. Since the cascaded 
+ConvNet [22] provides additional training data, the AdaBoost-based 
+detector is re-educated using the supplementary boosting strategy. 
+Similarly, the re-educated boosted detector and the cascaded ConvNet 
+detector can achieve high accuracy while decreasing the detection time. 
+In [23], a robust algorithm that reliably identifies and recognizes traffic 
+signs despite difficulties such as haze, fog, and blurry images caused by 
+the poor state of the roadways. Image editing, the OCR method, and the 
+You Only Look Once Version3 (YOLOv3) detection algorithm were used 
+to get this result. Hu, Jie [24] used deep learning to develop a new way 
+to find and identify traffic signs. The lack of adequate spatial 
+information in the high-level characteristics of minor traffic signs is 
+addressed by creating the parallel deformable convolution module 
+(PDCM), the first contribution of this study. To maximize the effec-
+tiveness of its feature extraction, PDCM may acquire the matching 
+receptive field in a customizable manner. Symmetrical branches are 
+used to ensure that the privacy of the abstract information is preserved. 
+They suggest using a sub-pixel convolutional attention module to miti-
+gate the impact of size variance (SCAM). Wang, Yongjie, et al. [25] 
+develop a way
+e-Prime - Advances in Electrical Engineering, Electronics and Energy 7 (2024) 100442
+4
+3. Used methodology 
+Much research has been done on the different TSDRs and the 
+different data sets, performance indicators, and data availability be-
+tween them. Possible future developments in the study of driver assis-
+tance systems are reviewed, and a few quick recommendations are 
+offered to demonstrate the current concerns and obstacles the available 
+technology faces. However, these conventional methods failed to 
+remove the haze from source images and detect the traffic sign. Fig. 1 
+shows the DLHR-TSDR method block diagram developed in the study. 
+The U-Net is a CNN architecture commonly used for image segmentation 
+tasks. It has a unique U-shaped architecture that allows for the efficient 
+extraction of features from input images. In recent years, researchers 
+have developed U-Net-based algorithms for haze removal.One such al-
+gorithm is the HRU-Net-based deep learning algorithm for single-image 
+haze removal. The algorithm takes a hazy image as input and produces a 
+haze-free image as output. The HRU-Net architecture is used for feature 
+extraction and image restoration, and the network is trained using a 
+large dataset of hazy and haze-free image pairs. The HRU-Net structure 
+consists of both a restricting and an expanding channel. Via a series of 
+convolutional and pooling layers, the shrinking path reduces the spatial 
+resolution of the input image while simultaneously increasing the 
+number of feature mappings. Reduce the number of feature maps while 
+improving their spatial resolution with convolutional and up-sampling 
+layers. Skip connections combine features from the contracting and 
+expanding paths, allowing the network to preserve spatial information. 
+In the case of haze removal, the hazy image is passed through the HRU- 
+Net architecture, and the output is a haze-free image. Then, the TSDR- 
+CNN is trained using a supervised learning approach, where it lear
+
+
+========== WaveletFormerNet_ A Transformer-based wavelet network for real-world non-homogeneous and dense fog removal.pdf ==========
+Image and Vision Computing 146 (2024) 105014
+Available online 10 April 2024
+0262-8856/⌐ 2024 Elsevier B.V. All rights reserved.
+WaveletFormerNet: A Transformer-based wavelet network for real-world 
+non-homogeneous and dense fog removal 
+Shengli Zhang a, Zhiyong Tao a,*,1, Sen Lin b 
+a School of Electronic and Information Engineering, Liaoning Technical University, Huludao, Liaoning, China 
+b School of Automation and Electrical Engineering, Shenyang Ligong University, Shenyang, Liaoning, China   
+ARTICLE INFO  
+Keywords: 
+Image dehazing 
+Convolution neural network 
+Wavelet transform 
+Swin transformer 
+Fog removal 
+ABSTRACT  
+Although deep convolutional neural networks have achieved remarkable success in removing synthetic fog, it is 
+essential to be able to process images taken in complex foggy conditions, such as dense or non-homogeneous fog, 
+in the real world. However, the haze distribution in the real world is complex, and downsampling can lead to 
+color distortion or loss of detail in the output results as the resolution of a feature map or image resolution 
+decreases. Moreover, the over-stacking of convolutional blocks might increase the model complexity. In addition 
+to the challenges of obtaining sufficient training data, overfitting can also arise in deep learning techniques for 
+foggy image processing, which can limit the generalization abilities of the model, posing challenges for its 
+practical applications in real-world scenarios. Considering these issues, this paper proposes a Transformer-based 
+wavelet network (WaveletFormerNet) for real-world foggy image recovery. We embed the discrete wavelet 
+transform into the Vision Transformer by proposing the WaveletFormer and IWaveletFormer blocks, aiming to 
+alleviate texture detail loss and color distortion in the image due to downsampling. We introduce parallel 
+convolution in the Transformer block, which allows for the capture of multi-frequency information in a light-
+weight mechanism. Such a structure red
+Image and Vision Computing 146 (2024) 105014
+2
+t(x) and the global atmospheric light A by handcraft; these methods have 
+made significant progress. However, these prior-based methods usually 
+require time-consuming iterative optimization and manually designed 
+priors; they need to be more consistent with the practice. As is well 
+known, haze formation is related to natural factors, such as altitude, 
+temperature, and humidity, but it is challenging to express hazy images 
+with a simplistic model. Therefore, these prior-based methods may 
+result in estimation errors when dealing with complex scenes such as the 
+non-homogeneous and dense fog weather. 
+Nowadays, data-driven based methods have made significant prog-
+ress in image dehazing. A handful of end-to-end models [17,25,46] have 
+been proposed to mitigate the deep reliance on predefined prior infor-
+mation, but they typically have limitations in terms of interpretability. 
+With the rapid development of deep learning techniques and the 
+establishment of large-scale synthetic datasets [26], many data-driven 
+approaches [53,58,49,29,56,1] use Convolution Neural Networks 
+(CNNs) to extract features and build end-to-end dehazing networks to 
+learn the transmission map between clear and hazy images. 
+Although the above data-driven approaches significantly improve 
+the visual quality of image dehazing results, the following problems still 
+exist for the current state-of-the-art (SOTA) CNNs: First, due to the 
+complex distribution of haze in the real world, edge information is 
+crucial to recovering the texture details of a clear image. Still, the points 
+at the edges of the image may be ignored during the layer-by-layer 
+convolution process, resulting in the loss of image details easily. Sec-
+ond, models trained on synthetic fog datasets do not work well for 
+processing images in real-world non-homogeneous fog or dense fog, and 
+the generalization ability and robustness of the network still need to be 
+improved. Third, 
+Image and Vision Computing 146 (2024) 105014
+3
+haze-free images. He et al. [21] proposed the dark channel prior (DCP), 
+assuming that the image patches of haze-free outdoor images often have 
+low-intensity values in at least one channel. To address the difference in 
+brightness and saturation of hazy images, Zhu et al. [60] proposed color 
+attenuation prior (CAP) to estimate the scene depth as solid prior 
+knowledge. To eliminate the polarization effect of information. Shen 
+et al. [46] proposed a globally nonuniform ambient light model to 
+predict spatially varied ambient light and designed a bright pixel index 
+to correct the transmission. With the predicted haze parameters, they 
+reversed the atmospheric scattering model to restore visibility. Zhou 
+et al. [59] proposed a robust polarization-based dehazing network. 
+However, the specific scenario inherently limits the performance of 
+these methods, and they may lead to undesirable color distortions when 
+the scenario does not satisfy these priors. In contrast, WaveletFormerNet 
+can reconstruct images with richer detail by leveraging the comple-
+mentary advantages of prior- and deep learning-based methods. 
+2.1.2. Deep learning methods 
+Recently, deep learning techniques have been proposed to tackle the 
+problem of underwater image dehazing. These techniques have shown 
+promising results in the restoration of underwater images. They can be 
+classified into three categories: (i) CNN-based methods, (ii) GAN-based 
+methods, and (iii) Transformer-based methods. 
+2.1.2.1. CNN-based methods. A wide range of CNN-based methods 
+[41,8,25,31,39,30,48,53,49,58] have dominated in recent years. Ren 
+et al. [41] proposed MSCNN to estimate t(x) using a coarse-scale 
+network followed by local optimization. Li et al. [25] reiterated ASM 
+and proposed AODNet to learn each hazy image and its t(x). However, 
+all of these methods rely on ASM, and the dehazing results are often 
+color-distorted. To alleviate the bottleneck problem enco
+Image and Vision Computing 146 (2024) 105014
+4
+[20] proposed a DWSR combining the discrete wavelet transform with 
+ResNet by predicting the residual wavelet subbands. Inspired by U-Net 
+[44], Liu et al. [28] proposed MWCNN, which replaces pooling and non- 
+pooling operations to reduce the number of parameters in the network. 
+However, multiple uses of the discrete wavelet transform operations 
+may result in redundant channels. Therefore, Yang et al. [54] proposed 
+the Wavelet U-Net, which uses the discrete wavelet transform to extract 
+edge features while applying the adaptive color transform that con-
+volutional layers; this structure enhances the texture details in the 
+image. Zou et al. [61] proposed SDWNet to obtain large sensory fields 
+with a high spatial resolution and recover precise high-frequency texture 
+details. Fu et al. [18] proposed a two-branch network DW-GAN to 
+leverage the power of discrete wavelet transform in helping the network 
+acquire more frequency domain information. These methods demon-
+strate the significant role of discrete wavelet transform in the image 
+recovery process. 
+2.3. Vision Transformer 
+Attention mechanism [50] of deep learning has achieved a great 
+process nowadays. Dosovitskiy et al. [16] proposed ViT with the direct 
+application of the Transformer architecture, which projects images into 
+token sequences via patch-wise linear embedding. The shortcomings of 
+the ViT are its weak inductive bias and its quadratic computational cost. 
+Until Liu et al. [32] proposed the Swin Transformer, they divided tokens 
+into a window and performed self-attention within a window to main-
+tain a linear computational cost. Guo et al. [19] proposed Dehamer 
+modulate convolutional features via learning modulation matrices, 
+which are conditioned on Transformer features instead of simple addi-
+tion or concatenation of features. Song et al. [49] proposed the Deha-
+zeFormer, which can be viewed as a combination of Swin Transformer 
+[32] and U-Net 

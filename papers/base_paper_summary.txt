@@ -1,0 +1,508 @@
+J. Vis. Commun. Image R. 90 (2023) 103720
+Available online 9 December 2022
+1047-3203/© 2022 Published by Elsevier Inc.
+Contents lists available at ScienceDirect
+J. Vis. Commun. Image R.
+journal homepage: www.elsevier.com/locate/jvci
+Full length article
+Real-world image dehazing with improved joint enhancement and exposure
+fusion✩
+Nur Huseyin Kaplan
+Department of Electrical and Electronic Engineering, Erzurum Technical University, Yakutiye, Erzurum, 25050, Turkiye
+A R T I C L E I N F O
+Keywords:
+Image dehazing
+Image enhancement
+Image sharpening
+Image filtering
+A B S T R A C T
+In this work, a single image dehazing method that improves the haze removal capacity of the Joint Contrast
+Enhancement and Exposure Fusion (CEEF) method with Smoothing-Sharpening Image Filter (SSIF) is presented.
+In this method, the hazy image is first sharpened with SSIF to obtain a sharper image. In this way, the difference
+between haze and objects is amplified. Then, the AHE procedure in CEEF is replaced by CLAHE to obtain
+an enhanced CEEF. The enhanced CEEF is applied to the filtering result to obtain the final dehazed image.
+Observations demonstrate that the proposed method obtains enhanced results while reducing the amount of
+haze. The visual and quantitative comparisons between the proposed method and state-of-the-art dehazing
+methods show that the proposed method has better dehazing performance and has a 50% improvement in
+terms of the FADE metric compared to the closest result.
+1. Introduction
+Imaging systems tend to construct low contrast images, especially
+in bad weather conditions like fog and haze. The low visibility of these
+images is dependent on the scattering and absorption of the light by
+the particles within the atmosphere. Since most automated systems and
+advanced image processing algorithms need higher contrast images,
+dehazing is a fundamental problem for these applications.
+Since the amount of haze depends on the distance between the scene
+and the imaging device, the depth information of these images is not
+present. Therefore, image dehazing is a challenging problem because of
+the unknown depth information. The traditional enhancement methods,
+like histogram-based methods, cannot restore the depth information of
+the images [1–3].
+In order to increase the performance of dehazing algorithms, multi-
+ple images of the same scene taken under different weather conditions
+are used [4–6]. These algorithms are effective for haze removal; how-
+ever, the need for multiple scenes for input is generally not possible.
+For this reason, many single image dehazing algorithms have been
+developed [7–10]. These methods generally use a prior or assumption
+along with the common hazy image model. The standard model consists
+of two unknown parameters, namely transmission and airlight. The
+main objective of single image dehazing methods is to estimate the
+transmission map. In order to achieve this, several prior assumptions
+have been made. For instance, He et al. [ 7] proposed using the Dark
+Channel Prior (DCP) for dehazing. The prior calculates the darkest pixel
+within a patch based on the observation that at least one pixel has a low
+✩ This paper has been recommended for acceptance by Zicheng Liu.
+E-mail address: huseyin.kaplan@erzurum.edu.tr.
+intensity for at least one color channel. Although an effective method, it
+distorts the color, especially in the sky region, and the time consump-
+tion is too high due to the soft matting process to reduce the effects
+caused by patches. Zhu et al. [ 9] have proposed a color attenuation
+prior for image dehazing with a supervised learning process. In this
+prior, the difference between the saturation and brightness values of
+the hazy image based linear model is constructed to estimate the haze
+amount within the image. The method does not perform well, especially
+for in-homogeneous haze. Recently, a multi-scale products prior based
+method (MP) has been proposed [ 10]. This method decomposes the
+input hazy image by an undecimated Laplacian decomposition to obtain
+its detail and approximation subbands. Then, the multi-scale product
+of the approximation subband is used to calculate the prior. This prior
+can remove the haze and does not distort the color in the sky region.
+However, the method cannot remove the haze, especially in the mid
+regions. The prior-based algorithms generally suffer from artifacts and
+distortions.
+Due to the improvements in learning algorithms, image dehazing
+methods based on learning have attracted researchers in recent years.
+Learning-based methods can be divided into two categories model-
+based, and model-free methods [11]. Model-based methods directly try
+to estimate the transmission maps with the use of convolutional neural
+networks. Cai et al. [12] have proposed a trainable system (DehazeNet)
+to estimate the transmission with the help of convolutional neural
+networks. Ren et al. [ 13] proposed a multi-scale deep neural network.
+https://doi.org/10.1016/j.jvcir.2022.103720
+Received 1 August 2022; Received in revised form 17 October 2022; Accepted 3 December 2022
+Journal of Visual Communication and Image Representation 90 (2023) 103720
+2
+N.H. Kaplan
+The deep network model is trained to learn the mapping between the
+transmission map and the hazy image in this method. The model-based
+algorithms generally suffer from artifacts and distortions similar to the
+prior-based methods. On the other hand, model-free methods do not
+use the classical hazy image model. Instead, the methods dehaze the
+image by using end-to-end convolutional neural networks. For instance,
+GridDehazeNet is proposed in [14]. The method uses an end-to-end
+convolutional network consisting of three parts: pre-processing, back-
+bone, and post-processing. The model-free learning algorithms perform
+better than the model-based learning algorithms. However, they still
+present artifacts and distortions in the dehazed images [15].
+In addition to the methods given above, there are dehazing methods
+based on image enhancement techniques, like Retinex [16] and fu-
+sion [17–19]. In [16], it is assumed that there is a relationship between
+dehazing and Retinex. The dehazing results sometimes have unnatural
+colors due to the fact that Retinex ignores the atmospheric light [11].
+In [17], a Laplacian pyramid-based multi-scale fusion strategy is pro-
+posed for dehazing. In [18], a guided filter-driven weighted combina-
+tion of Gaussian-based DCP and an Adaptive Histogram Equalization is
+used.
+Recently, a Joint Contrast Enhancement and Exposure Fusion based
+dehazing method (CEEF) has been proposed [11]. In this method,
+firstly, contrast enhancement is performed. In this stage, Gamma Cor-
+rection (GC) and Color Preserving Adaptive Histogram Equalization
+(CP-AHE) is applied to improve the contrast of the image. After enhanc-
+ing the contrast, a fast and adaptive structural patch decomposition is
+applied to fuse the images obtained by GC and CP-AHE. Even though
+providing better results than previous methods, the haze is not removed
+enough, and the contrast improvement can be better.
+Motivated by the results of CEEF [11], in this paper, a dehaz-
+ing method that combines the Smoothing-Sharpening Image Filter
+(SSIF) [20] and CEEF is proposed. The proposed method first sharpens
+the images with SSIF. The sharpened image is expected to amplify the
+difference between haze and objects within the image. Thus, the haze
+removal performance is also expected to be amplified. After obtaining
+the sharpened hazy image, an enhanced version of CEEF is applied
+to the sharpened image to obtain the dehazed image. The proposed
+enhanced CEEF replaces the Adaptive Histogram Equalization (AHE)
+with Clipping Limited Adaptive Histogram Equalization (CLAHE) in
+the contrast enhancement stage of the CEEF method. In this way, the
+possible noise amplifications of AHE are expected to be reduced so as
+to obtain a better enhancement performance. The main contributions
+of the proposed dehazing algorithm can be concluded as follows:
+• The input hazy image is sharpened by Sharpening Smoothing
+Image Filter (SSIF) to amplify the difference between the scene
+and haze so as to obtain a better haze removal performance.
+• The Adaptive Histogram Equalization (AHE) provides noisy re-
+sults in the enhanced results. Therefore, it is proposed to replace
+the AHE of the CEEF method with Clipping Limited AHE (CLAHE)
+to obtain a better-enhanced result.
+A large dataset of hazy images has been used to examine the perfor-
+mance of the proposed method. The resulting images and quantitative
+comparisons show that the proposed dehazing algorithm produces
+images with higher contrast and visibility.
+The rest of the paper is as follows. An explanation of the SSIF and
+CEEF is given in Section 2. The proposed dehazing method is given
+in Section 3. Experimental setup, ablation studies, real-world image
+dehazing, and comparisons for benchmark datasets are included in
+Section 4. The paper is concluded in Section 5.
+2. Related work
+2.1. Smoothing sharpening image filter
+Smoothing Sharpening Image Filter (SSIF) is a guided edge-aware
+filter, which can be used for smoothing and sharpening purposes [20].
+The filter uses a tuning parameter to perform smoothing or sharpening.
+The guided patch interpolation of SSIF within the patch 𝑘 can be given
+as:
+𝐽𝑘(𝑞) = 𝜇𝑘 +𝑠𝑖𝑔𝑛(𝜙𝑘)𝛼𝑘(𝐺𝑘(𝑞) −𝑣𝑘) (1)
+Here, 𝐽𝑘 represents the filtered output, and 𝐺𝑘 is the guidance
+image, which can be the original image or a guidance image with a
+higher signal-to-noise ratio compared to the original image [20]. 𝜇𝑘 is
+the mean of the input image, and𝑣𝑘 is the mean of the guidance image.
+𝜙𝑘 is the sample patch covariance of the original and guidance images.
+The most important thing for SSIF is to determine 𝛼𝑘. For self-
+guidance, 𝛼𝑘 can be evaluated by:
+𝛼𝑘 = 1
+2
+⎛
+⎜
+⎜
+⎜⎝
+|𝜙𝑘|
+𝜎2
+𝑘 +𝜖
++
+√√√√√
+(
+|𝜙𝑘|
+𝜎2
+𝑘 +𝜖
+)2
++ 4𝜅𝜖
+𝜎2
+𝑘 +𝜖
+⎞
+⎟
+⎟
+⎟⎠
+(2)
+Here 𝜎𝑘 is the patch variance of the input image, and 𝜖 is a user-
+defined parameter, controlling the sharpening gain [20]. The parameter
+𝜅 determines the smoothing or sharpening level. 𝜅 <1 means smooth-
+ing, and 𝜅 > 1 means sharpening. Moreover, 𝜅 = 1 means there is no
+filtering, whereas 𝜅 = 0 means iterative guided filtering [20].
+In order to perform self-guidance filtering following weighted aver-
+aging is used [20]:
+𝐽 (𝑝) = 𝐼(𝑝)
+𝑁∑
+𝑘=1
+𝜔𝑘𝛼𝑘 +
+𝑁∑
+𝑘=1
+𝜔𝑘(1 −𝛼𝑘)𝜇𝑘 (3)
+The weighting factor 𝜔𝑘 is evaluated as:
+𝜔𝑘 = 𝑐𝑘
+1 +
+(
+𝜎2
+𝑘
+𝑠𝜎2
+) (4)
+Here, 𝑐𝑘 is a factor to ensure ∑𝑁
+𝑘=1𝜔𝑘 = 1 . 𝑠 is a pre-defined scale
+parameter, and𝜎2 is the average of the patch variances𝜎2
+𝑘 for the whole
+image.
+There are four parameters to be determined for the SSIF filter,
+namely𝜅 for sharpening-smoothing level,𝑟 for patch radius,𝑠 for scale,
+and 𝜖 for sharpening gain.
+2.2. Joint contrast enhancement and exposure fusion
+Joint Contrast Enhancement and Exposure Fusion (CEEF) is a
+method combining Gamma Correction (GC) and Color Preservation
+Adaptive Histogram Equalization (CP-AHE) [11] for enhancement. The
+method applies GC and CP-AHE separately to the input hazy image.
+The outputs of GC and CP-AHE are then fused with a multi-scale
+structural patch decomposition based fusion method to obtain the
+dehazed image [11].
+Let 𝐼 be the input hazy image. The GC is calculated as follows:
+𝐼𝐺𝑛 =𝛼𝐼𝑛 (5)
+Here, 𝐼 is the input hazy image to be corrected, and 𝐼𝐺𝑛 are the
+corrected image sequences of the input image obtained for Gamma
+values 𝑛 = 2, 3, 4, 5. 𝛼 is a coefficient with a default value of 1.
+In the CP-AHE step, the input image is reshaped to obtain a single
+2D matrix by simply ordering the R, G, and B values of the color image.
+𝐼𝑅𝑇 =𝑅𝑇 (𝐼) (6)
+𝐼𝑅𝑇 is the reshaped version of input image 𝐼, and 𝑅𝑇 (.) is the
+reshaping operator. The AHE is applied to obtain the enhanced image.
+𝐼𝐶,𝑅𝑇 =𝐴𝐻𝐸 (𝐼𝑅𝑇 ) (7)
+The AHE result is reshaped to obtain the CP-AHE output as [11]:
+𝐼𝐶 =𝑅𝑇 −1(𝐼𝐶,𝑅𝑇 ) (8)
+Journal of Visual Communication and Image Representation 90 (2023) 103720
+3
+N.H. Kaplan
+Finally, a faster version of structural patch decomposition for multi-
+exposure fusion is applied to the image sequence obtained by CP-AHE
+𝐼𝐺𝑛,𝑛 = 2, 3, 4, 5 and GC result 𝐼𝐶 [11].
+To perform the fusion process, first, the sequence obtained from the
+input hazy image is combined. The detail layers can be obtained by:
+𝐻 (𝑙) =
+𝐾∑
+𝑘=1
+𝐹 (𝛾 (𝑙)
+𝑘 ) ∗ 𝑋(𝑙)
+𝑘 −𝐹 (𝛾 (𝑙)
+𝑘 ) ∗ 𝐹 (𝑋(𝑙)
+𝑘 ) (9)
+Here, 𝐻 (𝑙) is the 𝑙𝑡ℎ level detail layer, 𝑙 is the decomposition level,
+𝐾 is the number of image sequence 𝐹 (.) represents the mean filter
+operator, and ∗ is the Hadamard product. 𝑋(𝑙)
+𝑘 is the input sequence
+of 𝑙𝑡ℎ level, which is calculated by downsampling the previous level
+input sequence as [11]:
+𝑋(𝑙)
+𝑘 =𝐷(𝐹 (𝑋(𝑙−1)
+𝑘 )) (10)
+where 𝐷(.) is the downsampling operator with a factor of 2.
+For L levels of decomposition, the final base layer can be obtained
+as:
+𝐵(𝐿) =
+𝐾∑
+𝑘=1
+𝛼(𝐿)
+𝑘 ∗𝐹 (𝑋(𝐿)
+𝑘 ),𝑙 = 1, 2, …,𝐿 (11)
+where, 𝛼(𝐿)
+𝑘 is the weight factor calculated as:
+𝛼(𝐿)
+𝑘 =
+𝑡𝑎𝑛−1(0.5𝜆 −|0.5 −𝑋(𝐿)
+𝑘 |𝜆)
+∑𝐾
+𝑘=1𝑡𝑎𝑛−1(0.5𝜆 −|0.5 −𝑋(𝐿)
+𝑘 |𝜆)
+(12)
+The haze-free base layers can be obtained recursively as:
+𝐵𝑙
+𝑅 =𝐹 (𝐵(𝑙+1) +𝐻 (𝑙+1)) (13)
+Finally, the haze-free image is obtained as [ 11]:
+𝑋𝑅 =𝐵1 +𝐻 1 (14)
+3. The proposed dehazing method
+In the proposed method, first, the SSIF filter is applied to the
+original hazy image as:
+𝐼𝑆 =𝑆𝑆𝐼𝐹 (𝐼) (15)
+where𝐼 is the input hazy image and𝑆𝑆𝐼𝐹 (.) is the Sharpening Smooth-
+ing Image Filter operator. By applying SSIF, it is expected that the
+difference between the haze and the scene to be amplified. By this way,
+the haze removal performance is expected to be improved.
+Secondly, a modified version of CEEF is proposed. The CEEF method
+separately applies GC and CP-AHE to the input image. In the modified
+version of CEEF [11], it is proposed to apply CLAHE instead of AHE to
+obtain higher-quality results. In classical AHE, the enhancement result
+contains noisy components [ 21]. To overcome this issue, a Contrast
+Limiting is proposed for AHE [ 21]. In this method, first, the image is
+decomposed into sub-blocks. To avoid noise amplification, a contrast-
+limit is determined for each block. The crop limit 𝛽 is determined as:
+𝛽 = 𝑀
+𝑁
+(
+1 + 𝛼
+100 (𝑠max − 1)
+)
+(16)
+Here, 𝑀 and 𝑁 are the width and the height of the input image,
+respectively. 𝛼 is the crop factor and 𝑠𝑚𝑎𝑥 is maximum value of the
+transfer function. For𝛼 = 0 there is no change in the pixels, and for the
+maximum value of 𝛼, crop limit is equal to 𝑠𝑚𝑎𝑥 .
+The GC output of the filtered image is obtained by:
+𝐼𝑆
+𝐺𝑛
+=𝛼𝐼𝑛 (17)
+To obtain the CP-CLAHE of the filtered image, the color channels
+are reshaped as in CEEF [ 11].
+𝐼𝑆
+𝑅𝑇 =𝑅𝑇 (𝐼) (18)
+Fig. 1. Proposed dehazing scheme.
+𝐼𝑆
+𝑅𝑇 is the reshaped version of the filtered image 𝐼𝑆, and 𝑅𝑇 (.) is
+the reshaping operator. The CLAHE is applied to obtain the enhanced
+image.
+𝐼𝑆
+𝐶,𝑅𝑇 =𝐶𝐿𝐴𝐻𝐸 (𝐼𝑆
+𝑅𝑇 ) (19)
+The CLAHE result is reshaped to obtain the CP-CLAHE output as:
+𝐼𝑆
+𝐶 =𝑅𝑇 −1(𝐼𝑆
+𝐶,𝑅𝑇 ) (20)
+Finally, a faster version of structural patch decomposition for mul-
+tiexposure fusion is applied to the image sequence obtained by CP-
+CLAHE, and GC results [ 11].
+The proposed scheme is given in Fig. 1 .
+In the proposed method, parameter determination is also important.
+There are four parameters of SSIF to be determined; namely, Patch Ra-
+dius (𝑟), Scale (𝑠), Sharpening Gain𝜖, and sharpening-smoothing factor
+(𝜅) [20]. Both real-world and synthetic hazy images have been dehazed
+by the proposed method to understand the effects of the parameters.
+After experimenting on different types of images, it is seen that the
+𝑟, 𝑠, and 𝜖 parameters have a minor effect on dehazing results. On
+the other hand, the 𝜅 parameter dramatically affects dehazed results.
+Moreover, it is observed that the 𝜅 value differs for synthetic images
+and real-world images.
+In order to determine the 𝜅 parameter for synthetic images, ran-
+domly chosen 40 images within the RESIDE [ 22] dataset are dehazed
+with SSIF. Average Structural Similarity Index Measure (SSIM) and
+Peak-Signal-to-Noise-Ratio (PSNR) metrics were calculated for different
+𝜅 values. The PSNR and SSIM values for differing 𝜅 values are shown
+in Fig. 2. As seen in Fig. 2, the average SSIM and PSNR values indicate
+that choosing𝜅 around 1.2 provides better results for synthetic images.
+It is well known that real-world data has to be interpreted dif-
+ferently than synthetic datasets. Therefore, to evaluate the 𝜅 value
+for real-world images, the Fog Aware Density Evaluator (FADE) [ 23]
+metric has been evaluated for differing 𝜅 values for randomly chosen
+real-world images. The𝜅 value is determined as 2 for real-world images
+according to average FADE values.
+After determining the filtering parameters of the SSIF, the clipping
+limit of CLAHE is also determined in a similar manner. The clipping
+limit is chosen as 0.0017 for synthetic images and 0.02 for real-world
+images.
+4. Experimental results
+4.1. Experimental setup
+4.1.1. Dataset
+In order to determine the performance of the proposed method, 32
+known real-world scenes are used to evaluate the real-world dehazing
+performance of the method. Moreover, synthetic datasets RESIDE [22],
+O-HAZE [24], I-HAZE [25], D-HAZY [26], DENSE-HAZE [27], and NH-
+HAZE [ 28] datasets are used. RESIDE [ 22] SOTS dataset consists of
+500 Indoor hazy images and 492 Outdoor hazy images, while RESIDE
+citeLi2019 HSTS contains ten hazy images. O-HAZE [ 24] dataset con-
+tains 45 outdoor hazy images, whereas I-HAZE [ 25] dataset has 30
+indoor hazy images. D-HAZY [ 26] Middlebury dataset has 23 hazy
+images, and NYU dataset has 1449 hazy images. DENSE-HAZE [ 27]
+dataset contains 55 high-density hazy images, while NH-HAZE [ 28]
+contains 55 hazy images with non-homogeneous haze.
+Journal of Visual Communication and Image Representation 90 (2023) 103720
+4
+N.H. Kaplan
+Fig. 2. (a) PSNR and (b) SSIM values for different 𝜅 values.
+4.1.2. Implementation details
+The parameters of the proposed method are set as follows:
+1. 𝜅 parameter of SSIF filter is chosen as 1.2 for synthetic images
+and 2 for real-world images.
+2. Remaining SSIF parameters are set to 𝑟 = 5, 𝜖 = 0.1 and 𝑠 = 1.
+3. For CEEF [ 11], the clipping limit of CLAHE is chosen as 0.0017
+for synthetic images and 0.02 for real-world images.
+4. The remaining CEEF [ 11] parameters are the same as given
+in [11].
+4.2. Ablation studies
+The first difference between the proposed method and CEEF [11] is
+applying CLAHE instead of AHE. The original hazy images are given in
+Fig. 3.a1–a3, CEEF [ 11] result, and modified CEEF [ 11] with CLAHE
+are given in Fig. 3.b1–b3 and Fig. 3.c1–c3, respectively. It can be seen
+that visibility is increased with the use of CLAHE. Another difference is
+applying SSIF prior to CEEF [11]. Fig. 3.d1–d3 show the CEEF [11] with
+pre-applying SSIF. The dehazing performance is significantly improved
+by SSIF. Fig. 3.e1–e3 shows the overall proposed method. The visibility
+improvement can be seen in the proposed method.
+The FADE [ 23] values obtained for Fig. 3 are given in Table 1 .
+The table clearly indicates that the haze removal performance of the
+proposed method outperforms the CEEF [ 11] method.
+Table 1
+FADE comparisons for Fig. 3 .
+Figure Hazy CEEF [ 11] CEEF with CLAHE CEEF with SSIF Proposed
+Fig. 3.a1 2.5904 0.3029 0.2063 0.2017 0.1920
+Fig. 3.a2 1.3077 0.3573 0.3034 0.2755 0.2574
+Fig. 3.a3 2.4554 0.4010 0.2681 0.2716 0.2628
+4.3. Real-world image dehazing
+CEEF [ 11], DUALMAP [ 29], FMEF [ 30], IDE [ 31], DDAP [ 32],
+LBF [33], MLP [ 34], RADE [ 35], and SBIA [ 36] methods are imple-
+mented alongwith the proposed method for comparison purposes.
+Firstly, 32 commonly used real-world images have been dehazed
+by the methods given above, along with the proposed method. Four
+sample dehazing results for Canon, Castle, Flags and Forest images are
+given in Figs. 4, 5, 6, and 7, respectively. The dehazing results obtained
+by CEEF [ 11], DUALMAP [ 29], FMEF [ 30], IDE [ 31], DDAP [ 32],
+LBF [33], MLP [34], RADE [35], SBIA [36], and the proposed methods
+are given in Figures b–k, respectively. A far end, given in red square,
+and a closer scene, given in blue square, are zoomed in to see the
+differences between the methods clearly.
+As seen in Fig. 4, the SBIA [36] method seems to have a very poor
+haze removal performance. The dehazing performances of IDE [ 31],
+MLP [ 34], FMEF [ 30], and DDAP [ 32] methods are also very low
+compared to the remaining methods. The haze removal performance
+is better in DUALMAP [ 29], and the proposed method than in the
+CEEF [11] method.
+In Fig. 5 , the SBIA [ 36], IDE [ 31], MLP [ 34], FMEF [ 30], and
+LBF [33] methods have a low dehazing performance than the remaining
+methods. The haze removal performance of the proposed method seems
+better than the former methods.
+As seen in Fig. 6 , the SBIA [ 36], IDE [ 31], MLP [ 34], FMEF [ 30],
+and DDAP [32] methods cannot remove the haze sufficiently. The haze
+removal performance is better in the proposed method than in the
+remaining methods.
+In Fig. 7, the SBIA [ 36] method seems to have a very poor haze
+removal performance. Similarly, the dehazing performance of IDE [31],
+MLP [ 34], FMEF [ 30], and DDAP [ 32] methods are also very low
+compared to the remaining methods. The haze removal performance
+is better in the proposed method than in the remaining methods.
+For an objective comparison, FADE [ 23] score for the dehazing
+results abovementioned methods are evaluated along with the proposed
+method. The FADE [23] score indicates the amount of haze present in
+the image. Therefore, the smaller the FADE value, the better the haze
+removal performance of the method. The calculated FADE scores of
+the dehazing methods for 32 images and their averages are given in
+Table 2. For each image, the best score is given in bold and red, the
+second best score is given in bold and blue, and the third best score is
+given in bold and green. As seen in the Table, the proposed method has
+the best FADE scores for all images. The average FADE values indicate
+that the proposed method has a 50% improvement compared to the
+closest method.
+4.4. Comparisons for benchmark datasets
+Even though the proposed method focuses on enhancement in ad-
+dition to haze removal of Rel-World images, synthetic benchmark
+datasets are also included for comparison. For this purpose; bench-
+mark dataset; RESIDE [22], O-HAZE [24], I-HAZE [25], D-HAZY [26],
+DENSE-HAZE [ 27], and NH-HAZE [ 28] have been dehazed by the
+abovementioned methods and the proposed method. The quantitative
+comparisons evaluated by PSNR and SSIM metrics have been given
+in Table 3. For each dataset, the best score is given in bold and red,
+the second-best score is in bold and blue, and the third-best score is
+in bold and green. For the D-HAZY Middlebury Dataset, the highest
+Journal of Visual Communication and Image Representation 90 (2023) 103720
+5
+N.H. Kaplan
+Fig. 3. (a1–a3), Input hazy image, dehazing results for (b1–b3) CEEF [ 11], (c1–c3) CEEF [ 11] with CLAHE, (d1–d3) CEEF [ 11] with SSIF, (e1–e3) and proposed method.
+Fig. 4. (a) Canon image, dehazing results for (b) CEEF [ 11], (c) DUALMAP [ 29], (d) FMEF [ 30], (e) IDE [ 31], (f) DDAP [ 32], (g) LBF [ 33], (h) MLP [ 34], (i) RADE [ 35], (j)
+SBIA [36], (k) proposed methods.
+PSNR and SSIM values are achieved by the proposed method followed
+by SBIA [36] method. For the D-HAZY NYU dataset, the highest PSNR
+and SSIM values are obtained by DUALMAP [ 29] method followed
+by SBIA [ 36] and DDAP [ 32] methods. The proposed method has
+acceptable PSNR and SSIM values for the D-HAZY NYU Dataset. For the
+I-HAZE dataset, the highest PSNR and SSIM values are achieved by the
+FMEF [30] method, followed closely by the proposed method. For the
+O-HAZE dataset, the highest PSNR and SSIM values are achieved by the
+FMEF [30] method, followed closely by the proposed method. For the
+RESIDE HSTS dataset, the highest PSNR value is obtained by SBIA [36]
+method followed by FMEF [ 30] method. The highest SSIM value for
+the RESIDE HSTS is achieved by the proposed method, followed by the
+MLP [ 34] method. For the RESIDE SOTS-Indoor dataset, the highest
+PSNR and SSIM values are obtained by the proposed method, followed
+by MLP [ 34], and DDAP [ 32] methods, respectively. For the RESIDE
+SOTS-Outdoor dataset, the highest PSNR is obtained by SBIA [ 36]
+method followed by the FMEF [30] method, and the highest SSIM value
+is obtained by the MLP [34] method followed by the proposed method.
+For the DENSE-HAZE dataset, the highest SSIM value is obtained by
+the RADE [ 35] method followed by the MLP [ 34] method, and the
+highest PSNR value is obtained by the proposed method followed by
+the CEEF [ 11] method. Looking into all eight datasets, the proposed
+method has achieved the best performance in four datasets and the
+second-best performance in three datasets.
+Even though the proposed method focuses on enhancement along
+with dehazing, the PSNR and SSIM values obtained for benchmark
+datasets indicate that the proposed method has a solid performance for
+the synthetic datasets.
+Considering real-world images, the proposed method has a superior
+performance over compared state-of-the-art dehazing methods. For
+synthetic hazy images, the overall performance of the proposed method
+is close to or better than the compared state-of-art methods.
+Journal of Visual Communication and Image Representation 90 (2023) 103720
+6
+N.H. Kaplan
+Fig. 5. (a) Castle image, dehazing results for (b) CEEF [ 11], (c) DUALMAP [ 29], (d) FMEF [ 30], (e) IDE [ 31], (f) DDAP [ 32], (g) LBF [ 33], (h) MLP [ 34], (i) RADE [ 35], (j)
+SBIA [36], (k) proposed methods.
+Fig. 6. (a) Flags image, dehazing results for (b) CEEF [ 11], (c) DUALMAP [ 29], (d) FMEF [ 30], (e) IDE [ 31], (f) DDAP [ 32], (g) LBF [ 33], (h) MLP [ 34], (i) RADE [ 35], (j)
+SBIA [36], (k) proposed methods.

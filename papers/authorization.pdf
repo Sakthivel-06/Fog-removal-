@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+
+<!-- template name: idplus.html.login.continue.session.form.template.html -->
+
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=10,11" />
+	<meta name="robots" content="NOINDEX,FOLLOW,NOARCHIVE,NOODP,NOYDIR" />
+	<base href="https://id.elsevier.com/" />
+	<title>Sign in</title>
+	<noscript>
+		<link rel="stylesheet" href="assets/css/elsevier/main.min.css" />
+	</noscript>
+	<link rel="shortcut icon" type="image/png" href="assets/images/elsevier/mstile-144x144.png" />
+				
+	<script src="/assets/js/analytics.js"></script>
+	<script type="text/javascript">
+    	window.pageData = {
+        	page: {
+            	productName : "id",
+            	businessUnit : "ELS:RP:ST",
+        		            	environment : "prod",
+        		            	            	name : "CONTINUE_TO_CLIENT_SCREEN_SESSION_JSOFF",
+            					            	language : "en-US",
+            	            	            	secondaryProductName : "SD/science",
+            					            	display : "",
+            	            	            	type : "AP-LR",
+            					            	experimentationUserID  : "",
+            					            	userPolicy  : "blue",
+            					            	prompt  : "none",
+            					            	clientId  : "SDFE-v4",
+            					            	platSite  : "SD/science",
+            	            	loadTime : ""
+        	},
+        	visitor : {
+        	ipAddress : "27.60.175.11",
+               	accountId : "ae:110278",
+               	accountName : "ae:Sri Krishna College of Engineering and Technology",
+    			                accessType : "ae:REG:SHIBBOLETH:INST:SHIBBOLETH",
+        		userId : "ae:240647766"
+	        },
+    form : {
+   	   		step : "",
+   	   	   		type : "",
+   	   	   		errorType : ""
+   	    	}
+    };
+   
+	</script>
+	
+
+	<meta name="SADiscoveryURL" content="" />
+	<meta name="SADiscoveryContext" content="" />
+	<meta name="SAAPIEnabled" content="false" />
+	<meta name="SAEntityToPersist" content='$SA_CONTENT_ENTITY' />
+</head>
+
+<body onload="autoSubmit()">
+        <noscript>
+                <div id="skipLink" class="accessibility-link-skip" aria-label="Skip content" style="color: -webkit-link; text-decoration: underline; cursor: pointer;" onclick="toMain();" tabindex="0">Skip to content</div>
+<header class="client-info-header" aria-label="Header">
+	<div>
+		    	        <img class="els-client-logo-named-products" src="/assets/images/SD/science/logo.svg" onError="this.onerror=null;this.src='assets/images/elsevier/ELS_Letter_Logo.svg';" alt="ScienceDirect">
+	    		</div>
+	
+		
+					
+				<!-- OneTrust Cookies Consent Notice start for id.elsevier.com -->
+				
+				<script type="text/javascript">
+	 				var arr = String(window.location).split("/");
+					var idDomain = arr[2];
+					
+					if (idDomain == "id.elsevier.com") {
+					    const scriptElement = document.createElement("script");
+					    scriptElement.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+					    scriptElement.type = "text/javascript";
+					    scriptElement.charset = "UTF-8";
+					    scriptElement.setAttribute("data-domain-script", "0822d422-b22b-4b2b-b210-5548e2c6819b");
+					    document.body.appendChild(scriptElement);
+  					}
+				</script>
+				
+				<script type="text/javascript">
+				
+				function OptanonWrapper() { }
+				
+				</script>
+				
+				<!-- OneTrust Cookies Consent Notice end for id.elsevier.com -->
+	
+			</header>
+
+                <div class="els-hero-image" style="background-image: url('assets/images/SD/page.jpg')">
+                        <section class="container-fluid">
+
+                                        <main id="maincontent">
+				
+<div class="sec-A">
+			<img src="assets/images/elsevier/Non_Solus_Boxy.svg" alt="Elsevier" class="els-client-non-solus solus-logo">	
+</div>
+        </noscript>
+					
+										
+					<form id="els-signin-form" method="POST" action="/as/nmwbnZzgzt/resume/as/authorization.ping?acwCookieCreated=true&client_id=SDFE-v4&state=retryCounter%3D0%26csrfToken%3Dde4b43cf-e9cd-40eb-8b9e-2add7607fb82%26idpPolicy%3Durn%253Acom%253Aelsevier%253Aidp%253Apolicy%253Aproduct%253Ainst_assoc%26returnUrl%3D%252Fscience%252Farticle%252Fpii%252FS0262885624001185%253Ffr%253DRR-2%2526ref%253Dpdf_download%2526rr%253Da38ace2d98287ff8%26migrated%3DMIGRATED%26prompt%3Dnone%26cid%3Darp-d2732a41-508f-4954-ba63-fad0cb0a78e4" autocomplete="off" name="elsForm" novalidate>
+                        <noscript>
+                            
+                            <div class="sec-B">
+                                <h1 class="els-h1-txt">Success</h1>
+                                <h2 class="els-h2-txt">If the page won't redirect you automatically, please click below</h2>
+                            </div>
+						
+                            <div class="sec-D">
+                                <div>
+                                    <button type="submit" id="bdd-elsPrimaryBtn" class="els-primaryBtn" name="continueLogin" value="true">
+                                        Continue
+                                    </button>
+                                </div>
+                            </div>
+							</noscript>
+                        <div id='SA_ENTITY_Discovery'></div>
+				</form>
+		<noscript>
+			</main>
+		</section>
+	</div>
+	<footer class="els-footer" aria-label="Footer">
+    <div class="els-footer-logo">
+        <a class="els-footer-non-solus" title="Go to Elsevier Homepage" href="http://www.elsevier.com/" target="_blank"><img src="assets/images/elsevier/Non_Solus_Logo.svg" alt="Non Solus" aria-label="Elsevier homepage"></a>
+        <a class="els-footer-elsevier-letter" title="Go to Elsevier Homepage" href="http://www.elsevier.com/" target="_blank" tabindex="-1"><img src="assets/images/elsevier/ELS_Letter_Logo.svg" alt="Elsevier" aria-label="Elsevier homepage"></a>
+    </div>
+    
+    <div class="els-document-links">
+        <div class="els-document-link-row cookies-row" aria-label="Copyright Notice General">Copyright &copy; 2026 Elsevier, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies.</div>
+        <div class="els-document-link-row links-row">
+        <ul class="els-footer-links" style="list-style:none">
+           <li><a href="https://www.elsevier.com/about" aria-label="About Elsevier" class="els-document-link anchor" target="_tab"><span class="anchor-text">About Elsevier</span><span id="privacyLink-icon" class="privacyLink-icon">↗</span></a></li>
+           <li><a href=https://www.elsevier.com/legal/elsevier-website-terms-and-conditions aria-label="Terms and conditions" class="els-document-link anchor" target="_blank"><span class="anchor-text">Terms and conditions</span><span id="privacyLink-icon" class="privacyLink-icon">↗</span></a></li>
+           <li><a href=https://www.elsevier.com/legal/privacy-policy aria-label="Privacy policy" class="els-document-link anchor" target="_blank"><span class="anchor-text">Privacy policy</span><span id="privacyLink-icon" class="privacyLink-icon">↗</span></a></li>
+           <li><a href="javascript: void(0)" aria-label="Cookie settings" class="ot-sdk-show-settings cookie els-document-link anchor" style="color:black;"><span class="anchor-text">Cookie settings</span><span id="privacyLink-icon" class="privacyLink-icon">↗</span></a></li>
+           <li><a href="https://www.elsevier.support/elsevieraccess" aria-label="Help" class="els-document-link anchor" target="_blank"><span class="anchor-text">Help</span><span id="privacyLink-icon" class="privacyLink-icon">↗</span></a></li>
+        </ul>
+        </div>
+    </div>
+	<a class="relx-logo-e" style="height:30px" title="Go to RELX Group Homepage" href="http://www.reedelsevier.com/" target="_blank" aria-label="Relx group image">
+            <img src="assets/images/elsevier/Relx_Logo_E_2.svg" alt="RELXGroup">
+            <img src="assets/images/elsevier/Relx_Logo_Letter_2.svg" alt="RELXGroup">
+	</a>
+
+</footer>
+	</noscript>
+</body>
+<script src="/assets/js/jquery-1.12.4.min.js"></script>
+<script src="/assets/js/SA.js"></script>
+<script src="//unpkg.com/@theidentityselector/thiss-ds"></script>
+<script type="text/javascript">
+	function autoSubmit() {
+		performSAOperation("els-signin-form", true);
+	}
+</script>
+<script type="text/javascript">
+					   document.addEventListener('DOMContentLoaded', () => {
+		   window.pageData.page.loadTime = performance ? (Math.round(performance.now())).toString() : "";
+		   // Only fire if Adobe Launch already loaded. If deferred due to consent, the onload callback will fire.
+		   if (window._satellite) {
+			   pageDataTracker.trackPageLoad();
+		   }
+	   });
+</script>
+<meta http-equiv="refresh" name="refresh" content="5;">
+</html>
