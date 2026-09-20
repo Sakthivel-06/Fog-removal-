@@ -1,0 +1,852 @@
+[
+  {
+    "id": 0,
+    "clean_file": "clean_00000.jpg",
+    "hazy_file": "hazy_00000.jpg",
+    "tgt_file": "tgt_00000.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 0,
+    "beta_mean": 1.6709421873092651,
+    "tgt_mean": 0.4139435589313507,
+    "tgt_min": 0.1429075449705124,
+    "tgt_max": 0.8038422465324402
+  },
+  {
+    "id": 1,
+    "clean_file": "clean_00001.jpg",
+    "hazy_file": "hazy_00001.jpg",
+    "tgt_file": "tgt_00001.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 1,
+    "beta_mean": 1.6736284494400024,
+    "tgt_mean": 0.4133969247341156,
+    "tgt_min": 0.14291027188301086,
+    "tgt_max": 0.803954005241394
+  },
+  {
+    "id": 2,
+    "clean_file": "clean_00002.jpg",
+    "hazy_file": "hazy_00002.jpg",
+    "tgt_file": "tgt_00002.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 2,
+    "beta_mean": 1.6763110160827637,
+    "tgt_mean": 0.4128519892692566,
+    "tgt_min": 0.1429266482591629,
+    "tgt_max": 0.8040646910667419
+  },
+  {
+    "id": 3,
+    "clean_file": "clean_00003.jpg",
+    "hazy_file": "hazy_00003.jpg",
+    "tgt_file": "tgt_00003.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 3,
+    "beta_mean": 1.6789863109588623,
+    "tgt_mean": 0.4123094379901886,
+    "tgt_min": 0.1429567188024521,
+    "tgt_max": 0.8041749000549316
+  },
+  {
+    "id": 4,
+    "clean_file": "clean_00004.jpg",
+    "hazy_file": "hazy_00004.jpg",
+    "tgt_file": "tgt_00004.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 4,
+    "beta_mean": 1.6816494464874268,
+    "tgt_mean": 0.411769837141037,
+    "tgt_min": 0.14301113784313202,
+    "tgt_max": 0.8042806386947632
+  },
+  {
+    "id": 5,
+    "clean_file": "clean_00005.jpg",
+    "hazy_file": "hazy_00005.jpg",
+    "tgt_file": "tgt_00005.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 5,
+    "beta_mean": 1.6842976808547974,
+    "tgt_mean": 0.41123390197753906,
+    "tgt_min": 0.14308671653270721,
+    "tgt_max": 0.8043846487998962
+  },
+  {
+    "id": 6,
+    "clean_file": "clean_00006.jpg",
+    "hazy_file": "hazy_00006.jpg",
+    "tgt_file": "tgt_00006.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 6,
+    "beta_mean": 1.6869287490844727,
+    "tgt_mean": 0.41070234775543213,
+    "tgt_min": 0.143174409866333,
+    "tgt_max": 0.8044896721839905
+  },
+  {
+    "id": 7,
+    "clean_file": "clean_00007.jpg",
+    "hazy_file": "hazy_00007.jpg",
+    "tgt_file": "tgt_00007.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 7,
+    "beta_mean": 1.6895382404327393,
+    "tgt_mean": 0.41017571091651917,
+    "tgt_min": 0.14328229427337646,
+    "tgt_max": 0.8045937418937683
+  },
+  {
+    "id": 8,
+    "clean_file": "clean_00008.jpg",
+    "hazy_file": "hazy_00008.jpg",
+    "tgt_file": "tgt_00008.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 8,
+    "beta_mean": 1.6921218633651733,
+    "tgt_mean": 0.4096547067165375,
+    "tgt_min": 0.14341682195663452,
+    "tgt_max": 0.8046948313713074
+  },
+  {
+    "id": 9,
+    "clean_file": "clean_00009.jpg",
+    "hazy_file": "hazy_00009.jpg",
+    "tgt_file": "tgt_00009.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 9,
+    "beta_mean": 1.6946780681610107,
+    "tgt_mean": 0.409140020608902,
+    "tgt_min": 0.14356139302253723,
+    "tgt_max": 0.8047983050346375
+  },
+  {
+    "id": 10,
+    "clean_file": "clean_00010.jpg",
+    "hazy_file": "hazy_00010.jpg",
+    "tgt_file": "tgt_00010.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 10,
+    "beta_mean": 1.6972036361694336,
+    "tgt_mean": 0.4086322784423828,
+    "tgt_min": 0.14371609687805176,
+    "tgt_max": 0.8049047589302063
+  },
+  {
+    "id": 11,
+    "clean_file": "clean_00011.jpg",
+    "hazy_file": "hazy_00011.jpg",
+    "tgt_file": "tgt_00011.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 11,
+    "beta_mean": 1.6996924877166748,
+    "tgt_mean": 0.4081319272518158,
+    "tgt_min": 0.14390063285827637,
+    "tgt_max": 0.8050064444541931
+  },
+  {
+    "id": 12,
+    "clean_file": "clean_00012.jpg",
+    "hazy_file": "hazy_00012.jpg",
+    "tgt_file": "tgt_00012.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 12,
+    "beta_mean": 1.702143907546997,
+    "tgt_mean": 0.4076398015022278,
+    "tgt_min": 0.14409056305885315,
+    "tgt_max": 0.8051120042800903
+  },
+  {
+    "id": 13,
+    "clean_file": "clean_00013.jpg",
+    "hazy_file": "hazy_00013.jpg",
+    "tgt_file": "tgt_00013.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 13,
+    "beta_mean": 1.7045550346374512,
+    "tgt_mean": 0.40715646743774414,
+    "tgt_min": 0.14428457617759705,
+    "tgt_max": 0.8052219748497009
+  },
+  {
+    "id": 14,
+    "clean_file": "clean_00014.jpg",
+    "hazy_file": "hazy_00014.jpg",
+    "tgt_file": "tgt_00014.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 14,
+    "beta_mean": 1.7069203853607178,
+    "tgt_mean": 0.4066823720932007,
+    "tgt_min": 0.1444977968931198,
+    "tgt_max": 0.805330753326416
+  },
+  {
+    "id": 15,
+    "clean_file": "clean_00015.jpg",
+    "hazy_file": "hazy_00015.jpg",
+    "tgt_file": "tgt_00015.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 15,
+    "beta_mean": 1.709238052368164,
+    "tgt_mean": 0.4062182307243347,
+    "tgt_min": 0.144722580909729,
+    "tgt_max": 0.8054417967796326
+  },
+  {
+    "id": 16,
+    "clean_file": "clean_00016.jpg",
+    "hazy_file": "hazy_00016.jpg",
+    "tgt_file": "tgt_00016.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 16,
+    "beta_mean": 1.7115061283111572,
+    "tgt_mean": 0.4057645797729492,
+    "tgt_min": 0.14495302736759186,
+    "tgt_max": 0.8055585026741028
+  },
+  {
+    "id": 17,
+    "clean_file": "clean_00017.jpg",
+    "hazy_file": "hazy_00017.jpg",
+    "tgt_file": "tgt_00017.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 17,
+    "beta_mean": 1.7137200832366943,
+    "tgt_mean": 0.4053219258785248,
+    "tgt_min": 0.1451936811208725,
+    "tgt_max": 0.805678129196167
+  },
+  {
+    "id": 18,
+    "clean_file": "clean_00018.jpg",
+    "hazy_file": "hazy_00018.jpg",
+    "tgt_file": "tgt_00018.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 18,
+    "beta_mean": 1.7158764600753784,
+    "tgt_mean": 0.40489083528518677,
+    "tgt_min": 0.1454472541809082,
+    "tgt_max": 0.8057977557182312
+  },
+  {
+    "id": 19,
+    "clean_file": "clean_00019.jpg",
+    "hazy_file": "hazy_00019.jpg",
+    "tgt_file": "tgt_00019.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 19,
+    "beta_mean": 1.717974305152893,
+    "tgt_mean": 0.40447181463241577,
+    "tgt_min": 0.14570415019989014,
+    "tgt_max": 0.8059244155883789
+  },
+  {
+    "id": 20,
+    "clean_file": "clean_00020.jpg",
+    "hazy_file": "hazy_00020.jpg",
+    "tgt_file": "tgt_00020.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 20,
+    "beta_mean": 1.7200108766555786,
+    "tgt_mean": 0.40406540036201477,
+    "tgt_min": 0.14596138894557953,
+    "tgt_max": 0.8060582280158997
+  },
+  {
+    "id": 21,
+    "clean_file": "clean_00021.jpg",
+    "hazy_file": "hazy_00021.jpg",
+    "tgt_file": "tgt_00021.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 21,
+    "beta_mean": 1.7219799757003784,
+    "tgt_mean": 0.4036720097064972,
+    "tgt_min": 0.14622893929481506,
+    "tgt_max": 0.8061891794204712
+  },
+  {
+    "id": 22,
+    "clean_file": "clean_00022.jpg",
+    "hazy_file": "hazy_00022.jpg",
+    "tgt_file": "tgt_00022.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 22,
+    "beta_mean": 1.7238826751708984,
+    "tgt_mean": 0.40329211950302124,
+    "tgt_min": 0.14649763703346252,
+    "tgt_max": 0.8063281178474426
+  },
+  {
+    "id": 23,
+    "clean_file": "clean_00023.jpg",
+    "hazy_file": "hazy_00023.jpg",
+    "tgt_file": "tgt_00023.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 23,
+    "beta_mean": 1.725716233253479,
+    "tgt_mean": 0.4029262661933899,
+    "tgt_min": 0.14676760137081146,
+    "tgt_max": 0.8064753413200378
+  },
+  {
+    "id": 24,
+    "clean_file": "clean_00024.jpg",
+    "hazy_file": "hazy_00024.jpg",
+    "tgt_file": "tgt_00024.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 24,
+    "beta_mean": 1.7274761199951172,
+    "tgt_mean": 0.402574747800827,
+    "tgt_min": 0.14704278111457825,
+    "tgt_max": 0.8066235780715942
+  },
+  {
+    "id": 25,
+    "clean_file": "clean_00025.jpg",
+    "hazy_file": "hazy_00025.jpg",
+    "tgt_file": "tgt_00025.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 25,
+    "beta_mean": 1.7291611433029175,
+    "tgt_mean": 0.40223801136016846,
+    "tgt_min": 0.14731928706169128,
+    "tgt_max": 0.806776762008667
+  },
+  {
+    "id": 26,
+    "clean_file": "clean_00026.jpg",
+    "hazy_file": "hazy_00026.jpg",
+    "tgt_file": "tgt_00026.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 26,
+    "beta_mean": 1.7307701110839844,
+    "tgt_mean": 0.40191650390625,
+    "tgt_min": 0.14759498834609985,
+    "tgt_max": 0.8069389462471008
+  },
+  {
+    "id": 27,
+    "clean_file": "clean_00027.jpg",
+    "hazy_file": "hazy_00027.jpg",
+    "tgt_file": "tgt_00027.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 27,
+    "beta_mean": 1.732300043106079,
+    "tgt_mean": 0.4016105532646179,
+    "tgt_min": 0.14787091314792633,
+    "tgt_max": 0.8071061968803406
+  },
+  {
+    "id": 28,
+    "clean_file": "clean_00028.jpg",
+    "hazy_file": "hazy_00028.jpg",
+    "tgt_file": "tgt_00028.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 28,
+    "beta_mean": 1.7337474822998047,
+    "tgt_mean": 0.40132051706314087,
+    "tgt_min": 0.1481465846300125,
+    "tgt_max": 0.8072746396064758
+  },
+  {
+    "id": 29,
+    "clean_file": "clean_00029.jpg",
+    "hazy_file": "hazy_00029.jpg",
+    "tgt_file": "tgt_00029.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 29,
+    "beta_mean": 1.7351129055023193,
+    "tgt_mean": 0.4010466933250427,
+    "tgt_min": 0.14841970801353455,
+    "tgt_max": 0.8074524402618408
+  },
+  {
+    "id": 30,
+    "clean_file": "clean_00030.jpg",
+    "hazy_file": "hazy_00030.jpg",
+    "tgt_file": "tgt_00030.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 30,
+    "beta_mean": 1.7363941669464111,
+    "tgt_mean": 0.4007894694805145,
+    "tgt_min": 0.14869047701358795,
+    "tgt_max": 0.8076395988464355
+  },
+  {
+    "id": 31,
+    "clean_file": "clean_00031.jpg",
+    "hazy_file": "hazy_00031.jpg",
+    "tgt_file": "tgt_00031.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 31,
+    "beta_mean": 1.7375863790512085,
+    "tgt_mean": 0.40054917335510254,
+    "tgt_min": 0.14895787835121155,
+    "tgt_max": 0.8078231811523438
+  },
+  {
+    "id": 32,
+    "clean_file": "clean_00032.jpg",
+    "hazy_file": "hazy_00032.jpg",
+    "tgt_file": "tgt_00032.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 32,
+    "beta_mean": 1.7386912107467651,
+    "tgt_mean": 0.40032604336738586,
+    "tgt_min": 0.14922143518924713,
+    "tgt_max": 0.8080161213874817
+  },
+  {
+    "id": 33,
+    "clean_file": "clean_00033.jpg",
+    "hazy_file": "hazy_00033.jpg",
+    "tgt_file": "tgt_00033.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 33,
+    "beta_mean": 1.7397069931030273,
+    "tgt_mean": 0.4001202881336212,
+    "tgt_min": 0.14946548640727997,
+    "tgt_max": 0.8082180619239807
+  },
+  {
+    "id": 34,
+    "clean_file": "clean_00034.jpg",
+    "hazy_file": "hazy_00034.jpg",
+    "tgt_file": "tgt_00034.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 34,
+    "beta_mean": 1.7406302690505981,
+    "tgt_mean": 0.39993226528167725,
+    "tgt_min": 0.1496906727552414,
+    "tgt_max": 0.8084200620651245
+  },
+  {
+    "id": 35,
+    "clean_file": "clean_00035.jpg",
+    "hazy_file": "hazy_00035.jpg",
+    "tgt_file": "tgt_00035.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 35,
+    "beta_mean": 1.7414608001708984,
+    "tgt_mean": 0.39976221323013306,
+    "tgt_min": 0.1499096006155014,
+    "tgt_max": 0.8086259961128235
+  },
+  {
+    "id": 36,
+    "clean_file": "clean_00036.jpg",
+    "hazy_file": "hazy_00036.jpg",
+    "tgt_file": "tgt_00036.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 36,
+    "beta_mean": 1.74219810962677,
+    "tgt_mean": 0.3996102213859558,
+    "tgt_min": 0.15012386441230774,
+    "tgt_max": 0.808840274810791
+  },
+  {
+    "id": 37,
+    "clean_file": "clean_00037.jpg",
+    "hazy_file": "hazy_00037.jpg",
+    "tgt_file": "tgt_00037.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 37,
+    "beta_mean": 1.7428405284881592,
+    "tgt_mean": 0.3994765877723694,
+    "tgt_min": 0.15032754838466644,
+    "tgt_max": 0.809057891368866
+  },
+  {
+    "id": 38,
+    "clean_file": "clean_00038.jpg",
+    "hazy_file": "hazy_00038.jpg",
+    "tgt_file": "tgt_00038.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 38,
+    "beta_mean": 1.7433854341506958,
+    "tgt_mean": 0.3993614912033081,
+    "tgt_min": 0.15052242577075958,
+    "tgt_max": 0.8092728853225708
+  },
+  {
+    "id": 39,
+    "clean_file": "clean_00039.jpg",
+    "hazy_file": "hazy_00039.jpg",
+    "tgt_file": "tgt_00039.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 39,
+    "beta_mean": 1.743834376335144,
+    "tgt_mean": 0.39926502108573914,
+    "tgt_min": 0.15071269869804382,
+    "tgt_max": 0.8094948530197144
+  },
+  {
+    "id": 40,
+    "clean_file": "clean_00040.jpg",
+    "hazy_file": "hazy_00040.jpg",
+    "tgt_file": "tgt_00040.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 40,
+    "beta_mean": 1.7441866397857666,
+    "tgt_mean": 0.399187296628952,
+    "tgt_min": 0.1508987545967102,
+    "tgt_max": 0.8097235560417175
+  },
+  {
+    "id": 41,
+    "clean_file": "clean_00041.jpg",
+    "hazy_file": "hazy_00041.jpg",
+    "tgt_file": "tgt_00041.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 41,
+    "beta_mean": 1.7444382905960083,
+    "tgt_mean": 0.3991285562515259,
+    "tgt_min": 0.15107423067092896,
+    "tgt_max": 0.8099414706230164
+  },
+  {
+    "id": 42,
+    "clean_file": "clean_00042.jpg",
+    "hazy_file": "hazy_00042.jpg",
+    "tgt_file": "tgt_00042.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 42,
+    "beta_mean": 1.7445920705795288,
+    "tgt_mean": 0.3990887701511383,
+    "tgt_min": 0.15124617516994476,
+    "tgt_max": 0.8101639747619629
+  },
+  {
+    "id": 43,
+    "clean_file": "clean_00043.jpg",
+    "hazy_file": "hazy_00043.jpg",
+    "tgt_file": "tgt_00043.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 43,
+    "beta_mean": 1.7446476221084595,
+    "tgt_mean": 0.39906805753707886,
+    "tgt_min": 0.15141503512859344,
+    "tgt_max": 0.8103910088539124
+  },
+  {
+    "id": 44,
+    "clean_file": "clean_00044.jpg",
+    "hazy_file": "hazy_00044.jpg",
+    "tgt_file": "tgt_00044.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 44,
+    "beta_mean": 1.7446024417877197,
+    "tgt_mean": 0.3990664780139923,
+    "tgt_min": 0.15157632529735565,
+    "tgt_max": 0.8106086254119873
+  },
+  {
+    "id": 45,
+    "clean_file": "clean_00045.jpg",
+    "hazy_file": "hazy_00045.jpg",
+    "tgt_file": "tgt_00045.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 45,
+    "beta_mean": 1.7444573640823364,
+    "tgt_mean": 0.39908403158187866,
+    "tgt_min": 0.15157288312911987,
+    "tgt_max": 0.8108198642730713
+  },
+  {
+    "id": 46,
+    "clean_file": "clean_00046.jpg",
+    "hazy_file": "hazy_00046.jpg",
+    "tgt_file": "tgt_00046.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 46,
+    "beta_mean": 1.7442138195037842,
+    "tgt_mean": 0.3991207182407379,
+    "tgt_min": 0.1515081822872162,
+    "tgt_max": 0.8110304474830627
+  },
+  {
+    "id": 47,
+    "clean_file": "clean_00047.jpg",
+    "hazy_file": "hazy_00047.jpg",
+    "tgt_file": "tgt_00047.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 47,
+    "beta_mean": 1.7438706159591675,
+    "tgt_mean": 0.39917659759521484,
+    "tgt_min": 0.15145084261894226,
+    "tgt_max": 0.8112315535545349
+  },
+  {
+    "id": 48,
+    "clean_file": "clean_00048.jpg",
+    "hazy_file": "hazy_00048.jpg",
+    "tgt_file": "tgt_00048.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 48,
+    "beta_mean": 1.7434266805648804,
+    "tgt_mean": 0.3992516100406647,
+    "tgt_min": 0.15140439569950104,
+    "tgt_max": 0.8114123344421387
+  },
+  {
+    "id": 49,
+    "clean_file": "clean_00049.jpg",
+    "hazy_file": "hazy_00049.jpg",
+    "tgt_file": "tgt_00049.npy",
+    "A": [
+      0.889995276927948,
+      0.8749241232872009,
+      0.8878474235534668
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.25 PM.mp4",
+    "frame_in_video": 49,
+    "beta_mean": 1.7428851127624512,
+    "tgt_mean": 0.39934563636779785,
+    "tgt_min": 0.15137627720832825,
+    "tgt_max": 0.811587393283844
+  }
+]

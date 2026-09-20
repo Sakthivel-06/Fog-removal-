@@ -1,0 +1,3742 @@
+[
+  {
+    "id": 0,
+    "clean_file": "clean_00000.jpg",
+    "hazy_file": "hazy_00000.jpg",
+    "tgt_file": "tgt_00000.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 0,
+    "beta_mean": 1.5144379138946533,
+    "tgt_mean": 0.36892086267471313,
+    "tgt_min": 0.2398863285779953,
+    "tgt_max": 0.5140023827552795
+  },
+  {
+    "id": 1,
+    "clean_file": "clean_00001.jpg",
+    "hazy_file": "hazy_00001.jpg",
+    "tgt_file": "tgt_00001.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 1,
+    "beta_mean": 1.5173145532608032,
+    "tgt_mean": 0.3682244122028351,
+    "tgt_min": 0.23921680450439453,
+    "tgt_max": 0.5131828188896179
+  },
+  {
+    "id": 2,
+    "clean_file": "clean_00002.jpg",
+    "hazy_file": "hazy_00002.jpg",
+    "tgt_file": "tgt_00002.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 2,
+    "beta_mean": 1.5201890468597412,
+    "tgt_mean": 0.36752983927726746,
+    "tgt_min": 0.23854850232601166,
+    "tgt_max": 0.5125005841255188
+  },
+  {
+    "id": 3,
+    "clean_file": "clean_00003.jpg",
+    "hazy_file": "hazy_00003.jpg",
+    "tgt_file": "tgt_00003.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 3,
+    "beta_mean": 1.5230580568313599,
+    "tgt_mean": 0.36683809757232666,
+    "tgt_min": 0.2378813922405243,
+    "tgt_max": 0.5117670297622681
+  },
+  {
+    "id": 4,
+    "clean_file": "clean_00004.jpg",
+    "hazy_file": "hazy_00004.jpg",
+    "tgt_file": "tgt_00004.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 4,
+    "beta_mean": 1.5259180068969727,
+    "tgt_mean": 0.3661499619483948,
+    "tgt_min": 0.2372155338525772,
+    "tgt_max": 0.5109832286834717
+  },
+  {
+    "id": 5,
+    "clean_file": "clean_00005.jpg",
+    "hazy_file": "hazy_00005.jpg",
+    "tgt_file": "tgt_00005.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 5,
+    "beta_mean": 1.528765320777893,
+    "tgt_mean": 0.36546602845191956,
+    "tgt_min": 0.23655317723751068,
+    "tgt_max": 0.5101439952850342
+  },
+  {
+    "id": 6,
+    "clean_file": "clean_00006.jpg",
+    "hazy_file": "hazy_00006.jpg",
+    "tgt_file": "tgt_00006.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 6,
+    "beta_mean": 1.5315970182418823,
+    "tgt_mean": 0.36478689312934875,
+    "tgt_min": 0.23589254915714264,
+    "tgt_max": 0.5094121694564819
+  },
+  {
+    "id": 7,
+    "clean_file": "clean_00007.jpg",
+    "hazy_file": "hazy_00007.jpg",
+    "tgt_file": "tgt_00007.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 7,
+    "beta_mean": 1.5344090461730957,
+    "tgt_mean": 0.36411380767822266,
+    "tgt_min": 0.2352338284254074,
+    "tgt_max": 0.5086407661437988
+  },
+  {
+    "id": 8,
+    "clean_file": "clean_00008.jpg",
+    "hazy_file": "hazy_00008.jpg",
+    "tgt_file": "tgt_00008.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 8,
+    "beta_mean": 1.5371980667114258,
+    "tgt_mean": 0.3634476065635681,
+    "tgt_min": 0.2345772236585617,
+    "tgt_max": 0.5078738331794739
+  },
+  {
+    "id": 9,
+    "clean_file": "clean_00009.jpg",
+    "hazy_file": "hazy_00009.jpg",
+    "tgt_file": "tgt_00009.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 9,
+    "beta_mean": 1.5399607419967651,
+    "tgt_mean": 0.36278873682022095,
+    "tgt_min": 0.2339271456003189,
+    "tgt_max": 0.5070796608924866
+  },
+  {
+    "id": 10,
+    "clean_file": "clean_00010.jpg",
+    "hazy_file": "hazy_00010.jpg",
+    "tgt_file": "tgt_00010.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 10,
+    "beta_mean": 1.5426933765411377,
+    "tgt_mean": 0.3621382415294647,
+    "tgt_min": 0.2332800030708313,
+    "tgt_max": 0.5063011050224304
+  },
+  {
+    "id": 11,
+    "clean_file": "clean_00011.jpg",
+    "hazy_file": "hazy_00011.jpg",
+    "tgt_file": "tgt_00011.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 11,
+    "beta_mean": 1.5453932285308838,
+    "tgt_mean": 0.36149653792381287,
+    "tgt_min": 0.23263725638389587,
+    "tgt_max": 0.5055173635482788
+  },
+  {
+    "id": 12,
+    "clean_file": "clean_00012.jpg",
+    "hazy_file": "hazy_00012.jpg",
+    "tgt_file": "tgt_00012.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 12,
+    "beta_mean": 1.548056721687317,
+    "tgt_mean": 0.3608647286891937,
+    "tgt_min": 0.23199884593486786,
+    "tgt_max": 0.5047250986099243
+  },
+  {
+    "id": 13,
+    "clean_file": "clean_00013.jpg",
+    "hazy_file": "hazy_00013.jpg",
+    "tgt_file": "tgt_00013.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 13,
+    "beta_mean": 1.550680160522461,
+    "tgt_mean": 0.36024317145347595,
+    "tgt_min": 0.2313709855079651,
+    "tgt_max": 0.5040482878684998
+  },
+  {
+    "id": 14,
+    "clean_file": "clean_00014.jpg",
+    "hazy_file": "hazy_00014.jpg",
+    "tgt_file": "tgt_00014.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 14,
+    "beta_mean": 1.5532610416412354,
+    "tgt_mean": 0.3596329689025879,
+    "tgt_min": 0.23074881732463837,
+    "tgt_max": 0.5033581852912903
+  },
+  {
+    "id": 15,
+    "clean_file": "clean_00015.jpg",
+    "hazy_file": "hazy_00015.jpg",
+    "tgt_file": "tgt_00015.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 15,
+    "beta_mean": 1.555795669555664,
+    "tgt_mean": 0.35903477668762207,
+    "tgt_min": 0.23013311624526978,
+    "tgt_max": 0.5026327967643738
+  },
+  {
+    "id": 16,
+    "clean_file": "clean_00016.jpg",
+    "hazy_file": "hazy_00016.jpg",
+    "tgt_file": "tgt_00016.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 16,
+    "beta_mean": 1.5582815408706665,
+    "tgt_mean": 0.3584487736225128,
+    "tgt_min": 0.22952674329280853,
+    "tgt_max": 0.5018892884254456
+  },
+  {
+    "id": 17,
+    "clean_file": "clean_00017.jpg",
+    "hazy_file": "hazy_00017.jpg",
+    "tgt_file": "tgt_00017.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 17,
+    "beta_mean": 1.5607150793075562,
+    "tgt_mean": 0.3578758239746094,
+    "tgt_min": 0.22893574833869934,
+    "tgt_max": 0.5011378526687622
+  },
+  {
+    "id": 18,
+    "clean_file": "clean_00018.jpg",
+    "hazy_file": "hazy_00018.jpg",
+    "tgt_file": "tgt_00018.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 18,
+    "beta_mean": 1.563093662261963,
+    "tgt_mean": 0.3573167622089386,
+    "tgt_min": 0.22835443913936615,
+    "tgt_max": 0.5003551840782166
+  },
+  {
+    "id": 19,
+    "clean_file": "clean_00019.jpg",
+    "hazy_file": "hazy_00019.jpg",
+    "tgt_file": "tgt_00019.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 19,
+    "beta_mean": 1.565414547920227,
+    "tgt_mean": 0.35677221417427063,
+    "tgt_min": 0.22778376936912537,
+    "tgt_max": 0.499543160200119
+  },
+  {
+    "id": 20,
+    "clean_file": "clean_00020.jpg",
+    "hazy_file": "hazy_00020.jpg",
+    "tgt_file": "tgt_00020.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 20,
+    "beta_mean": 1.5676746368408203,
+    "tgt_mean": 0.35624274611473083,
+    "tgt_min": 0.22722461819648743,
+    "tgt_max": 0.49870380759239197
+  },
+  {
+    "id": 21,
+    "clean_file": "clean_00021.jpg",
+    "hazy_file": "hazy_00021.jpg",
+    "tgt_file": "tgt_00021.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 21,
+    "beta_mean": 1.5698716640472412,
+    "tgt_mean": 0.35572823882102966,
+    "tgt_min": 0.22668947279453278,
+    "tgt_max": 0.4978228509426117
+  },
+  {
+    "id": 22,
+    "clean_file": "clean_00022.jpg",
+    "hazy_file": "hazy_00022.jpg",
+    "tgt_file": "tgt_00022.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 22,
+    "beta_mean": 1.5720027685165405,
+    "tgt_mean": 0.3552299439907074,
+    "tgt_min": 0.2261689305305481,
+    "tgt_max": 0.49693968892097473
+  },
+  {
+    "id": 23,
+    "clean_file": "clean_00023.jpg",
+    "hazy_file": "hazy_00023.jpg",
+    "tgt_file": "tgt_00023.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 23,
+    "beta_mean": 1.5740656852722168,
+    "tgt_mean": 0.35474833846092224,
+    "tgt_min": 0.22566403448581696,
+    "tgt_max": 0.49606770277023315
+  },
+  {
+    "id": 24,
+    "clean_file": "clean_00024.jpg",
+    "hazy_file": "hazy_00024.jpg",
+    "tgt_file": "tgt_00024.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 24,
+    "beta_mean": 1.5760577917099,
+    "tgt_mean": 0.3542838394641876,
+    "tgt_min": 0.2251758724451065,
+    "tgt_max": 0.49517613649368286
+  },
+  {
+    "id": 25,
+    "clean_file": "clean_00025.jpg",
+    "hazy_file": "hazy_00025.jpg",
+    "tgt_file": "tgt_00025.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 25,
+    "beta_mean": 1.577977180480957,
+    "tgt_mean": 0.35383668541908264,
+    "tgt_min": 0.22471432387828827,
+    "tgt_max": 0.4942932426929474
+  },
+  {
+    "id": 26,
+    "clean_file": "clean_00026.jpg",
+    "hazy_file": "hazy_00026.jpg",
+    "tgt_file": "tgt_00026.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 26,
+    "beta_mean": 1.5798213481903076,
+    "tgt_mean": 0.3534072935581207,
+    "tgt_min": 0.2242775708436966,
+    "tgt_max": 0.49340423941612244
+  },
+  {
+    "id": 27,
+    "clean_file": "clean_00027.jpg",
+    "hazy_file": "hazy_00027.jpg",
+    "tgt_file": "tgt_00027.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 27,
+    "beta_mean": 1.5815881490707397,
+    "tgt_mean": 0.3529964089393616,
+    "tgt_min": 0.22386211156845093,
+    "tgt_max": 0.4926019012928009
+  },
+  {
+    "id": 28,
+    "clean_file": "clean_00028.jpg",
+    "hazy_file": "hazy_00028.jpg",
+    "tgt_file": "tgt_00028.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 28,
+    "beta_mean": 1.5832759141921997,
+    "tgt_mean": 0.3526044189929962,
+    "tgt_min": 0.22346916794776917,
+    "tgt_max": 0.49205952882766724
+  },
+  {
+    "id": 29,
+    "clean_file": "clean_00029.jpg",
+    "hazy_file": "hazy_00029.jpg",
+    "tgt_file": "tgt_00029.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 29,
+    "beta_mean": 1.5848828554153442,
+    "tgt_mean": 0.35223132371902466,
+    "tgt_min": 0.2231096476316452,
+    "tgt_max": 0.4915004074573517
+  },
+  {
+    "id": 30,
+    "clean_file": "clean_00030.jpg",
+    "hazy_file": "hazy_00030.jpg",
+    "tgt_file": "tgt_00030.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 30,
+    "beta_mean": 1.5864067077636719,
+    "tgt_mean": 0.3518778085708618,
+    "tgt_min": 0.22277531027793884,
+    "tgt_max": 0.4909258186817169
+  },
+  {
+    "id": 31,
+    "clean_file": "clean_00031.jpg",
+    "hazy_file": "hazy_00031.jpg",
+    "tgt_file": "tgt_00031.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 31,
+    "beta_mean": 1.5878461599349976,
+    "tgt_mean": 0.3515439033508301,
+    "tgt_min": 0.2224746197462082,
+    "tgt_max": 0.4903273582458496
+  },
+  {
+    "id": 32,
+    "clean_file": "clean_00032.jpg",
+    "hazy_file": "hazy_00032.jpg",
+    "tgt_file": "tgt_00032.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 32,
+    "beta_mean": 1.5891996622085571,
+    "tgt_mean": 0.3512302339076996,
+    "tgt_min": 0.2222023904323578,
+    "tgt_max": 0.48981228470802307
+  },
+  {
+    "id": 33,
+    "clean_file": "clean_00033.jpg",
+    "hazy_file": "hazy_00033.jpg",
+    "tgt_file": "tgt_00033.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 33,
+    "beta_mean": 1.5904662609100342,
+    "tgt_mean": 0.3509366512298584,
+    "tgt_min": 0.22197066247463226,
+    "tgt_max": 0.4893297553062439
+  },
+  {
+    "id": 34,
+    "clean_file": "clean_00034.jpg",
+    "hazy_file": "hazy_00034.jpg",
+    "tgt_file": "tgt_00034.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 34,
+    "beta_mean": 1.5916439294815063,
+    "tgt_mean": 0.3506638705730438,
+    "tgt_min": 0.2217700183391571,
+    "tgt_max": 0.48884907364845276
+  },
+  {
+    "id": 35,
+    "clean_file": "clean_00035.jpg",
+    "hazy_file": "hazy_00035.jpg",
+    "tgt_file": "tgt_00035.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 35,
+    "beta_mean": 1.5927315950393677,
+    "tgt_mean": 0.3504120707511902,
+    "tgt_min": 0.22160176932811737,
+    "tgt_max": 0.48838451504707336
+  },
+  {
+    "id": 36,
+    "clean_file": "clean_00036.jpg",
+    "hazy_file": "hazy_00036.jpg",
+    "tgt_file": "tgt_00036.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 36,
+    "beta_mean": 1.5937286615371704,
+    "tgt_mean": 0.35018104314804077,
+    "tgt_min": 0.22147585451602936,
+    "tgt_max": 0.487898588180542
+  },
+  {
+    "id": 37,
+    "clean_file": "clean_00037.jpg",
+    "hazy_file": "hazy_00037.jpg",
+    "tgt_file": "tgt_00037.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 37,
+    "beta_mean": 1.5946341753005981,
+    "tgt_mean": 0.3499709963798523,
+    "tgt_min": 0.22139723598957062,
+    "tgt_max": 0.48740509152412415
+  },
+  {
+    "id": 38,
+    "clean_file": "clean_00038.jpg",
+    "hazy_file": "hazy_00038.jpg",
+    "tgt_file": "tgt_00038.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 38,
+    "beta_mean": 1.5954471826553345,
+    "tgt_mean": 0.34978243708610535,
+    "tgt_min": 0.22135533392429352,
+    "tgt_max": 0.4869043827056885
+  },
+  {
+    "id": 39,
+    "clean_file": "clean_00039.jpg",
+    "hazy_file": "hazy_00039.jpg",
+    "tgt_file": "tgt_00039.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 39,
+    "beta_mean": 1.5961666107177734,
+    "tgt_mean": 0.34961551427841187,
+    "tgt_min": 0.2207661271095276,
+    "tgt_max": 0.4863983690738678
+  },
+  {
+    "id": 40,
+    "clean_file": "clean_00040.jpg",
+    "hazy_file": "hazy_00040.jpg",
+    "tgt_file": "tgt_00040.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 40,
+    "beta_mean": 1.5967917442321777,
+    "tgt_mean": 0.3494703769683838,
+    "tgt_min": 0.22020839154720306,
+    "tgt_max": 0.4858890771865845
+  },
+  {
+    "id": 41,
+    "clean_file": "clean_00041.jpg",
+    "hazy_file": "hazy_00041.jpg",
+    "tgt_file": "tgt_00041.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 41,
+    "beta_mean": 1.5973237752914429,
+    "tgt_mean": 0.34934622049331665,
+    "tgt_min": 0.21972507238388062,
+    "tgt_max": 0.4856882095336914
+  },
+  {
+    "id": 42,
+    "clean_file": "clean_00042.jpg",
+    "hazy_file": "hazy_00042.jpg",
+    "tgt_file": "tgt_00042.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 42,
+    "beta_mean": 1.597760796546936,
+    "tgt_mean": 0.3492438793182373,
+    "tgt_min": 0.21929602324962616,
+    "tgt_max": 0.48563334345817566
+  },
+  {
+    "id": 43,
+    "clean_file": "clean_00043.jpg",
+    "hazy_file": "hazy_00043.jpg",
+    "tgt_file": "tgt_00043.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 43,
+    "beta_mean": 1.5981028079986572,
+    "tgt_mean": 0.3491634726524353,
+    "tgt_min": 0.21892112493515015,
+    "tgt_max": 0.4855649471282959
+  },
+  {
+    "id": 44,
+    "clean_file": "clean_00044.jpg",
+    "hazy_file": "hazy_00044.jpg",
+    "tgt_file": "tgt_00044.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 44,
+    "beta_mean": 1.5983495712280273,
+    "tgt_mean": 0.34910500049591064,
+    "tgt_min": 0.21860016882419586,
+    "tgt_max": 0.48548418283462524
+  },
+  {
+    "id": 45,
+    "clean_file": "clean_00045.jpg",
+    "hazy_file": "hazy_00045.jpg",
+    "tgt_file": "tgt_00045.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 45,
+    "beta_mean": 1.5985019207000732,
+    "tgt_mean": 0.3490680158138275,
+    "tgt_min": 0.21834322810173035,
+    "tgt_max": 0.4853958189487457
+  },
+  {
+    "id": 46,
+    "clean_file": "clean_00046.jpg",
+    "hazy_file": "hazy_00046.jpg",
+    "tgt_file": "tgt_00046.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 46,
+    "beta_mean": 1.5985599756240845,
+    "tgt_mean": 0.349052369594574,
+    "tgt_min": 0.2181505262851715,
+    "tgt_max": 0.4852898120880127
+  },
+  {
+    "id": 47,
+    "clean_file": "clean_00047.jpg",
+    "hazy_file": "hazy_00047.jpg",
+    "tgt_file": "tgt_00047.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 47,
+    "beta_mean": 1.5985233783721924,
+    "tgt_mean": 0.3490585386753082,
+    "tgt_min": 0.2180100530385971,
+    "tgt_max": 0.48517584800720215
+  },
+  {
+    "id": 48,
+    "clean_file": "clean_00048.jpg",
+    "hazy_file": "hazy_00048.jpg",
+    "tgt_file": "tgt_00048.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 48,
+    "beta_mean": 1.5983922481536865,
+    "tgt_mean": 0.3490864336490631,
+    "tgt_min": 0.21792086958885193,
+    "tgt_max": 0.4850674271583557
+  },
+  {
+    "id": 49,
+    "clean_file": "clean_00049.jpg",
+    "hazy_file": "hazy_00049.jpg",
+    "tgt_file": "tgt_00049.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 49,
+    "beta_mean": 1.5981680154800415,
+    "tgt_mean": 0.34913554787635803,
+    "tgt_min": 0.2178928405046463,
+    "tgt_max": 0.48509010672569275
+  },
+  {
+    "id": 50,
+    "clean_file": "clean_00050.jpg",
+    "hazy_file": "hazy_00050.jpg",
+    "tgt_file": "tgt_00050.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 50,
+    "beta_mean": 1.5978503227233887,
+    "tgt_mean": 0.3492061197757721,
+    "tgt_min": 0.2179138958454132,
+    "tgt_max": 0.4851035475730896
+  },
+  {
+    "id": 51,
+    "clean_file": "clean_00051.jpg",
+    "hazy_file": "hazy_00051.jpg",
+    "tgt_file": "tgt_00051.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 51,
+    "beta_mean": 1.5974411964416504,
+    "tgt_mean": 0.3492974638938904,
+    "tgt_min": 0.21799173951148987,
+    "tgt_max": 0.4851018786430359
+  },
+  {
+    "id": 52,
+    "clean_file": "clean_00052.jpg",
+    "hazy_file": "hazy_00052.jpg",
+    "tgt_file": "tgt_00052.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 52,
+    "beta_mean": 1.596940279006958,
+    "tgt_mean": 0.34940996766090393,
+    "tgt_min": 0.2181144505739212,
+    "tgt_max": 0.485094279050827
+  },
+  {
+    "id": 53,
+    "clean_file": "clean_00053.jpg",
+    "hazy_file": "hazy_00053.jpg",
+    "tgt_file": "tgt_00053.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 53,
+    "beta_mean": 1.5963492393493652,
+    "tgt_mean": 0.3495430052280426,
+    "tgt_min": 0.2182914912700653,
+    "tgt_max": 0.48508793115615845
+  },
+  {
+    "id": 54,
+    "clean_file": "clean_00054.jpg",
+    "hazy_file": "hazy_00054.jpg",
+    "tgt_file": "tgt_00054.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 54,
+    "beta_mean": 1.5956681966781616,
+    "tgt_mean": 0.3496968150138855,
+    "tgt_min": 0.21850965917110443,
+    "tgt_max": 0.48549893498420715
+  },
+  {
+    "id": 55,
+    "clean_file": "clean_00055.jpg",
+    "hazy_file": "hazy_00055.jpg",
+    "tgt_file": "tgt_00055.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 55,
+    "beta_mean": 1.5948984622955322,
+    "tgt_mean": 0.3498711585998535,
+    "tgt_min": 0.21876685321331024,
+    "tgt_max": 0.4860648512840271
+  },
+  {
+    "id": 56,
+    "clean_file": "clean_00056.jpg",
+    "hazy_file": "hazy_00056.jpg",
+    "tgt_file": "tgt_00056.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 56,
+    "beta_mean": 1.5940427780151367,
+    "tgt_mean": 0.35006511211395264,
+    "tgt_min": 0.21906667947769165,
+    "tgt_max": 0.48659375309944153
+  },
+  {
+    "id": 57,
+    "clean_file": "clean_00057.jpg",
+    "hazy_file": "hazy_00057.jpg",
+    "tgt_file": "tgt_00057.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 57,
+    "beta_mean": 1.5931016206741333,
+    "tgt_mean": 0.3502786159515381,
+    "tgt_min": 0.21941518783569336,
+    "tgt_max": 0.48710396885871887
+  },
+  {
+    "id": 58,
+    "clean_file": "clean_00058.jpg",
+    "hazy_file": "hazy_00058.jpg",
+    "tgt_file": "tgt_00058.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 58,
+    "beta_mean": 1.5920755863189697,
+    "tgt_mean": 0.3505117893218994,
+    "tgt_min": 0.21980179846286774,
+    "tgt_max": 0.4875909686088562
+  },
+  {
+    "id": 59,
+    "clean_file": "clean_00059.jpg",
+    "hazy_file": "hazy_00059.jpg",
+    "tgt_file": "tgt_00059.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 59,
+    "beta_mean": 1.5909665822982788,
+    "tgt_mean": 0.35076433420181274,
+    "tgt_min": 0.22022752463817596,
+    "tgt_max": 0.48805558681488037
+  },
+  {
+    "id": 60,
+    "clean_file": "clean_00060.jpg",
+    "hazy_file": "hazy_00060.jpg",
+    "tgt_file": "tgt_00060.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 60,
+    "beta_mean": 1.589775800704956,
+    "tgt_mean": 0.3510359525680542,
+    "tgt_min": 0.22069337964057922,
+    "tgt_max": 0.4884987473487854
+  },
+  {
+    "id": 61,
+    "clean_file": "clean_00061.jpg",
+    "hazy_file": "hazy_00061.jpg",
+    "tgt_file": "tgt_00061.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 61,
+    "beta_mean": 1.5885076522827148,
+    "tgt_mean": 0.351325124502182,
+    "tgt_min": 0.22121986746788025,
+    "tgt_max": 0.48891958594322205
+  },
+  {
+    "id": 62,
+    "clean_file": "clean_00062.jpg",
+    "hazy_file": "hazy_00062.jpg",
+    "tgt_file": "tgt_00062.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 62,
+    "beta_mean": 1.5871614217758179,
+    "tgt_mean": 0.35163259506225586,
+    "tgt_min": 0.22178888320922852,
+    "tgt_max": 0.4893234074115753
+  },
+  {
+    "id": 63,
+    "clean_file": "clean_00063.jpg",
+    "hazy_file": "hazy_00063.jpg",
+    "tgt_file": "tgt_00063.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 63,
+    "beta_mean": 1.585739016532898,
+    "tgt_mean": 0.35195794701576233,
+    "tgt_min": 0.22240115702152252,
+    "tgt_max": 0.489744633436203
+  },
+  {
+    "id": 64,
+    "clean_file": "clean_00064.jpg",
+    "hazy_file": "hazy_00064.jpg",
+    "tgt_file": "tgt_00064.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 64,
+    "beta_mean": 1.584242343902588,
+    "tgt_mean": 0.35230082273483276,
+    "tgt_min": 0.22305752336978912,
+    "tgt_max": 0.4901566803455353
+  },
+  {
+    "id": 65,
+    "clean_file": "clean_00065.jpg",
+    "hazy_file": "hazy_00065.jpg",
+    "tgt_file": "tgt_00065.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 65,
+    "beta_mean": 1.582674503326416,
+    "tgt_mean": 0.3526603579521179,
+    "tgt_min": 0.2237703949213028,
+    "tgt_max": 0.49056151509284973
+  },
+  {
+    "id": 66,
+    "clean_file": "clean_00066.jpg",
+    "hazy_file": "hazy_00066.jpg",
+    "tgt_file": "tgt_00066.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 66,
+    "beta_mean": 1.5810378789901733,
+    "tgt_mean": 0.3530358076095581,
+    "tgt_min": 0.2245367467403412,
+    "tgt_max": 0.4909467399120331
+  },
+  {
+    "id": 67,
+    "clean_file": "clean_00067.jpg",
+    "hazy_file": "hazy_00067.jpg",
+    "tgt_file": "tgt_00067.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 67,
+    "beta_mean": 1.5793336629867554,
+    "tgt_mean": 0.3534274697303772,
+    "tgt_min": 0.22534888982772827,
+    "tgt_max": 0.4913218915462494
+  },
+  {
+    "id": 68,
+    "clean_file": "clean_00068.jpg",
+    "hazy_file": "hazy_00068.jpg",
+    "tgt_file": "tgt_00068.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 68,
+    "beta_mean": 1.5775638818740845,
+    "tgt_mean": 0.3538348078727722,
+    "tgt_min": 0.2259010225534439,
+    "tgt_max": 0.4916883707046509
+  },
+  {
+    "id": 69,
+    "clean_file": "clean_00069.jpg",
+    "hazy_file": "hazy_00069.jpg",
+    "tgt_file": "tgt_00069.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 69,
+    "beta_mean": 1.575731635093689,
+    "tgt_mean": 0.35425689816474915,
+    "tgt_min": 0.22635404765605927,
+    "tgt_max": 0.4920576214790344
+  },
+  {
+    "id": 70,
+    "clean_file": "clean_00070.jpg",
+    "hazy_file": "hazy_00070.jpg",
+    "tgt_file": "tgt_00070.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 70,
+    "beta_mean": 1.573838472366333,
+    "tgt_mean": 0.3546936511993408,
+    "tgt_min": 0.2268349677324295,
+    "tgt_max": 0.49242183566093445
+  },
+  {
+    "id": 71,
+    "clean_file": "clean_00071.jpg",
+    "hazy_file": "hazy_00071.jpg",
+    "tgt_file": "tgt_00071.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 71,
+    "beta_mean": 1.5718884468078613,
+    "tgt_mean": 0.3551439642906189,
+    "tgt_min": 0.2273475080728531,
+    "tgt_max": 0.49277937412261963
+  },
+  {
+    "id": 72,
+    "clean_file": "clean_00072.jpg",
+    "hazy_file": "hazy_00072.jpg",
+    "tgt_file": "tgt_00072.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 72,
+    "beta_mean": 1.5698825120925903,
+    "tgt_mean": 0.35560792684555054,
+    "tgt_min": 0.22788719832897186,
+    "tgt_max": 0.4931362271308899
+  },
+  {
+    "id": 73,
+    "clean_file": "clean_00073.jpg",
+    "hazy_file": "hazy_00073.jpg",
+    "tgt_file": "tgt_00073.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 73,
+    "beta_mean": 1.5678240060806274,
+    "tgt_mean": 0.35608455538749695,
+    "tgt_min": 0.22845949232578278,
+    "tgt_max": 0.4935048818588257
+  },
+  {
+    "id": 74,
+    "clean_file": "clean_00074.jpg",
+    "hazy_file": "hazy_00074.jpg",
+    "tgt_file": "tgt_00074.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 74,
+    "beta_mean": 1.565714716911316,
+    "tgt_mean": 0.3565737009048462,
+    "tgt_min": 0.22905898094177246,
+    "tgt_max": 0.49387601017951965
+  },
+  {
+    "id": 75,
+    "clean_file": "clean_00075.jpg",
+    "hazy_file": "hazy_00075.jpg",
+    "tgt_file": "tgt_00075.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 75,
+    "beta_mean": 1.563557505607605,
+    "tgt_mean": 0.3570747971534729,
+    "tgt_min": 0.22968558967113495,
+    "tgt_max": 0.4942508041858673
+  },
+  {
+    "id": 76,
+    "clean_file": "clean_00076.jpg",
+    "hazy_file": "hazy_00076.jpg",
+    "tgt_file": "tgt_00076.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 76,
+    "beta_mean": 1.5613561868667603,
+    "tgt_mean": 0.35758668184280396,
+    "tgt_min": 0.23034316301345825,
+    "tgt_max": 0.49462974071502686
+  },
+  {
+    "id": 77,
+    "clean_file": "clean_00077.jpg",
+    "hazy_file": "hazy_00077.jpg",
+    "tgt_file": "tgt_00077.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 77,
+    "beta_mean": 1.5591130256652832,
+    "tgt_mean": 0.3581089377403259,
+    "tgt_min": 0.23103487491607666,
+    "tgt_max": 0.4950277507305145
+  },
+  {
+    "id": 78,
+    "clean_file": "clean_00078.jpg",
+    "hazy_file": "hazy_00078.jpg",
+    "tgt_file": "tgt_00078.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 78,
+    "beta_mean": 1.5568299293518066,
+    "tgt_mean": 0.3586413264274597,
+    "tgt_min": 0.23175400495529175,
+    "tgt_max": 0.4954339265823364
+  },
+  {
+    "id": 79,
+    "clean_file": "clean_00079.jpg",
+    "hazy_file": "hazy_00079.jpg",
+    "tgt_file": "tgt_00079.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 79,
+    "beta_mean": 1.5545098781585693,
+    "tgt_mean": 0.35918325185775757,
+    "tgt_min": 0.23250050842761993,
+    "tgt_max": 0.49585533142089844
+  },
+  {
+    "id": 80,
+    "clean_file": "clean_00080.jpg",
+    "hazy_file": "hazy_00080.jpg",
+    "tgt_file": "tgt_00080.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 80,
+    "beta_mean": 1.5521559715270996,
+    "tgt_mean": 0.35973405838012695,
+    "tgt_min": 0.2332744151353836,
+    "tgt_max": 0.49645742774009705
+  },
+  {
+    "id": 81,
+    "clean_file": "clean_00081.jpg",
+    "hazy_file": "hazy_00081.jpg",
+    "tgt_file": "tgt_00081.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 81,
+    "beta_mean": 1.5497722625732422,
+    "tgt_mean": 0.3602922558784485,
+    "tgt_min": 0.23384343087673187,
+    "tgt_max": 0.4970409870147705
+  },
+  {
+    "id": 82,
+    "clean_file": "clean_00082.jpg",
+    "hazy_file": "hazy_00082.jpg",
+    "tgt_file": "tgt_00082.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 82,
+    "beta_mean": 1.5473601818084717,
+    "tgt_mean": 0.3608580529689789,
+    "tgt_min": 0.23441006243228912,
+    "tgt_max": 0.49760621786117554
+  },
+  {
+    "id": 83,
+    "clean_file": "clean_00083.jpg",
+    "hazy_file": "hazy_00083.jpg",
+    "tgt_file": "tgt_00083.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 83,
+    "beta_mean": 1.5449228286743164,
+    "tgt_mean": 0.3614307940006256,
+    "tgt_min": 0.23499268293380737,
+    "tgt_max": 0.49815455079078674
+  },
+  {
+    "id": 84,
+    "clean_file": "clean_00084.jpg",
+    "hazy_file": "hazy_00084.jpg",
+    "tgt_file": "tgt_00084.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 84,
+    "beta_mean": 1.5424630641937256,
+    "tgt_mean": 0.36200979351997375,
+    "tgt_min": 0.2355910837650299,
+    "tgt_max": 0.4986875057220459
+  },
+  {
+    "id": 85,
+    "clean_file": "clean_00085.jpg",
+    "hazy_file": "hazy_00085.jpg",
+    "tgt_file": "tgt_00085.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 85,
+    "beta_mean": 1.5399847030639648,
+    "tgt_mean": 0.36259400844573975,
+    "tgt_min": 0.23621155321598053,
+    "tgt_max": 0.4992177486419678
+  },
+  {
+    "id": 86,
+    "clean_file": "clean_00086.jpg",
+    "hazy_file": "hazy_00086.jpg",
+    "tgt_file": "tgt_00086.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 86,
+    "beta_mean": 1.5374901294708252,
+    "tgt_mean": 0.36318275332450867,
+    "tgt_min": 0.23684930801391602,
+    "tgt_max": 0.5006309747695923
+  },
+  {
+    "id": 87,
+    "clean_file": "clean_00087.jpg",
+    "hazy_file": "hazy_00087.jpg",
+    "tgt_file": "tgt_00087.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 87,
+    "beta_mean": 1.5349822044372559,
+    "tgt_mean": 0.36377575993537903,
+    "tgt_min": 0.23750245571136475,
+    "tgt_max": 0.5023886561393738
+  },
+  {
+    "id": 88,
+    "clean_file": "clean_00088.jpg",
+    "hazy_file": "hazy_00088.jpg",
+    "tgt_file": "tgt_00088.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 88,
+    "beta_mean": 1.532463550567627,
+    "tgt_mean": 0.3643723130226135,
+    "tgt_min": 0.2381710708141327,
+    "tgt_max": 0.5041782259941101
+  },
+  {
+    "id": 89,
+    "clean_file": "clean_00089.jpg",
+    "hazy_file": "hazy_00089.jpg",
+    "tgt_file": "tgt_00089.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 89,
+    "beta_mean": 1.5299382209777832,
+    "tgt_mean": 0.3649713099002838,
+    "tgt_min": 0.2388603836297989,
+    "tgt_max": 0.5059891939163208
+  },
+  {
+    "id": 90,
+    "clean_file": "clean_00090.jpg",
+    "hazy_file": "hazy_00090.jpg",
+    "tgt_file": "tgt_00090.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 90,
+    "beta_mean": 1.5274085998535156,
+    "tgt_mean": 0.36557239294052124,
+    "tgt_min": 0.23956440389156342,
+    "tgt_max": 0.5078271627426147
+  },
+  {
+    "id": 91,
+    "clean_file": "clean_00091.jpg",
+    "hazy_file": "hazy_00091.jpg",
+    "tgt_file": "tgt_00091.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 91,
+    "beta_mean": 1.5248773097991943,
+    "tgt_mean": 0.36617469787597656,
+    "tgt_min": 0.24028617143630981,
+    "tgt_max": 0.5096902251243591
+  },
+  {
+    "id": 92,
+    "clean_file": "clean_00092.jpg",
+    "hazy_file": "hazy_00092.jpg",
+    "tgt_file": "tgt_00092.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 92,
+    "beta_mean": 1.5223475694656372,
+    "tgt_mean": 0.36677777767181396,
+    "tgt_min": 0.24102309346199036,
+    "tgt_max": 0.5115758776664734
+  },
+  {
+    "id": 93,
+    "clean_file": "clean_00093.jpg",
+    "hazy_file": "hazy_00093.jpg",
+    "tgt_file": "tgt_00093.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 93,
+    "beta_mean": 1.5198227167129517,
+    "tgt_mean": 0.3673804700374603,
+    "tgt_min": 0.2417791187763214,
+    "tgt_max": 0.5134711265563965
+  },
+  {
+    "id": 94,
+    "clean_file": "clean_00094.jpg",
+    "hazy_file": "hazy_00094.jpg",
+    "tgt_file": "tgt_00094.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 94,
+    "beta_mean": 1.517305850982666,
+    "tgt_mean": 0.3679823875427246,
+    "tgt_min": 0.24254953861236572,
+    "tgt_max": 0.5153850317001343
+  },
+  {
+    "id": 95,
+    "clean_file": "clean_00095.jpg",
+    "hazy_file": "hazy_00095.jpg",
+    "tgt_file": "tgt_00095.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 95,
+    "beta_mean": 1.5147995948791504,
+    "tgt_mean": 0.3685828447341919,
+    "tgt_min": 0.24333427846431732,
+    "tgt_max": 0.5173163414001465
+  },
+  {
+    "id": 96,
+    "clean_file": "clean_00096.jpg",
+    "hazy_file": "hazy_00096.jpg",
+    "tgt_file": "tgt_00096.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 96,
+    "beta_mean": 1.5123063325881958,
+    "tgt_mean": 0.3691810071468353,
+    "tgt_min": 0.24413727223873138,
+    "tgt_max": 0.5192639231681824
+  },
+  {
+    "id": 97,
+    "clean_file": "clean_00097.jpg",
+    "hazy_file": "hazy_00097.jpg",
+    "tgt_file": "tgt_00097.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 97,
+    "beta_mean": 1.5098297595977783,
+    "tgt_mean": 0.3697759807109833,
+    "tgt_min": 0.24495753645896912,
+    "tgt_max": 0.5212138891220093
+  },
+  {
+    "id": 98,
+    "clean_file": "clean_00098.jpg",
+    "hazy_file": "hazy_00098.jpg",
+    "tgt_file": "tgt_00098.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 98,
+    "beta_mean": 1.5073729753494263,
+    "tgt_mean": 0.37036728858947754,
+    "tgt_min": 0.24579165875911713,
+    "tgt_max": 0.5231795907020569
+  },
+  {
+    "id": 99,
+    "clean_file": "clean_00099.jpg",
+    "hazy_file": "hazy_00099.jpg",
+    "tgt_file": "tgt_00099.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 99,
+    "beta_mean": 1.5049387216567993,
+    "tgt_mean": 0.3709541857242584,
+    "tgt_min": 0.24663954973220825,
+    "tgt_max": 0.5251606106758118
+  },
+  {
+    "id": 100,
+    "clean_file": "clean_00100.jpg",
+    "hazy_file": "hazy_00100.jpg",
+    "tgt_file": "tgt_00100.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 100,
+    "beta_mean": 1.5025300979614258,
+    "tgt_mean": 0.371535986661911,
+    "tgt_min": 0.24750107526779175,
+    "tgt_max": 0.5271567702293396
+  },
+  {
+    "id": 101,
+    "clean_file": "clean_00101.jpg",
+    "hazy_file": "hazy_00101.jpg",
+    "tgt_file": "tgt_00101.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 101,
+    "beta_mean": 1.5001490116119385,
+    "tgt_mean": 0.3721116781234741,
+    "tgt_min": 0.24838215112686157,
+    "tgt_max": 0.5291438102722168
+  },
+  {
+    "id": 102,
+    "clean_file": "clean_00102.jpg",
+    "hazy_file": "hazy_00102.jpg",
+    "tgt_file": "tgt_00102.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 102,
+    "beta_mean": 1.497799038887024,
+    "tgt_mean": 0.37268078327178955,
+    "tgt_min": 0.2492763251066208,
+    "tgt_max": 0.5311311483383179
+  },
+  {
+    "id": 103,
+    "clean_file": "clean_00103.jpg",
+    "hazy_file": "hazy_00103.jpg",
+    "tgt_file": "tgt_00103.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 103,
+    "beta_mean": 1.4954832792282104,
+    "tgt_mean": 0.3732425570487976,
+    "tgt_min": 0.2501833736896515,
+    "tgt_max": 0.5331135392189026
+  },
+  {
+    "id": 104,
+    "clean_file": "clean_00104.jpg",
+    "hazy_file": "hazy_00104.jpg",
+    "tgt_file": "tgt_00104.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 104,
+    "beta_mean": 1.4932048320770264,
+    "tgt_mean": 0.373796284198761,
+    "tgt_min": 0.25110316276550293,
+    "tgt_max": 0.5350862741470337
+  },
+  {
+    "id": 105,
+    "clean_file": "clean_00105.jpg",
+    "hazy_file": "hazy_00105.jpg",
+    "tgt_file": "tgt_00105.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 105,
+    "beta_mean": 1.4909662008285522,
+    "tgt_mean": 0.3743410110473633,
+    "tgt_min": 0.2520354688167572,
+    "tgt_max": 0.5370252728462219
+  },
+  {
+    "id": 106,
+    "clean_file": "clean_00106.jpg",
+    "hazy_file": "hazy_00106.jpg",
+    "tgt_file": "tgt_00106.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 106,
+    "beta_mean": 1.4887685775756836,
+    "tgt_mean": 0.3748764097690582,
+    "tgt_min": 0.2529849112033844,
+    "tgt_max": 0.5389336347579956
+  },
+  {
+    "id": 107,
+    "clean_file": "clean_00107.jpg",
+    "hazy_file": "hazy_00107.jpg",
+    "tgt_file": "tgt_00107.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 107,
+    "beta_mean": 1.4866160154342651,
+    "tgt_mean": 0.37540170550346375,
+    "tgt_min": 0.2539460361003876,
+    "tgt_max": 0.5408146977424622
+  },
+  {
+    "id": 108,
+    "clean_file": "clean_00108.jpg",
+    "hazy_file": "hazy_00108.jpg",
+    "tgt_file": "tgt_00108.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 108,
+    "beta_mean": 1.4845116138458252,
+    "tgt_mean": 0.37591615319252014,
+    "tgt_min": 0.25491848587989807,
+    "tgt_max": 0.5426643490791321
+  },
+  {
+    "id": 109,
+    "clean_file": "clean_00109.jpg",
+    "hazy_file": "hazy_00109.jpg",
+    "tgt_file": "tgt_00109.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 109,
+    "beta_mean": 1.4824575185775757,
+    "tgt_mean": 0.376418799161911,
+    "tgt_min": 0.25590139627456665,
+    "tgt_max": 0.5444571375846863
+  },
+  {
+    "id": 110,
+    "clean_file": "clean_00110.jpg",
+    "hazy_file": "hazy_00110.jpg",
+    "tgt_file": "tgt_00110.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 110,
+    "beta_mean": 1.4804567098617554,
+    "tgt_mean": 0.37690916657447815,
+    "tgt_min": 0.2568945586681366,
+    "tgt_max": 0.5462101101875305
+  },
+  {
+    "id": 111,
+    "clean_file": "clean_00111.jpg",
+    "hazy_file": "hazy_00111.jpg",
+    "tgt_file": "tgt_00111.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 111,
+    "beta_mean": 1.4785093069076538,
+    "tgt_mean": 0.37738698720932007,
+    "tgt_min": 0.2579033374786377,
+    "tgt_max": 0.547904908657074
+  },
+  {
+    "id": 112,
+    "clean_file": "clean_00112.jpg",
+    "hazy_file": "hazy_00112.jpg",
+    "tgt_file": "tgt_00112.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 112,
+    "beta_mean": 1.4766199588775635,
+    "tgt_mean": 0.37785130739212036,
+    "tgt_min": 0.25892162322998047,
+    "tgt_max": 0.5495514869689941
+  },
+  {
+    "id": 113,
+    "clean_file": "clean_00113.jpg",
+    "hazy_file": "hazy_00113.jpg",
+    "tgt_file": "tgt_00113.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 113,
+    "beta_mean": 1.4747908115386963,
+    "tgt_mean": 0.3783012628555298,
+    "tgt_min": 0.25994873046875,
+    "tgt_max": 0.5511226654052734
+  },
+  {
+    "id": 114,
+    "clean_file": "clean_00114.jpg",
+    "hazy_file": "hazy_00114.jpg",
+    "tgt_file": "tgt_00114.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 114,
+    "beta_mean": 1.4730243682861328,
+    "tgt_mean": 0.3787364363670349,
+    "tgt_min": 0.2609840929508209,
+    "tgt_max": 0.5526390671730042
+  },
+  {
+    "id": 115,
+    "clean_file": "clean_00115.jpg",
+    "hazy_file": "hazy_00115.jpg",
+    "tgt_file": "tgt_00115.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 115,
+    "beta_mean": 1.4713226556777954,
+    "tgt_mean": 0.379156231880188,
+    "tgt_min": 0.26202717423439026,
+    "tgt_max": 0.5540980100631714
+  },
+  {
+    "id": 116,
+    "clean_file": "clean_00116.jpg",
+    "hazy_file": "hazy_00116.jpg",
+    "tgt_file": "tgt_00116.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 116,
+    "beta_mean": 1.469685673713684,
+    "tgt_mean": 0.3795605003833771,
+    "tgt_min": 0.2630831301212311,
+    "tgt_max": 0.5554801821708679
+  },
+  {
+    "id": 117,
+    "clean_file": "clean_00117.jpg",
+    "hazy_file": "hazy_00117.jpg",
+    "tgt_file": "tgt_00117.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 117,
+    "beta_mean": 1.4681174755096436,
+    "tgt_mean": 0.3799479901790619,
+    "tgt_min": 0.2641465961933136,
+    "tgt_max": 0.5567735433578491
+  },
+  {
+    "id": 118,
+    "clean_file": "clean_00118.jpg",
+    "hazy_file": "hazy_00118.jpg",
+    "tgt_file": "tgt_00118.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 118,
+    "beta_mean": 1.4666202068328857,
+    "tgt_mean": 0.38031843304634094,
+    "tgt_min": 0.26490938663482666,
+    "tgt_max": 0.5580018162727356
+  },
+  {
+    "id": 119,
+    "clean_file": "clean_00119.jpg",
+    "hazy_file": "hazy_00119.jpg",
+    "tgt_file": "tgt_00119.npy",
+    "A": [
+      0.8464481234550476,
+      0.8574536442756653,
+      0.8618097305297852
+    ],
+    "source_video": "person-bicycle_clean.mp4",
+    "frame_in_video": 119,
+    "beta_mean": 1.4651957750320435,
+    "tgt_mean": 0.38067135214805603,
+    "tgt_min": 0.2652997374534607,
+    "tgt_max": 0.5591632127761841
+  },
+  {
+    "id": 120,
+    "clean_file": "clean_00120.jpg",
+    "hazy_file": "hazy_00120.jpg",
+    "tgt_file": "tgt_00120.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 0,
+    "beta_mean": 1.7605156898498535,
+    "tgt_mean": 0.4061567485332489,
+    "tgt_min": 0.1528569757938385,
+    "tgt_max": 0.7929744124412537
+  },
+  {
+    "id": 121,
+    "clean_file": "clean_00121.jpg",
+    "hazy_file": "hazy_00121.jpg",
+    "tgt_file": "tgt_00121.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 1,
+    "beta_mean": 1.7568007707595825,
+    "tgt_mean": 0.4061526954174042,
+    "tgt_min": 0.17819711565971375,
+    "tgt_max": 0.7706215381622314
+  },
+  {
+    "id": 122,
+    "clean_file": "clean_00122.jpg",
+    "hazy_file": "hazy_00122.jpg",
+    "tgt_file": "tgt_00122.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 2,
+    "beta_mean": 1.7595100402832031,
+    "tgt_mean": 0.40562066435813904,
+    "tgt_min": 0.17795199155807495,
+    "tgt_max": 0.7701602578163147
+  },
+  {
+    "id": 123,
+    "clean_file": "clean_00123.jpg",
+    "hazy_file": "hazy_00123.jpg",
+    "tgt_file": "tgt_00123.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 3,
+    "beta_mean": 1.7622120380401611,
+    "tgt_mean": 0.4050908386707306,
+    "tgt_min": 0.17773018777370453,
+    "tgt_max": 0.7697024941444397
+  },
+  {
+    "id": 124,
+    "clean_file": "clean_00124.jpg",
+    "hazy_file": "hazy_00124.jpg",
+    "tgt_file": "tgt_00124.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 4,
+    "beta_mean": 1.7649035453796387,
+    "tgt_mean": 0.40456387400627136,
+    "tgt_min": 0.17753078043460846,
+    "tgt_max": 0.7692503929138184
+  },
+  {
+    "id": 125,
+    "clean_file": "clean_00125.jpg",
+    "hazy_file": "hazy_00125.jpg",
+    "tgt_file": "tgt_00125.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 5,
+    "beta_mean": 1.7675807476043701,
+    "tgt_mean": 0.4040406346321106,
+    "tgt_min": 0.17734435200691223,
+    "tgt_max": 0.7688022255897522
+  },
+  {
+    "id": 126,
+    "clean_file": "clean_00126.jpg",
+    "hazy_file": "hazy_00126.jpg",
+    "tgt_file": "tgt_00126.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 6,
+    "beta_mean": 1.770238995552063,
+    "tgt_mean": 0.4035215377807617,
+    "tgt_min": 0.17718957364559174,
+    "tgt_max": 0.7683631777763367
+  },
+  {
+    "id": 127,
+    "clean_file": "clean_00127.jpg",
+    "hazy_file": "hazy_00127.jpg",
+    "tgt_file": "tgt_00127.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 7,
+    "beta_mean": 1.7728763818740845,
+    "tgt_mean": 0.4030073583126068,
+    "tgt_min": 0.1770469844341278,
+    "tgt_max": 0.7679302096366882
+  },
+  {
+    "id": 128,
+    "clean_file": "clean_00128.jpg",
+    "hazy_file": "hazy_00128.jpg",
+    "tgt_file": "tgt_00128.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 8,
+    "beta_mean": 1.7754898071289062,
+    "tgt_mean": 0.4024985730648041,
+    "tgt_min": 0.1769251525402069,
+    "tgt_max": 0.7675069570541382
+  },
+  {
+    "id": 129,
+    "clean_file": "clean_00129.jpg",
+    "hazy_file": "hazy_00129.jpg",
+    "tgt_file": "tgt_00129.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 9,
+    "beta_mean": 1.7780762910842896,
+    "tgt_mean": 0.40199586749076843,
+    "tgt_min": 0.17682293057441711,
+    "tgt_max": 0.7670947909355164
+  },
+  {
+    "id": 130,
+    "clean_file": "clean_00130.jpg",
+    "hazy_file": "hazy_00130.jpg",
+    "tgt_file": "tgt_00130.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 10,
+    "beta_mean": 1.7806321382522583,
+    "tgt_mean": 0.4014999270439148,
+    "tgt_min": 0.17673315107822418,
+    "tgt_max": 0.7666898965835571
+  },
+  {
+    "id": 131,
+    "clean_file": "clean_00131.jpg",
+    "hazy_file": "hazy_00131.jpg",
+    "tgt_file": "tgt_00131.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 11,
+    "beta_mean": 1.7831525802612305,
+    "tgt_mean": 0.40101107954978943,
+    "tgt_min": 0.17666861414909363,
+    "tgt_max": 0.7662991285324097
+  },
+  {
+    "id": 132,
+    "clean_file": "clean_00132.jpg",
+    "hazy_file": "hazy_00132.jpg",
+    "tgt_file": "tgt_00132.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 12,
+    "beta_mean": 1.785636305809021,
+    "tgt_mean": 0.40053024888038635,
+    "tgt_min": 0.17661592364311218,
+    "tgt_max": 0.7659162878990173
+  },
+  {
+    "id": 133,
+    "clean_file": "clean_00133.jpg",
+    "hazy_file": "hazy_00133.jpg",
+    "tgt_file": "tgt_00133.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 13,
+    "beta_mean": 1.788080096244812,
+    "tgt_mean": 0.40005776286125183,
+    "tgt_min": 0.17658144235610962,
+    "tgt_max": 0.7655466198921204
+  },
+  {
+    "id": 134,
+    "clean_file": "clean_00134.jpg",
+    "hazy_file": "hazy_00134.jpg",
+    "tgt_file": "tgt_00134.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 14,
+    "beta_mean": 1.7904815673828125,
+    "tgt_mean": 0.39959412813186646,
+    "tgt_min": 0.17654752731323242,
+    "tgt_max": 0.765190064907074
+  },
+  {
+    "id": 135,
+    "clean_file": "clean_00135.jpg",
+    "hazy_file": "hazy_00135.jpg",
+    "tgt_file": "tgt_00135.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 15,
+    "beta_mean": 1.7928366661071777,
+    "tgt_mean": 0.3991401791572571,
+    "tgt_min": 0.17652539908885956,
+    "tgt_max": 0.7648423314094543
+  },
+  {
+    "id": 136,
+    "clean_file": "clean_00136.jpg",
+    "hazy_file": "hazy_00136.jpg",
+    "tgt_file": "tgt_00136.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 16,
+    "beta_mean": 1.7951416969299316,
+    "tgt_mean": 0.39869603514671326,
+    "tgt_min": 0.17652654647827148,
+    "tgt_max": 0.7645096182823181
+  },
+  {
+    "id": 137,
+    "clean_file": "clean_00137.jpg",
+    "hazy_file": "hazy_00137.jpg",
+    "tgt_file": "tgt_00137.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 17,
+    "beta_mean": 1.7973946332931519,
+    "tgt_mean": 0.3982626497745514,
+    "tgt_min": 0.1765415221452713,
+    "tgt_max": 0.7641857862472534
+  },
+  {
+    "id": 138,
+    "clean_file": "clean_00138.jpg",
+    "hazy_file": "hazy_00138.jpg",
+    "tgt_file": "tgt_00138.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 18,
+    "beta_mean": 1.799593448638916,
+    "tgt_mean": 0.3978402614593506,
+    "tgt_min": 0.17657645046710968,
+    "tgt_max": 0.763875424861908
+  },
+  {
+    "id": 139,
+    "clean_file": "clean_00139.jpg",
+    "hazy_file": "hazy_00139.jpg",
+    "tgt_file": "tgt_00139.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 19,
+    "beta_mean": 1.801735281944275,
+    "tgt_mean": 0.39742928743362427,
+    "tgt_min": 0.17663122713565826,
+    "tgt_max": 0.7635784149169922
+  },
+  {
+    "id": 140,
+    "clean_file": "clean_00140.jpg",
+    "hazy_file": "hazy_00140.jpg",
+    "tgt_file": "tgt_00140.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 20,
+    "beta_mean": 1.803816795349121,
+    "tgt_mean": 0.3970305621623993,
+    "tgt_min": 0.17670045793056488,
+    "tgt_max": 0.7632904648780823
+  },
+  {
+    "id": 141,
+    "clean_file": "clean_00141.jpg",
+    "hazy_file": "hazy_00141.jpg",
+    "tgt_file": "tgt_00141.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 21,
+    "beta_mean": 1.8058347702026367,
+    "tgt_mean": 0.3966439962387085,
+    "tgt_min": 0.17650379240512848,
+    "tgt_max": 0.7630155682563782
+  },
+  {
+    "id": 142,
+    "clean_file": "clean_00142.jpg",
+    "hazy_file": "hazy_00142.jpg",
+    "tgt_file": "tgt_00142.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 22,
+    "beta_mean": 1.807787537574768,
+    "tgt_mean": 0.3962705433368683,
+    "tgt_min": 0.17573224008083344,
+    "tgt_max": 0.7627493143081665
+  },
+  {
+    "id": 143,
+    "clean_file": "clean_00143.jpg",
+    "hazy_file": "hazy_00143.jpg",
+    "tgt_file": "tgt_00143.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 23,
+    "beta_mean": 1.8096730709075928,
+    "tgt_mean": 0.3959104120731354,
+    "tgt_min": 0.1749914139509201,
+    "tgt_max": 0.7624955177307129
+  },
+  {
+    "id": 144,
+    "clean_file": "clean_00144.jpg",
+    "hazy_file": "hazy_00144.jpg",
+    "tgt_file": "tgt_00144.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 24,
+    "beta_mean": 1.8114889860153198,
+    "tgt_mean": 0.39556387066841125,
+    "tgt_min": 0.17428261041641235,
+    "tgt_max": 0.7622536420822144
+  },
+  {
+    "id": 145,
+    "clean_file": "clean_00145.jpg",
+    "hazy_file": "hazy_00145.jpg",
+    "tgt_file": "tgt_00145.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 25,
+    "beta_mean": 1.813232421875,
+    "tgt_mean": 0.3952317237854004,
+    "tgt_min": 0.17360231280326843,
+    "tgt_max": 0.7620201706886292
+  },
+  {
+    "id": 146,
+    "clean_file": "clean_00146.jpg",
+    "hazy_file": "hazy_00146.jpg",
+    "tgt_file": "tgt_00146.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 26,
+    "beta_mean": 1.8149009943008423,
+    "tgt_mean": 0.3949137330055237,
+    "tgt_min": 0.17295211553573608,
+    "tgt_max": 0.7617962956428528
+  },
+  {
+    "id": 147,
+    "clean_file": "clean_00147.jpg",
+    "hazy_file": "hazy_00147.jpg",
+    "tgt_file": "tgt_00147.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 27,
+    "beta_mean": 1.8164926767349243,
+    "tgt_mean": 0.3946108818054199,
+    "tgt_min": 0.17233195900917053,
+    "tgt_max": 0.7615803480148315
+  },
+  {
+    "id": 148,
+    "clean_file": "clean_00148.jpg",
+    "hazy_file": "hazy_00148.jpg",
+    "tgt_file": "tgt_00148.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 28,
+    "beta_mean": 1.8180063962936401,
+    "tgt_mean": 0.3943231701850891,
+    "tgt_min": 0.17174646258354187,
+    "tgt_max": 0.7613746523857117
+  },
+  {
+    "id": 149,
+    "clean_file": "clean_00149.jpg",
+    "hazy_file": "hazy_00149.jpg",
+    "tgt_file": "tgt_00149.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 29,
+    "beta_mean": 1.8194403648376465,
+    "tgt_mean": 0.3940508961677551,
+    "tgt_min": 0.17119652032852173,
+    "tgt_max": 0.7611858248710632
+  },
+  {
+    "id": 150,
+    "clean_file": "clean_00150.jpg",
+    "hazy_file": "hazy_00150.jpg",
+    "tgt_file": "tgt_00150.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 30,
+    "beta_mean": 1.8207918405532837,
+    "tgt_mean": 0.3937947154045105,
+    "tgt_min": 0.17067700624465942,
+    "tgt_max": 0.761012852191925
+  },
+  {
+    "id": 151,
+    "clean_file": "clean_00151.jpg",
+    "hazy_file": "hazy_00151.jpg",
+    "tgt_file": "tgt_00151.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 31,
+    "beta_mean": 1.8220590353012085,
+    "tgt_mean": 0.39355430006980896,
+    "tgt_min": 0.17019198834896088,
+    "tgt_max": 0.7608461976051331
+  },
+  {
+    "id": 152,
+    "clean_file": "clean_00152.jpg",
+    "hazy_file": "hazy_00152.jpg",
+    "tgt_file": "tgt_00152.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 32,
+    "beta_mean": 1.8232405185699463,
+    "tgt_mean": 0.39333054423332214,
+    "tgt_min": 0.16973821818828583,
+    "tgt_max": 0.760686457157135
+  },
+  {
+    "id": 153,
+    "clean_file": "clean_00153.jpg",
+    "hazy_file": "hazy_00153.jpg",
+    "tgt_file": "tgt_00153.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 33,
+    "beta_mean": 1.8243355751037598,
+    "tgt_mean": 0.3931233286857605,
+    "tgt_min": 0.16932140290737152,
+    "tgt_max": 0.7605351805686951
+  },
+  {
+    "id": 154,
+    "clean_file": "clean_00154.jpg",
+    "hazy_file": "hazy_00154.jpg",
+    "tgt_file": "tgt_00154.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 34,
+    "beta_mean": 1.825343132019043,
+    "tgt_mean": 0.3929329216480255,
+    "tgt_min": 0.1689419448375702,
+    "tgt_max": 0.7603915929794312
+  },
+  {
+    "id": 155,
+    "clean_file": "clean_00155.jpg",
+    "hazy_file": "hazy_00155.jpg",
+    "tgt_file": "tgt_00155.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 35,
+    "beta_mean": 1.8262604475021362,
+    "tgt_mean": 0.39275985956192017,
+    "tgt_min": 0.16859358549118042,
+    "tgt_max": 0.7602545022964478
+  },
+  {
+    "id": 156,
+    "clean_file": "clean_00156.jpg",
+    "hazy_file": "hazy_00156.jpg",
+    "tgt_file": "tgt_00156.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 36,
+    "beta_mean": 1.827087163925171,
+    "tgt_mean": 0.39260369539260864,
+    "tgt_min": 0.16828174889087677,
+    "tgt_max": 0.7601194381713867
+  },
+  {
+    "id": 157,
+    "clean_file": "clean_00157.jpg",
+    "hazy_file": "hazy_00157.jpg",
+    "tgt_file": "tgt_00157.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 37,
+    "beta_mean": 1.8278218507766724,
+    "tgt_mean": 0.3924652636051178,
+    "tgt_min": 0.16800127923488617,
+    "tgt_max": 0.7599900960922241
+  },
+  {
+    "id": 158,
+    "clean_file": "clean_00158.jpg",
+    "hazy_file": "hazy_00158.jpg",
+    "tgt_file": "tgt_00158.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 38,
+    "beta_mean": 1.828464388847351,
+    "tgt_mean": 0.3923443555831909,
+    "tgt_min": 0.16775836050510406,
+    "tgt_max": 0.7598668932914734
+  },
+  {
+    "id": 159,
+    "clean_file": "clean_00159.jpg",
+    "hazy_file": "hazy_00159.jpg",
+    "tgt_file": "tgt_00159.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 39,
+    "beta_mean": 1.8290143013000488,
+    "tgt_mean": 0.39224112033843994,
+    "tgt_min": 0.16755302250385284,
+    "tgt_max": 0.7597489356994629
+  },
+  {
+    "id": 160,
+    "clean_file": "clean_00160.jpg",
+    "hazy_file": "hazy_00160.jpg",
+    "tgt_file": "tgt_00160.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 40,
+    "beta_mean": 1.8294694423675537,
+    "tgt_mean": 0.39215606451034546,
+    "tgt_min": 0.16737839579582214,
+    "tgt_max": 0.759636402130127
+  },
+  {
+    "id": 161,
+    "clean_file": "clean_00161.jpg",
+    "hazy_file": "hazy_00161.jpg",
+    "tgt_file": "tgt_00161.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 41,
+    "beta_mean": 1.8298300504684448,
+    "tgt_mean": 0.3920884430408478,
+    "tgt_min": 0.16724011301994324,
+    "tgt_max": 0.7595223784446716
+  },
+  {
+    "id": 162,
+    "clean_file": "clean_00162.jpg",
+    "hazy_file": "hazy_00162.jpg",
+    "tgt_file": "tgt_00162.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 42,
+    "beta_mean": 1.8300951719284058,
+    "tgt_mean": 0.3920392692089081,
+    "tgt_min": 0.16713233292102814,
+    "tgt_max": 0.7594130635261536
+  },
+  {
+    "id": 163,
+    "clean_file": "clean_00163.jpg",
+    "hazy_file": "hazy_00163.jpg",
+    "tgt_file": "tgt_00163.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 43,
+    "beta_mean": 1.8302652835845947,
+    "tgt_mean": 0.3920080363750458,
+    "tgt_min": 0.1670612394809723,
+    "tgt_max": 0.7593079209327698
+  },
+  {
+    "id": 164,
+    "clean_file": "clean_00164.jpg",
+    "hazy_file": "hazy_00164.jpg",
+    "tgt_file": "tgt_00164.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 44,
+    "beta_mean": 1.8303403854370117,
+    "tgt_mean": 0.3919948935508728,
+    "tgt_min": 0.16702648997306824,
+    "tgt_max": 0.759206235408783
+  },
+  {
+    "id": 165,
+    "clean_file": "clean_00165.jpg",
+    "hazy_file": "hazy_00165.jpg",
+    "tgt_file": "tgt_00165.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 45,
+    "beta_mean": 1.830318808555603,
+    "tgt_mean": 0.3920002579689026,
+    "tgt_min": 0.167021244764328,
+    "tgt_max": 0.7591091990470886
+  },
+  {
+    "id": 166,
+    "clean_file": "clean_00166.jpg",
+    "hazy_file": "hazy_00166.jpg",
+    "tgt_file": "tgt_00166.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 46,
+    "beta_mean": 1.8302022218704224,
+    "tgt_mean": 0.3920232057571411,
+    "tgt_min": 0.16705024242401123,
+    "tgt_max": 0.7590082287788391
+  },
+  {
+    "id": 167,
+    "clean_file": "clean_00167.jpg",
+    "hazy_file": "hazy_00167.jpg",
+    "tgt_file": "tgt_00167.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 47,
+    "beta_mean": 1.8299890756607056,
+    "tgt_mean": 0.3920646905899048,
+    "tgt_min": 0.1671079397201538,
+    "tgt_max": 0.7589115500450134
+  },
+  {
+    "id": 168,
+    "clean_file": "clean_00168.jpg",
+    "hazy_file": "hazy_00168.jpg",
+    "tgt_file": "tgt_00168.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 48,
+    "beta_mean": 1.8296812772750854,
+    "tgt_mean": 0.3921241760253906,
+    "tgt_min": 0.16719214618206024,
+    "tgt_max": 0.7588176131248474
+  },
+  {
+    "id": 169,
+    "clean_file": "clean_00169.jpg",
+    "hazy_file": "hazy_00169.jpg",
+    "tgt_file": "tgt_00169.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 49,
+    "beta_mean": 1.8292791843414307,
+    "tgt_mean": 0.39220160245895386,
+    "tgt_min": 0.16729484498500824,
+    "tgt_max": 0.7587261199951172
+  },
+  {
+    "id": 170,
+    "clean_file": "clean_00170.jpg",
+    "hazy_file": "hazy_00170.jpg",
+    "tgt_file": "tgt_00170.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 50,
+    "beta_mean": 1.8287816047668457,
+    "tgt_mean": 0.3922974169254303,
+    "tgt_min": 0.16742561757564545,
+    "tgt_max": 0.7586387991905212
+  },
+  {
+    "id": 171,
+    "clean_file": "clean_00171.jpg",
+    "hazy_file": "hazy_00171.jpg",
+    "tgt_file": "tgt_00171.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 51,
+    "beta_mean": 1.828190803527832,
+    "tgt_mean": 0.3924104869365692,
+    "tgt_min": 0.16758768260478973,
+    "tgt_max": 0.7585468292236328
+  },
+  {
+    "id": 172,
+    "clean_file": "clean_00172.jpg",
+    "hazy_file": "hazy_00172.jpg",
+    "tgt_file": "tgt_00172.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 52,
+    "beta_mean": 1.8275058269500732,
+    "tgt_mean": 0.39254170656204224,
+    "tgt_min": 0.16777677834033966,
+    "tgt_max": 0.7584587931632996
+  },
+  {
+    "id": 173,
+    "clean_file": "clean_00173.jpg",
+    "hazy_file": "hazy_00173.jpg",
+    "tgt_file": "tgt_00173.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 53,
+    "beta_mean": 1.8267290592193604,
+    "tgt_mean": 0.3926904797554016,
+    "tgt_min": 0.16799813508987427,
+    "tgt_max": 0.7583731412887573
+  },
+  {
+    "id": 174,
+    "clean_file": "clean_00174.jpg",
+    "hazy_file": "hazy_00174.jpg",
+    "tgt_file": "tgt_00174.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 54,
+    "beta_mean": 1.8258618116378784,
+    "tgt_mean": 0.3928566575050354,
+    "tgt_min": 0.16825106739997864,
+    "tgt_max": 0.7582896947860718
+  },
+  {
+    "id": 175,
+    "clean_file": "clean_00175.jpg",
+    "hazy_file": "hazy_00175.jpg",
+    "tgt_file": "tgt_00175.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 55,
+    "beta_mean": 1.8249027729034424,
+    "tgt_mean": 0.3930405378341675,
+    "tgt_min": 0.1685294806957245,
+    "tgt_max": 0.7582101821899414
+  },
+  {
+    "id": 176,
+    "clean_file": "clean_00176.jpg",
+    "hazy_file": "hazy_00176.jpg",
+    "tgt_file": "tgt_00176.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 56,
+    "beta_mean": 1.8238557577133179,
+    "tgt_mean": 0.39324086904525757,
+    "tgt_min": 0.16883492469787598,
+    "tgt_max": 0.758126974105835
+  },
+  {
+    "id": 177,
+    "clean_file": "clean_00177.jpg",
+    "hazy_file": "hazy_00177.jpg",
+    "tgt_file": "tgt_00177.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 57,
+    "beta_mean": 1.822719693183899,
+    "tgt_mean": 0.3934585452079773,
+    "tgt_min": 0.16916464269161224,
+    "tgt_max": 0.758047878742218
+  },
+  {
+    "id": 178,
+    "clean_file": "clean_00178.jpg",
+    "hazy_file": "hazy_00178.jpg",
+    "tgt_file": "tgt_00178.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 58,
+    "beta_mean": 1.8214975595474243,
+    "tgt_mean": 0.3936927914619446,
+    "tgt_min": 0.1695232093334198,
+    "tgt_max": 0.757971465587616
+  },
+  {
+    "id": 179,
+    "clean_file": "clean_00179.jpg",
+    "hazy_file": "hazy_00179.jpg",
+    "tgt_file": "tgt_00179.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 59,
+    "beta_mean": 1.8201910257339478,
+    "tgt_mean": 0.3939433693885803,
+    "tgt_min": 0.16990986466407776,
+    "tgt_max": 0.7578978538513184
+  },
+  {
+    "id": 180,
+    "clean_file": "clean_00180.jpg",
+    "hazy_file": "hazy_00180.jpg",
+    "tgt_file": "tgt_00180.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 60,
+    "beta_mean": 1.818799614906311,
+    "tgt_mean": 0.3942106068134308,
+    "tgt_min": 0.17031916975975037,
+    "tgt_max": 0.7578284740447998
+  },
+  {
+    "id": 181,
+    "clean_file": "clean_00181.jpg",
+    "hazy_file": "hazy_00181.jpg",
+    "tgt_file": "tgt_00181.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 61,
+    "beta_mean": 1.817327857017517,
+    "tgt_mean": 0.3944930136203766,
+    "tgt_min": 0.17075102031230927,
+    "tgt_max": 0.7577574253082275
+  },
+  {
+    "id": 182,
+    "clean_file": "clean_00182.jpg",
+    "hazy_file": "hazy_00182.jpg",
+    "tgt_file": "tgt_00182.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 62,
+    "beta_mean": 1.815774917602539,
+    "tgt_mean": 0.3947914242744446,
+    "tgt_min": 0.1712043434381485,
+    "tgt_max": 0.7576912045478821
+  },
+  {
+    "id": 183,
+    "clean_file": "clean_00183.jpg",
+    "hazy_file": "hazy_00183.jpg",
+    "tgt_file": "tgt_00183.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 63,
+    "beta_mean": 1.814144253730774,
+    "tgt_mean": 0.3951050043106079,
+    "tgt_min": 0.1716831475496292,
+    "tgt_max": 0.7576286196708679
+  },
+  {
+    "id": 184,
+    "clean_file": "clean_00184.jpg",
+    "hazy_file": "hazy_00184.jpg",
+    "tgt_file": "tgt_00184.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 64,
+    "beta_mean": 1.8124380111694336,
+    "tgt_mean": 0.3954334855079651,
+    "tgt_min": 0.17218691110610962,
+    "tgt_max": 0.7575699090957642
+  },
+  {
+    "id": 185,
+    "clean_file": "clean_00185.jpg",
+    "hazy_file": "hazy_00185.jpg",
+    "tgt_file": "tgt_00185.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 65,
+    "beta_mean": 1.8106565475463867,
+    "tgt_mean": 0.3957769572734833,
+    "tgt_min": 0.1727105975151062,
+    "tgt_max": 0.7575159072875977
+  },
+  {
+    "id": 186,
+    "clean_file": "clean_00186.jpg",
+    "hazy_file": "hazy_00186.jpg",
+    "tgt_file": "tgt_00186.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 66,
+    "beta_mean": 1.8088047504425049,
+    "tgt_mean": 0.3961338996887207,
+    "tgt_min": 0.17325350642204285,
+    "tgt_max": 0.7574637532234192
+  },
+  {
+    "id": 187,
+    "clean_file": "clean_00187.jpg",
+    "hazy_file": "hazy_00187.jpg",
+    "tgt_file": "tgt_00187.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 67,
+    "beta_mean": 1.8068817853927612,
+    "tgt_mean": 0.3965051770210266,
+    "tgt_min": 0.17381551861763,
+    "tgt_max": 0.7574169635772705
+  },
+  {
+    "id": 188,
+    "clean_file": "clean_00188.jpg",
+    "hazy_file": "hazy_00188.jpg",
+    "tgt_file": "tgt_00188.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 68,
+    "beta_mean": 1.8048919439315796,
+    "tgt_mean": 0.39688974618911743,
+    "tgt_min": 0.17429068684577942,
+    "tgt_max": 0.757375180721283
+  },
+  {
+    "id": 189,
+    "clean_file": "clean_00189.jpg",
+    "hazy_file": "hazy_00189.jpg",
+    "tgt_file": "tgt_00189.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 69,
+    "beta_mean": 1.8028380870819092,
+    "tgt_mean": 0.3972872495651245,
+    "tgt_min": 0.17443346977233887,
+    "tgt_max": 0.75733882188797
+  },
+  {
+    "id": 190,
+    "clean_file": "clean_00190.jpg",
+    "hazy_file": "hazy_00190.jpg",
+    "tgt_file": "tgt_00190.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 70,
+    "beta_mean": 1.800720453262329,
+    "tgt_mean": 0.397697776556015,
+    "tgt_min": 0.1746009737253189,
+    "tgt_max": 0.7573078274726868
+  },
+  {
+    "id": 191,
+    "clean_file": "clean_00191.jpg",
+    "hazy_file": "hazy_00191.jpg",
+    "tgt_file": "tgt_00191.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 71,
+    "beta_mean": 1.7985444068908691,
+    "tgt_mean": 0.39811962842941284,
+    "tgt_min": 0.17482611536979675,
+    "tgt_max": 0.7572826147079468
+  },
+  {
+    "id": 192,
+    "clean_file": "clean_00192.jpg",
+    "hazy_file": "hazy_00192.jpg",
+    "tgt_file": "tgt_00192.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 72,
+    "beta_mean": 1.7963099479675293,
+    "tgt_mean": 0.39855360984802246,
+    "tgt_min": 0.17504307627677917,
+    "tgt_max": 0.7572633624076843
+  },
+  {
+    "id": 193,
+    "clean_file": "clean_00193.jpg",
+    "hazy_file": "hazy_00193.jpg",
+    "tgt_file": "tgt_00193.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 73,
+    "beta_mean": 1.794021487236023,
+    "tgt_mean": 0.3989986777305603,
+    "tgt_min": 0.17528901994228363,
+    "tgt_max": 0.7572507262229919
+  },
+  {
+    "id": 194,
+    "clean_file": "clean_00194.jpg",
+    "hazy_file": "hazy_00194.jpg",
+    "tgt_file": "tgt_00194.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 74,
+    "beta_mean": 1.7916820049285889,
+    "tgt_mean": 0.3994543254375458,
+    "tgt_min": 0.17557191848754883,
+    "tgt_max": 0.7572450041770935
+  },
+  {
+    "id": 195,
+    "clean_file": "clean_00195.jpg",
+    "hazy_file": "hazy_00195.jpg",
+    "tgt_file": "tgt_00195.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 75,
+    "beta_mean": 1.789292573928833,
+    "tgt_mean": 0.39992061257362366,
+    "tgt_min": 0.1758781224489212,
+    "tgt_max": 0.7572450637817383
+  },
+  {
+    "id": 196,
+    "clean_file": "clean_00196.jpg",
+    "hazy_file": "hazy_00196.jpg",
+    "tgt_file": "tgt_00196.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 76,
+    "beta_mean": 1.7868585586547852,
+    "tgt_mean": 0.4003956913948059,
+    "tgt_min": 0.17624087631702423,
+    "tgt_max": 0.7572550177574158
+  },
+  {
+    "id": 197,
+    "clean_file": "clean_00197.jpg",
+    "hazy_file": "hazy_00197.jpg",
+    "tgt_file": "tgt_00197.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 77,
+    "beta_mean": 1.784380316734314,
+    "tgt_mean": 0.4008803963661194,
+    "tgt_min": 0.1766260862350464,
+    "tgt_max": 0.7572712302207947
+  },
+  {
+    "id": 198,
+    "clean_file": "clean_00198.jpg",
+    "hazy_file": "hazy_00198.jpg",
+    "tgt_file": "tgt_00198.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 78,
+    "beta_mean": 1.781862735748291,
+    "tgt_mean": 0.4013735055923462,
+    "tgt_min": 0.17704644799232483,
+    "tgt_max": 0.7572954297065735
+  },
+  {
+    "id": 199,
+    "clean_file": "clean_00199.jpg",
+    "hazy_file": "hazy_00199.jpg",
+    "tgt_file": "tgt_00199.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 79,
+    "beta_mean": 1.7793089151382446,
+    "tgt_mean": 0.4018745720386505,
+    "tgt_min": 0.1775011420249939,
+    "tgt_max": 0.757327675819397
+  },
+  {
+    "id": 200,
+    "clean_file": "clean_00200.jpg",
+    "hazy_file": "hazy_00200.jpg",
+    "tgt_file": "tgt_00200.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 80,
+    "beta_mean": 1.7767201662063599,
+    "tgt_mean": 0.4023834764957428,
+    "tgt_min": 0.1779768019914627,
+    "tgt_max": 0.7573657631874084
+  },
+  {
+    "id": 201,
+    "clean_file": "clean_00201.jpg",
+    "hazy_file": "hazy_00201.jpg",
+    "tgt_file": "tgt_00201.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 81,
+    "beta_mean": 1.7741023302078247,
+    "tgt_mean": 0.4028984010219574,
+    "tgt_min": 0.17848676443099976,
+    "tgt_max": 0.7574173212051392
+  },
+  {
+    "id": 202,
+    "clean_file": "clean_00202.jpg",
+    "hazy_file": "hazy_00202.jpg",
+    "tgt_file": "tgt_00202.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 82,
+    "beta_mean": 1.7714557647705078,
+    "tgt_mean": 0.40341994166374207,
+    "tgt_min": 0.1786356121301651,
+    "tgt_max": 0.7574750781059265
+  },
+  {
+    "id": 203,
+    "clean_file": "clean_00203.jpg",
+    "hazy_file": "hazy_00203.jpg",
+    "tgt_file": "tgt_00203.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 83,
+    "beta_mean": 1.7687857151031494,
+    "tgt_mean": 0.40394705533981323,
+    "tgt_min": 0.1785692572593689,
+    "tgt_max": 0.7575412392616272
+  },
+  {
+    "id": 204,
+    "clean_file": "clean_00204.jpg",
+    "hazy_file": "hazy_00204.jpg",
+    "tgt_file": "tgt_00204.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 84,
+    "beta_mean": 1.7660951614379883,
+    "tgt_mean": 0.40447914600372314,
+    "tgt_min": 0.17851920425891876,
+    "tgt_max": 0.7576161026954651
+  },
+  {
+    "id": 205,
+    "clean_file": "clean_00205.jpg",
+    "hazy_file": "hazy_00205.jpg",
+    "tgt_file": "tgt_00205.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 85,
+    "beta_mean": 1.7633860111236572,
+    "tgt_mean": 0.4050159752368927,
+    "tgt_min": 0.17848019301891327,
+    "tgt_max": 0.7576964497566223
+  },
+  {
+    "id": 206,
+    "clean_file": "clean_00206.jpg",
+    "hazy_file": "hazy_00206.jpg",
+    "tgt_file": "tgt_00206.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 86,
+    "beta_mean": 1.7606638669967651,
+    "tgt_mean": 0.40555575489997864,
+    "tgt_min": 0.17846029996871948,
+    "tgt_max": 0.7577925324440002
+  },
+  {
+    "id": 207,
+    "clean_file": "clean_00207.jpg",
+    "hazy_file": "hazy_00207.jpg",
+    "tgt_file": "tgt_00207.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 87,
+    "beta_mean": 1.757929801940918,
+    "tgt_mean": 0.4060990512371063,
+    "tgt_min": 0.17845183610916138,
+    "tgt_max": 0.7578940391540527
+  },
+  {
+    "id": 208,
+    "clean_file": "clean_00208.jpg",
+    "hazy_file": "hazy_00208.jpg",
+    "tgt_file": "tgt_00208.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 88,
+    "beta_mean": 1.7551885843276978,
+    "tgt_mean": 0.406644731760025,
+    "tgt_min": 0.17846079170703888,
+    "tgt_max": 0.7580037117004395
+  },
+  {
+    "id": 209,
+    "clean_file": "clean_00209.jpg",
+    "hazy_file": "hazy_00209.jpg",
+    "tgt_file": "tgt_00209.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 89,
+    "beta_mean": 1.7524434328079224,
+    "tgt_mean": 0.4071921408176422,
+    "tgt_min": 0.17848770320415497,
+    "tgt_max": 0.7581213712692261
+  },
+  {
+    "id": 210,
+    "clean_file": "clean_00210.jpg",
+    "hazy_file": "hazy_00210.jpg",
+    "tgt_file": "tgt_00210.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 90,
+    "beta_mean": 1.7496963739395142,
+    "tgt_mean": 0.40774106979370117,
+    "tgt_min": 0.17852582037448883,
+    "tgt_max": 0.7583831548690796
+  },
+  {
+    "id": 211,
+    "clean_file": "clean_00211.jpg",
+    "hazy_file": "hazy_00211.jpg",
+    "tgt_file": "tgt_00211.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 91,
+    "beta_mean": 1.7469533681869507,
+    "tgt_mean": 0.4082896411418915,
+    "tgt_min": 0.17856498062610626,
+    "tgt_max": 0.7587674260139465
+  },
+  {
+    "id": 212,
+    "clean_file": "clean_00212.jpg",
+    "hazy_file": "hazy_00212.jpg",
+    "tgt_file": "tgt_00212.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 92,
+    "beta_mean": 1.7442150115966797,
+    "tgt_mean": 0.4088383913040161,
+    "tgt_min": 0.17861172556877136,
+    "tgt_max": 0.7591435313224792
+  },
+  {
+    "id": 213,
+    "clean_file": "clean_00213.jpg",
+    "hazy_file": "hazy_00213.jpg",
+    "tgt_file": "tgt_00213.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 93,
+    "beta_mean": 1.7414863109588623,
+    "tgt_mean": 0.4093862473964691,
+    "tgt_min": 0.17867602407932281,
+    "tgt_max": 0.7595072984695435
+  },
+  {
+    "id": 214,
+    "clean_file": "clean_00214.jpg",
+    "hazy_file": "hazy_00214.jpg",
+    "tgt_file": "tgt_00214.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 94,
+    "beta_mean": 1.7387704849243164,
+    "tgt_mean": 0.4099324345588684,
+    "tgt_min": 0.17875820398330688,
+    "tgt_max": 0.7599503397941589
+  },
+  {
+    "id": 215,
+    "clean_file": "clean_00215.jpg",
+    "hazy_file": "hazy_00215.jpg",
+    "tgt_file": "tgt_00215.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 95,
+    "beta_mean": 1.736069679260254,
+    "tgt_mean": 0.41047683358192444,
+    "tgt_min": 0.17885059118270874,
+    "tgt_max": 0.7604969143867493
+  },
+  {
+    "id": 216,
+    "clean_file": "clean_00216.jpg",
+    "hazy_file": "hazy_00216.jpg",
+    "tgt_file": "tgt_00216.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 96,
+    "beta_mean": 1.7333892583847046,
+    "tgt_mean": 0.41101744771003723,
+    "tgt_min": 0.17896665632724762,
+    "tgt_max": 0.761038064956665
+  },
+  {
+    "id": 217,
+    "clean_file": "clean_00217.jpg",
+    "hazy_file": "hazy_00217.jpg",
+    "tgt_file": "tgt_00217.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 97,
+    "beta_mean": 1.730730652809143,
+    "tgt_mean": 0.41155487298965454,
+    "tgt_min": 0.17909272015094757,
+    "tgt_max": 0.7615715861320496
+  },
+  {
+    "id": 218,
+    "clean_file": "clean_00218.jpg",
+    "hazy_file": "hazy_00218.jpg",
+    "tgt_file": "tgt_00218.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 98,
+    "beta_mean": 1.7280980348587036,
+    "tgt_mean": 0.41208797693252563,
+    "tgt_min": 0.17923669517040253,
+    "tgt_max": 0.7620939016342163
+  },
+  {
+    "id": 219,
+    "clean_file": "clean_00219.jpg",
+    "hazy_file": "hazy_00219.jpg",
+    "tgt_file": "tgt_00219.npy",
+    "A": [
+      0.9104183912277222,
+      0.9172145128250122,
+      0.9076027870178223
+    ],
+    "source_video": "WhatsApp Video 2026-09-10 at 10.00.16 PM.mp4",
+    "frame_in_video": 99,
+    "beta_mean": 1.725494384765625,
+    "tgt_mean": 0.412616103887558,
+    "tgt_min": 0.17936475574970245,
+    "tgt_max": 0.7626035809516907
+  }
+]
