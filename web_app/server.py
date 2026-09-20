@@ -63,6 +63,13 @@ except Exception:
     pass
 
 
+# Try to cap PyTorch threads to reduce cloud container RAM
+try:
+    import torch
+    torch.set_num_threads(1)
+except Exception:
+    pass
+
 class VideoEngine:
     """
     Decoupled Producer-Consumer Video Dehazing Engine.
@@ -74,7 +81,7 @@ class VideoEngine:
         self.condition = threading.Condition(self.lock)
 
         # Core Configuration
-        self.current_video = "foggy_video.mp4"
+        self.current_video = "car-detection_patchy_haze.mp4"
         self.gt_video = None        # Paired Ground Truth video (if any)
         self.method = "A4"          # Default: Proposed Method A4
         self.res_mode = "fast"      # "fast" (240x426) or "hd" (360x640)
@@ -97,6 +104,7 @@ class VideoEngine:
         self.frame_seq = 0
         self.frame_idx = 0
         self.total_frames = 0
+
 
         # Video / Camera state
         self.video_reader = None
@@ -183,7 +191,7 @@ class VideoEngine:
                 pass
 
     def _init_pipelines(self):
-        """Initializes or updates pipelines based on beta, omega, and resolution."""
+        """Initializes primary pipeline, lazy-loading others on demand to conserve RAM."""
         target_short, target_long = (240, 426) if self.res_mode == "fast" else (360, 640)
         max_res = (target_long, target_short)
 
@@ -198,8 +206,6 @@ class VideoEngine:
         )
 
         best_ckpt = os.path.join(_ROOT_DIR, "checkpoints", "delta_t_tiny_unet_best.pt")
-        no_temp_ckpt = os.path.join(_ROOT_DIR, "checkpoints", "delta_t_tiny_unet_no_temp.pt")
-
         if os.path.exists(best_ckpt):
             self.p_a4 = LearnedResidualDehazingPipeline(
                 checkpoint_path=best_ckpt,
@@ -212,30 +218,49 @@ class VideoEngine:
                 enable_sky_model=True,
                 preserve_resolution=False
             )
-            self.p_a3 = LearnedResidualDehazingPipeline(
-                checkpoint_path=best_ckpt,
-                ablation_mode="A3",
-                downscale_res=(512, 288),
-                max_process_res=max_res,
-                beta=self.beta,
-                kappa=1.25,
-                omega=self.omega,
-                enable_sky_model=True,
-                preserve_resolution=False
-            )
+        else:
+            self.p_a4 = None
 
-        if os.path.exists(no_temp_ckpt):
-            self.p_a2 = LearnedResidualDehazingPipeline(
-                checkpoint_path=no_temp_ckpt,
-                ablation_mode="A2",
-                downscale_res=(512, 288),
-                max_process_res=max_res,
-                beta=self.beta,
-                kappa=1.25,
-                omega=self.omega,
-                enable_sky_model=True,
-                preserve_resolution=False
-            )
+        # p_a2 and p_a3 will be lazy-loaded on demand when selected by user
+        self.p_a2 = None
+        self.p_a3 = None
+        gc.collect()
+
+    def _get_pipeline(self, method_name):
+        target_short, target_long = (240, 426) if self.res_mode == "fast" else (360, 640)
+        max_res = (target_long, target_short)
+        best_ckpt = os.path.join(_ROOT_DIR, "checkpoints", "delta_t_tiny_unet_best.pt")
+        no_temp_ckpt = os.path.join(_ROOT_DIR, "checkpoints", "delta_t_tiny_unet_no_temp.pt")
+
+        if method_name in ["A4", "Proposed (A4)"]:
+            if self.p_a4 is None and os.path.exists(best_ckpt):
+                self.p_a4 = LearnedResidualDehazingPipeline(
+                    checkpoint_path=best_ckpt, ablation_mode="A4",
+                    downscale_res=(512, 288), max_process_res=max_res,
+                    beta=self.beta, kappa=1.25, omega=self.omega,
+                    enable_sky_model=True, preserve_resolution=False
+                )
+            return self.p_a4
+        elif method_name == "A3":
+            if self.p_a3 is None and os.path.exists(best_ckpt):
+                self.p_a3 = LearnedResidualDehazingPipeline(
+                    checkpoint_path=best_ckpt, ablation_mode="A3",
+                    downscale_res=(512, 288), max_process_res=max_res,
+                    beta=self.beta, kappa=1.25, omega=self.omega,
+                    enable_sky_model=True, preserve_resolution=False
+                )
+            return self.p_a3
+        elif method_name == "A2":
+            if self.p_a2 is None and os.path.exists(no_temp_ckpt):
+                self.p_a2 = LearnedResidualDehazingPipeline(
+                    checkpoint_path=no_temp_ckpt, ablation_mode="A2",
+                    downscale_res=(512, 288), max_process_res=max_res,
+                    beta=self.beta, kappa=1.25, omega=self.omega,
+                    enable_sky_model=True, preserve_resolution=False
+                )
+            return self.p_a2
+        return self.p_a1
+
 
     def _close_sources(self):
         """Closes video readers and camera processes."""
@@ -419,10 +444,11 @@ class VideoEngine:
         buf = io.BytesIO()
 
         while self.running:
-            # 1. Idle sleep if paused
-            if self.is_paused:
-                time.sleep(0.04)
+            # 1. Idle sleep if paused or no active clients in the last 6 seconds
+            if self.is_paused or (not self.has_active_clients and (time.time() - self.last_client_time > 6.0)):
+                time.sleep(0.08)
                 continue
+
 
             # 2. Fetch raw frame from active source
             raw_frame = None
@@ -503,17 +529,20 @@ class VideoEngine:
             method = self.method
 
             try:
-                if method == "A1" or (method == "A4" and self.p_a4 is None):
+                if method == "A1":
                     res = self.p_a1.process_frame(scaled_input)
                     out = res[0] if isinstance(res, tuple) else res
-                elif method == "A4":
-                    res = self.p_a4.process_frame(scaled_input)
+                elif method in ["A4", "Proposed (A4)"]:
+                    pipe = self._get_pipeline("A4")
+                    res = pipe.process_frame(scaled_input) if pipe else self.p_a1.process_frame(scaled_input)
                     out = res[0] if isinstance(res, tuple) else res
-                elif method == "A2" and self.p_a2 is not None:
-                    res = self.p_a2.process_frame(scaled_input)
+                elif method == "A2":
+                    pipe = self._get_pipeline("A2")
+                    res = pipe.process_frame(scaled_input) if pipe else self.p_a1.process_frame(scaled_input)
                     out = res[0] if isinstance(res, tuple) else res
-                elif method == "A3" and self.p_a3 is not None:
-                    res = self.p_a3.process_frame(scaled_input)
+                elif method == "A3":
+                    pipe = self._get_pipeline("A3")
+                    res = pipe.process_frame(scaled_input) if pipe else self.p_a1.process_frame(scaled_input)
                     out = res[0] if isinstance(res, tuple) else res
                 elif method == "DCP":
                     out = alg_dcp.process_frame(scaled_input)
@@ -580,6 +609,9 @@ class VideoEngine:
 
             # 10. Metric Telemetry Calculation (Fast metrics every 10 frames, ~1.5ms)
             self.frame_counter += 1
+            if self.frame_counter % 50 == 0:
+                gc.collect()
+
             if self.frame_counter % 10 == 0:
                 ent = metrics.entropy(out)
                 col = metrics.colorfulness(out)
@@ -689,6 +721,8 @@ class DehazingHTTPHandler(BaseHTTPRequestHandler):
         return
 
     def do_GET(self):
+        engine.has_active_clients = True
+        engine.last_client_time = time.time()
         parsed = urlparse(self.path)
         path = parsed.path
 
@@ -722,6 +756,8 @@ class DehazingHTTPHandler(BaseHTTPRequestHandler):
             self.send_error(404, "File Not Found")
 
     def do_POST(self):
+        engine.has_active_clients = True
+        engine.last_client_time = time.time()
         parsed = urlparse(self.path)
         path = parsed.path
 
