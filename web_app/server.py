@@ -261,6 +261,19 @@ class VideoEngine:
             return self.p_a2
         return self.p_a1
 
+    def push_browser_camera_frame(self, frame_rgb):
+        """Pushes a new frame from client browser webcam (phone/laptop) into engine queue."""
+        with self.lock:
+            if self.current_video != "camera:browser":
+                self.current_video = "camera:browser"
+                self.live_metrics["video"] = "camera:browser"
+        # Drop oldest frame if queue full so camera stream is always zero-latency
+        while not self.browser_camera_queue.empty():
+            try:
+                self.browser_camera_queue.get_nowait()
+            except queue.Empty:
+                break
+        self.browser_camera_queue.put(frame_rgb)
 
     def _close_sources(self):
         """Closes video readers and camera processes."""
@@ -698,6 +711,8 @@ class ThreadPoolHTTPServer(HTTPServer):
     def process_request_thread(self, request, client_address):
         try:
             self.finish_request(request, client_address)
+        except (ConnectionResetError, BrokenPipeError):
+            pass
         except Exception:
             self.handle_error(request, client_address)
         finally:

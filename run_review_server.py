@@ -74,33 +74,35 @@ def main():
     cf_proc = None
     public_url = None
     if os.path.exists(CLOUDFLARED_EXE):
-        print("[*] Launching Cloudflare Tunnel for remote access...")
+        # Redirect output to tunnel.log on disk so pipe buffer NEVER deadlocks or freezes
+        tunnel_log_path = os.path.join(_ROOT, "tunnel.log")
+        tunnel_log = open(tunnel_log_path, "w", encoding="utf-8")
         cf_proc = subprocess.Popen(
             [CLOUDFLARED_EXE, "tunnel", "--url", f"http://127.0.0.1:{PORT}", "--no-autoupdate"],
             cwd=_ROOT,
-            stdout=subprocess.PIPE,
+            stdout=tunnel_log,
             stderr=subprocess.STDOUT,
-            text=True,
-            bufsize=1
+            text=True
         )
 
-        # Monitor stdout for URL
+        # Monitor tunnel.log for the live URL
         pattern = re.compile(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com")
         start_t = time.time()
-        while time.time() - start_t < 15:
-            line = cf_proc.stdout.readline()
-            if not line:
-                break
-            match = pattern.search(line)
-            if match:
-                public_url = match.group(0)
-                # Write to public_url.txt so the web server can serve it to the frontend
+        while time.time() - start_t < 20:
+            time.sleep(0.5)
+            if os.path.exists(tunnel_log_path):
                 try:
-                    with open(os.path.join(_ROOT, "public_url.txt"), "w", encoding="utf-8") as f:
-                        f.write(public_url)
+                    with open(tunnel_log_path, "r", encoding="utf-8", errors="ignore") as f:
+                        content = f.read()
+                    match = pattern.search(content)
+                    if match:
+                        public_url = match.group(0)
+                        # Write to public_url.txt so the web server can serve it to frontend
+                        with open(os.path.join(_ROOT, "public_url.txt"), "w", encoding="utf-8") as pf:
+                            pf.write(public_url)
+                        break
                 except Exception:
                     pass
-                break
 
     # 4. Open Localhost in Default Browser
     local_url = f"http://localhost:{PORT}"
