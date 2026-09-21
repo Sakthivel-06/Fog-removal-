@@ -738,7 +738,8 @@ class DehazingHTTPHandler(BaseHTTPRequestHandler):
             self._serve_json(metrics_copy)
         elif path == "/api/videos":
             vid_dir = os.path.join(_ROOT_DIR, "test_videos")
-            videos = [f for f in os.listdir(vid_dir) if f.endswith(".mp4")]
+            valid_exts = (".mp4", ".avi", ".mov", ".mkv", ".webm")
+            videos = [f for f in os.listdir(vid_dir) if f.lower().endswith(valid_exts)] if os.path.exists(vid_dir) else []
             with engine.lock:
                 curr_vid = engine.current_video
                 curr_gt = engine.gt_video
@@ -751,6 +752,17 @@ class DehazingHTTPHandler(BaseHTTPRequestHandler):
         elif path == "/api/public_url":
             with engine.lock:
                 pub_url = engine.public_url
+            if not pub_url:
+                txt_path = os.path.join(_ROOT_DIR, "public_url.txt")
+                if os.path.exists(txt_path):
+                    try:
+                        with open(txt_path, "r", encoding="utf-8") as f:
+                            pub_url = f.read().strip()
+                            with engine.lock:
+                                engine.public_url = pub_url
+                                engine.live_metrics["public_url"] = pub_url
+                    except Exception:
+                        pass
             self._serve_json({"public_url": pub_url})
         else:
             self.send_error(404, "File Not Found")
@@ -787,6 +799,64 @@ class DehazingHTTPHandler(BaseHTTPRequestHandler):
                     self._serve_json({"status": "error", "message": str(e)}, code=400)
             else:
                 self._serve_json({"status": "error", "message": "Empty frame"}, code=400)
+
+        elif path == "/api/upload_video":
+            content_length = int(self.headers.get('Content-Length', 0))
+            if content_length <= 0:
+                self._serve_json({"status": "error", "message": "No file uploaded (empty content)"}, code=400)
+                return
+
+            from urllib.parse import parse_qs, unquote
+            query_params = parse_qs(parsed.query)
+            raw_filename = query_params.get("filename", [None])[0]
+            if raw_filename:
+                raw_filename = unquote(raw_filename)
+            else:
+                raw_filename = self.headers.get("X-Filename", f"user_video_{int(time.time())}.mp4")
+
+            # Clean and sanitize filename
+            safe_name = os.path.basename(raw_filename).replace("..", "").replace("/", "").replace("\\", "").strip()
+            if not safe_name:
+                safe_name = f"user_video_{int(time.time())}.mp4"
+
+            # Check video extension
+            base, ext = os.path.splitext(safe_name)
+            if ext.lower() not in [".mp4", ".avi", ".mov", ".mkv", ".webm"]:
+                ext = ".mp4"
+                safe_name = base + ext
+
+            # Prefix custom uploaded videos
+            if not safe_name.startswith("custom_") and not safe_name.startswith("uploaded_"):
+                safe_name = f"custom_{safe_name}"
+
+            vid_dir = os.path.join(_ROOT_DIR, "test_videos")
+            os.makedirs(vid_dir, exist_ok=True)
+            save_path = os.path.join(vid_dir, safe_name)
+
+            # Stream from network socket to disk in 64KB chunks (protects RAM)
+            bytes_left = content_length
+            chunk_size = 65536
+            try:
+                with open(save_path, "wb") as f:
+                    while bytes_left > 0:
+                        read_len = min(chunk_size, bytes_left)
+                        chunk = self.rfile.read(read_len)
+                        if not chunk:
+                            break
+                        f.write(chunk)
+                        bytes_left -= len(chunk)
+
+                # Immediately switch engine to play the newly uploaded video!
+                engine.update_settings({"video": safe_name, "restart": True})
+                print(f"\n [UPLOAD] User video saved & active: {safe_name} ({content_length / (1024*1024):.2f} MB)")
+                self._serve_json({
+                    "status": "ok",
+                    "filename": safe_name,
+                    "message": f"Video '{safe_name}' uploaded successfully!"
+                })
+            except Exception as e:
+                print(f"\n [UPLOAD ERROR] Failed to save {safe_name}: {e}")
+                self._serve_json({"status": "error", "message": str(e)}, code=500)
 
         else:
             self.send_error(404, "Unknown API endpoint")

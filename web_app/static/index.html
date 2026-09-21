@@ -526,6 +526,120 @@
       margin-bottom: 4px;
     }
 
+    /* Drag-and-Drop Viewport & Upload Card */
+    .stream-container.drag-active {
+      border: 2px dashed var(--accent-cyan) !important;
+      box-shadow: 0 0 35px rgba(0, 242, 254, 0.4) inset !important;
+    }
+
+    .stream-drop-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 10, 16, 0.88);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      color: var(--accent-cyan);
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      gap: 12px;
+    }
+
+    .stream-container.drag-active .stream-drop-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .upload-box {
+      border: 2px dashed rgba(0, 242, 254, 0.35);
+      border-radius: 12px;
+      padding: 16px 14px;
+      text-align: center;
+      background: rgba(0, 242, 254, 0.03);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .upload-box:hover, .upload-box.drag-active {
+      border-color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.09);
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+    }
+
+    .upload-icon {
+      font-size: 28px;
+    }
+
+    .upload-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .upload-text span {
+      color: var(--accent-cyan);
+      text-decoration: underline;
+    }
+
+    .upload-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .upload-progress-container {
+      background: rgba(10, 13, 22, 0.95);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      display: none;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+      border-radius: 4px;
+      transition: width 0.15s ease;
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+    }
+
+    .upload-msg {
+      font-size: 11px;
+      color: var(--accent-cyan);
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
     /* Footer */
     footer {
       padding: 20px;
@@ -591,6 +705,11 @@
 
         <!-- Video Stream Container -->
         <div class="stream-container" id="stream-box">
+          <div class="stream-drop-overlay" id="stream-drop-overlay">
+            <span style="font-size: 38px;">📥</span>
+            <span>Drop video here to dehaze instantly</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-weight: 400;">MP4, AVI, MOV, MKV supported • Real-time processing</span>
+          </div>
           <div class="side-by-side-overlay" id="side-banners">
             <div class="side-label side-left">Original Hazy Input</div>
             <div class="side-label side-right">AeroClear Dehazed</div>
@@ -718,6 +837,31 @@
             <option value="Light-DehazeNet">Light-DehazeNet (Li et al. Lightweight CNN)</option>
           </select>
         </div>
+ 
+        <!-- Custom Video Upload Card -->
+        <div class="control-group">
+          <div class="control-label">
+            <span>📤 Upload Custom Video</span>
+            <span class="value-badge" id="upload-badge">MP4 / AVI / MOV</span>
+          </div>
+          <div class="upload-box" id="upload-dropzone" onclick="document.getElementById('video-file-input').click()">
+            <input type="file" id="video-file-input" accept="video/mp4,video/avi,video/quicktime,video/x-matroska,video/webm,.mp4,.avi,.mov,.mkv,.webm" style="display:none" onchange="handleFileSelect(event)">
+            <div class="upload-icon">⚡</div>
+            <div class="upload-text">Drop video file here or <span>Browse</span></div>
+            <div class="upload-sub">Uploads from device • Instant 60 FPS Dehazing</div>
+          </div>
+
+          <div id="upload-progress-box" class="upload-progress-container">
+            <div class="progress-meta">
+              <span id="upload-filename" style="max-width: 170px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">video.mp4</span>
+              <span id="upload-pct" style="color: var(--accent-cyan); font-family: var(--font-mono);">0%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div id="upload-progress-bar" class="progress-bar-fill"></div>
+            </div>
+            <div id="upload-msg" class="upload-msg">Uploading to pipeline...</div>
+          </div>
+        </div>
 
         <div class="control-group">
           <div class="control-label">Video Input Source</div>
@@ -801,8 +945,8 @@
     let webcamStream = null;
     let webcamTimer = null;
 
-    // Load available video files & auto-populate selects
-    async function loadVideoList() {
+    // Load available video files & auto-populate selects into categorized optgroups
+    async function loadVideoList(selectOverride = null) {
       try {
         const res = await fetch('/api/videos');
         const data = await res.json();
@@ -813,40 +957,206 @@
         vidSelect.innerHTML = '';
         gtSelect.innerHTML = '<option value="none" selected>None — Unpaired Video (Report NIQE/FDI)</option>';
         
-        // Video options
-        data.videos.forEach(v => {
-          const opt = document.createElement('option');
-          opt.value = v;
-          opt.textContent = v;
-          if (v === data.current) opt.selected = true;
-          vidSelect.appendChild(opt);
+        const customVideos = [];
+        const benchmarkFogVideos = [];
+        const syntheticGtVideos = [];
+        const cleanGtCandidates = [];
 
-          // Add clean / GT candidates to GT selector
-          if (v.includes('clean') || v.includes('gt')) {
-            const gtOpt = document.createElement('option');
-            gtOpt.value = v;
-            gtOpt.textContent = v + ' (Clean GT)';
-            if (v === data.current_gt) gtOpt.selected = true;
-            gtSelect.appendChild(gtOpt);
+        data.videos.forEach(v => {
+          const lower = v.toLowerCase();
+          if (lower.startsWith('custom_') || lower.startsWith('user_') || lower.startsWith('uploaded_')) {
+            customVideos.push(v);
+          } else if (lower.includes('clean') || lower.includes('_gt')) {
+            cleanGtCandidates.push(v);
+          } else if (lower.includes('car-detection') || lower.includes('person-bicycle')) {
+            syntheticGtVideos.push(v);
+          } else {
+            benchmarkFogVideos.push(v);
           }
         });
 
-        // Add Camera options to video selector
+        // 1. Custom Uploaded Videos Group (if any exist)
+        if (customVideos.length > 0) {
+          const grpCustom = document.createElement('optgroup');
+          grpCustom.label = "✨ Custom Uploaded Videos";
+          customVideos.forEach(v => {
+            const opt = document.createElement('option');
+            opt.value = v;
+            opt.textContent = "📁 " + v.replace(/^custom_/, '');
+            grpCustom.appendChild(opt);
+          });
+          vidSelect.appendChild(grpCustom);
+        }
+
+        // 2. Real Foggy Benchmark Videos Group
+        if (benchmarkFogVideos.length > 0) {
+          const grpReal = document.createElement('optgroup');
+          grpReal.label = `🌫️ Real Foggy Benchmark Videos (${benchmarkFogVideos.length})`;
+          benchmarkFogVideos.forEach(v => {
+            const opt = document.createElement('option');
+            opt.value = v;
+            opt.textContent = v;
+            grpReal.appendChild(opt);
+          });
+          vidSelect.appendChild(grpReal);
+        }
+
+        // 3. Synthetic Benchmark Videos (with Paired GT)
+        if (syntheticGtVideos.length > 0) {
+          const grpSyn = document.createElement('optgroup');
+          grpSyn.label = "🎯 Synthetic Benchmarks (With Ground Truth)";
+          syntheticGtVideos.forEach(v => {
+            const opt = document.createElement('option');
+            opt.value = v;
+            opt.textContent = v;
+            grpSyn.appendChild(opt);
+          });
+          vidSelect.appendChild(grpSyn);
+        }
+
+        // 4. Live Cameras
+        const grpCam = document.createElement('optgroup');
+        grpCam.label = "📷 Live Hardware & Web Cameras";
         const camDshow = document.createElement('option');
         camDshow.value = "camera:dshow";
         camDshow.textContent = "📷 Laptop Webcam (DirectShow Chicony)";
-        if (data.current === "camera:dshow") camDshow.selected = true;
-        vidSelect.appendChild(camDshow);
+        grpCam.appendChild(camDshow);
 
         const camBrowser = document.createElement('option');
         camBrowser.value = "camera:browser";
         camBrowser.textContent = "🌐 Browser HTML5 Webcam (WebRTC)";
-        if (data.current === "camera:browser") camBrowser.selected = true;
-        vidSelect.appendChild(camBrowser);
+        grpCam.appendChild(camBrowser);
+        vidSelect.appendChild(grpCam);
+
+        // Populate Clean GT Selector
+        cleanGtCandidates.forEach(v => {
+          const gtOpt = document.createElement('option');
+          gtOpt.value = v;
+          gtOpt.textContent = v + ' (Clean GT)';
+          if (v === data.current_gt) gtOpt.selected = true;
+          gtSelect.appendChild(gtOpt);
+        });
+
+        // Set selected video
+        const targetVideo = selectOverride || data.current;
+        if (targetVideo) {
+          vidSelect.value = targetVideo;
+        }
 
       } catch (err) {
         console.error("Could not fetch video list:", err);
       }
+    }
+
+    /* Video Upload & Drag-and-Drop Handlers */
+    function uploadVideoFile(file) {
+      if (!file) return;
+      const validExts = ['.mp4', '.avi', '.mov', '.mkv', '.webm'];
+      const name = file.name.toLowerCase();
+      const hasValidExt = validExts.some(ext => name.endsWith(ext));
+      if (!hasValidExt && !file.type.startsWith('video/')) {
+        alert('Please select a valid video file (.mp4, .avi, .mov, .mkv, .webm)');
+        return;
+      }
+
+      const pBox = document.getElementById('upload-progress-box');
+      const pBar = document.getElementById('upload-progress-bar');
+      const pPct = document.getElementById('upload-pct');
+      const pName = document.getElementById('upload-filename');
+      const pMsg = document.getElementById('upload-msg');
+
+      pBox.style.display = 'block';
+      pBar.style.width = '0%';
+      pPct.textContent = '0%';
+      pName.textContent = file.name;
+      pMsg.textContent = `Uploading ${(file.size / (1024 * 1024)).toFixed(1)} MB to engine...`;
+      pMsg.style.color = 'var(--accent-cyan)';
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/api/upload_video?filename=' + encodeURIComponent(file.name), true);
+      xhr.setRequestHeader('Content-Type', file.type || 'application/octet-stream');
+      xhr.setRequestHeader('X-Filename', file.name);
+
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          const pct = Math.min(100, Math.round((e.loaded / e.total) * 100));
+          pBar.style.width = pct + '%';
+          pPct.textContent = pct + '%';
+          const loadedMb = (e.loaded / (1024 * 1024)).toFixed(1);
+          const totalMb = (e.total / (1024 * 1024)).toFixed(1);
+          pMsg.textContent = `Uploading: ${loadedMb} MB / ${totalMb} MB (${pct}%)`;
+        }
+      };
+
+      xhr.onload = async () => {
+        if (xhr.status === 200) {
+          try {
+            const res = JSON.parse(xhr.responseText);
+            pBar.style.width = '100%';
+            pPct.textContent = '100%';
+            pMsg.textContent = `✅ Active! Dehazing "${res.filename}" at 60 FPS`;
+            pMsg.style.color = 'var(--accent-green)';
+            
+            // Refresh dropdown to include new file and auto-select it
+            await loadVideoList(res.filename);
+
+            // Flash stream box in green
+            const streamBox = document.getElementById('stream-box');
+            streamBox.style.boxShadow = '0 0 25px rgba(0, 230, 118, 0.6)';
+            setTimeout(() => { streamBox.style.boxShadow = ''; }, 2500);
+          } catch (e) {
+            pMsg.textContent = 'Upload complete, video active!';
+            await loadVideoList();
+          }
+        } else {
+          pMsg.textContent = `Upload error: ${xhr.statusText || 'Server rejected file'}`;
+          pMsg.style.color = 'var(--accent-red)';
+        }
+      };
+
+      xhr.onerror = () => {
+        pMsg.textContent = 'Network error during video upload';
+        pMsg.style.color = 'var(--accent-red)';
+      };
+
+      xhr.send(file);
+    }
+
+    function handleFileSelect(e) {
+      const file = e.target.files && e.target.files[0];
+      if (file) uploadVideoFile(file);
+    }
+
+    function setupDragAndDrop() {
+      const dropzone = document.getElementById('upload-dropzone');
+      const streamBox = document.getElementById('stream-box');
+
+      [dropzone, streamBox].forEach(el => {
+        if (!el) return;
+        ['dragenter', 'dragover'].forEach(eventName => {
+          el.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            el.classList.add('drag-active');
+          }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          el.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            el.classList.remove('drag-active');
+          }, false);
+        });
+
+        el.addEventListener('drop', (e) => {
+          const dt = e.dataTransfer;
+          const files = dt.files;
+          if (files && files.length > 0) {
+            uploadVideoFile(files[0]);
+          }
+        }, false);
+      });
     }
 
     // Check for active public website URL
@@ -1171,6 +1481,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       loadVideoList();
       checkPublicUrl();
+      setupDragAndDrop();
       runCanvasPump();
       setInterval(pollTelemetry, 300);
       setInterval(checkPublicUrl, 6000);

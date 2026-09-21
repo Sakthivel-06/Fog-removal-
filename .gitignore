@@ -27,3 +27,6 @@ tunnel.log
 # Temporary web uploads (avoiding duplicate video storage; keep folder)
 temp_uploads/*
 !temp_uploads/.gitkeep
+public_url.txt
+test_videos/custom_*
+test_videos/uploaded_*
