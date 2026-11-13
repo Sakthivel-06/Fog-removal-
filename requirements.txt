@@ -8,3 +8,4 @@ imageio-ffmpeg
 torch
 torchvision
 pyyaml
+psycopg[binary]
