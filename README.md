@@ -12,6 +12,14 @@ pinned: false
 
 **Official Academic Title**: *Real-Time Fog Removal Using SSIF–CLAHE Temporal Coherence*
 
+> [!IMPORTANT]
+> **Complete Video Dehazing Project Directory**: All original input videos, processed dehazed frames across 12 algorithms, performance evaluation metrics (PSNR, SSIM, MSE, MAE, NIQE, BRISQUE, FPS), and 10 comparative visualization charts are fully organized inside the [Video_Dehazing_Project/](file:///c:/Users/kketh/OneDrive/Desktop/New%20folder/Fog-removal-/Video_Dehazing_Project) directory:
+> - **Input Videos**: [Input_Videos/](file:///c:/Users/kketh/OneDrive/Desktop/New%20folder/Fog-removal-/Video_Dehazing_Project/Input_Videos) (`car fog.mp4`, `fog test 001.mp4`, `mountains.mp4`, `317643.mp4`)
+> - **Dehazed Images**: [Dehazed_Images/](file:///c:/Users/kketh/OneDrive/Desktop/New%20folder/Fog-removal-/Video_Dehazing_Project/Dehazed_Images) (70+ frames per video across 12 dehazing algorithms & comparison matrices)
+> - **Performance Metrics**: [Performance_Metrics/](file:///c:/Users/kketh/OneDrive/Desktop/New%20folder/Fog-removal-/Video_Dehazing_Project/Performance_Metrics) (Consolidated tables, per-frame & summary CSVs, and 10 publication graphs)
+
+---
+
 AeroClear is a high-throughput, physics-grounded, OpenCV-free real-time video dehazing engine and web suite. It delivers temporal consistency, robust atmospheric light estimation, chromaticity preservation, and dynamic baseline comparisons (DCP, CAP, CEEF, CLAHE, Light-DehazeNet) at 35–60+ FPS on CPU.
 
 ---
